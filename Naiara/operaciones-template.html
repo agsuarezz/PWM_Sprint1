@@ -1,0 +1,35 @@
+<section class="money-card">
+    <header>
+        <h2 class="money-title">{{titulo}}</h2>
+    </header>
+
+    <div class="money-body">
+        <div class="money-row">
+            <label>{{label1}}</label>
+            <input type="text" placeholder="{{ph1}}">
+        </div>
+
+        <div class="money-row">
+            <label>{{label2}}</label>
+            <input type="text" placeholder="{{ph2}}">
+        </div>
+
+        <div class="money-row">
+            <label>{{label3}}</label>
+            <input type="text" placeholder="{{ph3}}">
+        </div>
+
+        <div class="money-row {{extraClass}}">
+            <label>{{label4}}</label>
+            <input type="text" placeholder="{{ph4}}">
+        </div>
+    </div>
+
+    <footer class="money-footer">
+        <button type="reset" class="btn-dark">Borrar</button>
+        <div class="footer-right">
+            <button type="button" class="btn-link">Cancelar</button>
+            <button type="submit" class="btn-white">{{btnText}}</button>
+        </div>
+    </footer>
+</section>

@@ -1,0 +1,64 @@
+<section id="profile_settings_container">
+    <header>
+        <h2>Configuración de Perfil</h2>
+    </header>
+
+    <article class="profile-item">
+        <div class="profile-icon">
+            <img src="{{iconUser}}" alt="Icono Usuario">
+        </div>
+        <div class="profile-info">
+            <h3>Nombre</h3>
+            <p>{{userName}} {{userLastName}}</p>
+        </div>
+        </article>
+
+    <hr>
+
+    <article class="profile-item">
+        <div class="profile-icon">
+            <img src="{{iconGeneric}}" alt="Icono">
+        </div>
+        <div class="profile-info">
+            <h3>Correo Electrónico</h3>
+            <p>{{userEmail}}</p>
+        </div>
+        <div class="profile-action">
+            <button type="button" onclick="modifyField('email')">Modificar</button>
+        </div>
+    </article>
+
+    <article class="profile-item">
+        <div class="profile-info-offset">
+            <h3>Clave de Acceso</h3>
+            <p>{{userPasswordMask}}</p>
+        </div>
+        <div class="profile-action">
+            <button type="button" onclick="modifyField('password')">Modificar</button>
+        </div>
+    </article>
+
+    <article class="profile-item">
+        <div class="profile-info-offset">
+            <h3>Número de teléfono</h3>
+            <p>{{userPhone}}</p>
+        </div>
+        <div class="profile-action">
+            <button type="button" onclick="modifyField('phone')">Modificar</button>
+        </div>
+    </article>
+
+    <article class="profile-item">
+        <div class="profile-info-offset">
+            <h3>Dirección</h3>
+            <p>{{userAddress}}</p>
+        </div>
+        <div class="profile-action">
+            <button type="button" onclick="modifyField('address')">Modificar</button>
+        </div>
+    </article>
+
+    <footer class="profile-footer">
+        <button type="button" class="btn-danger">{{labelDeleteAccount}}</button>
+    </footer>
+</section>
