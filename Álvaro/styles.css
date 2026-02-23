@@ -1,0 +1,195 @@
+/* =========================================
+   ESTILO SEÑORIAL - BANCO IMPERIUM
+   ========================================= */
+
+/* 1. Reset y Tipografía */
+:root {
+    --primary-black: #000000;
+    --secondary-black: #1a1a1a;
+    --pure-white: #ffffff;
+    --soft-gray: #f4f4f4;
+    --border-gray: #e0e0e0;
+    --gold-accent: #c5a059; /* Un toque sutil para elementos de lujo */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--pure-white);
+    color: var(--primary-black);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Se recomienda importar esta fuente de Google Fonts */
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* 2. Header (header.html) */
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    border-bottom: 1px solid var(--border-gray);
+    background: var(--pure-white);
+}
+
+/* 3. Sección de Cuenta (Jesús/ImageTextAccount.html) */
+.account-content {
+    padding: 80px 10%;
+    background-color: var(--pure-white);
+}
+
+.account-content__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.account-content__image img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%); /* Efecto señorial en blanco y negro */
+    transition: filter 0.5s ease;
+}
+
+.account-content__image img:hover {
+    filter: grayscale(0%);
+}
+
+.account-content__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.account-content__subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-black);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.account-content__benefits {
+    list-style: none;
+    border-top: 2px solid var(--primary-black);
+    padding-top: 20px;
+}
+
+.account-content__benefits li {
+    padding: 10px 0;
+    font-weight: 500;
+    border-bottom: 1px solid var(--soft-gray);
+}
+
+.account-content__benefits li::before {
+    content: "•";
+    margin-right: 10px;
+    color: var(--primary-black);
+}
+
+/* 4. Contenedor de Tarjetas (card-container.html) */
+.services-grid {
+    padding: 60px 10%;
+    background-color: var(--soft-gray);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-container {
+    background: var(--pure-white);
+    padding: 40px;
+    border: 1px solid var(--border-gray);
+    transition: all 0.3s ease;
+}
+
+.card-container:hover {
+    border-color: var(--primary-black);
+    transform: translateY(-5px);
+}
+
+.card-icon img {
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* 5. Footer (footermain.html) */
+.footer-socket {
+    background-color: var(--primary-black);
+    color: var(--pure-white);
+    padding: 40px 10%;
+}
+
+.socket-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.socket-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.socket-nav a {
+    color: var(--pure-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.socket-nav a:hover {
+    opacity: 1;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .account-content__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .socket-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* Contenedor para alinear las 3 tarjetas */
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
+    gap: 30px;                             /* Espacio entre tarjetas */
+    padding: 40px 10%;                     /* Margen lateral señorial */
+    background-color: #ffffff;             /* Fondo limpio */
+}
+
+/* Ajuste para que las tarjetas no se peguen en móviles */
+@media (max-width: 900px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr;        /* En móviles, una debajo de otra */
+    }
+}

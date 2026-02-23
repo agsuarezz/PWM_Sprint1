@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Imperium - Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div xlu-include-file="header.html"></div>
+
+<main>
+    <div xlu-include-file="ImageTextAccount.html"></div>
+
+    <section class="cards-wrapper">
+        <div xlu-include-file="card-container.html"></div>
+        <div xlu-include-file="card-container.html"></div>
+        <div xlu-include-file="card-container.html"></div>
+    </section>
+</main>
+
+    <div xlu-include-file="footermain.html"></div>
+
+    <script>
+        window.attributes = {
+            // Datos para Jesús/ImageTextAccount.html
+            image_src: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?q=80&w=500", 
+            image_alt: "Banca Premium",
+            title: "Cuenta Nómina Premium",
+            subtitle: "Exclusividad en cada movimiento.",
+            benefits: "<li>Gestor personal 24/7</li><li>Tarjetas Black sin coste</li>",
+
+            // Datos para las 3 cards
+            image: "https://cdn-icons-png.flaticon.com/512/2830/2830284.png",
+            imageCaption: "Servicio Bancario",
+            content: "Accede a préstamos personales con tasa preferencial."
+            // Nota: 'title' lo tomará del 'title' de arriba si no lo separas
+        };
+    </script>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+    </script>
+
+</body>
+</html>
