@@ -1,15 +1,10 @@
-/* =========================================
-   ESTILO SEÑORIAL - BANCO IMPERIUM
-   ========================================= */
-
-/* 1. Reset y Tipografía */
 :root {
     --primary-black: #000000;
     --secondary-black: #1a1a1a;
     --pure-white: #ffffff;
     --soft-gray: #f4f4f4;
     --border-gray: #e0e0e0;
-    --gold-accent: #c5a059; /* Un toque sutil para elementos de lujo */
+    --gold-accent: #c5a059;
 }
 
 * {
@@ -26,22 +21,11 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif; /* Se recomienda importar esta fuente de Google Fonts */
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
-/* 2. Header (header.html) */
-.header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    border-bottom: 1px solid var(--border-gray);
-    background: var(--pure-white);
-}
-
-/* 3. Sección de Cuenta (Jesús/ImageTextAccount.html) */
 .account-content {
     padding: 80px 10%;
     background-color: var(--pure-white);
@@ -57,7 +41,7 @@ h1, h2, h3 {
 .account-content__image img {
     width: 100%;
     height: auto;
-    filter: grayscale(100%); /* Efecto señorial en blanco y negro */
+    filter: grayscale(100%);
     transition: filter 0.5s ease;
 }
 
@@ -212,33 +196,28 @@ header{
     align-items: center;
 }
 
-/* CONTENEDOR PRINCIPAL */
 .header-container{
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-/* LOGO */
 .header-left{
     flex: 0 0 auto;
 }
 
-/* ZONA DERECHA ocupa todo el espacio restante */
 .header-right{
     flex: 1;
     display: flex;
     align-items: center;
 }
 
-/* WRAPPER del nav + botones */
 .nav-wrapper{
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-/* NAV centrado REAL */
 .main-navigation{
     margin: 0 auto;
 }
@@ -251,7 +230,6 @@ header{
     padding: 0;
 }
 
-/* BOTONES DERECHA */
 .client-access{
     display: flex;
     gap: 15px;
