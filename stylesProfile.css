@@ -1,0 +1,129 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+body {
+    background-color: #f4f7f6; /* Gris muy claro de fondo */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.profile-main-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+#profile-layout-container {
+    display: flex !important;
+    flex-direction: row !important;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Sombra suave */
+    max-width: 1000px;
+    width: 100%;
+    gap: 60px;
+}
+
+/* --- COLUMNA IZQUIERDA: FOTO --- */
+.profile-left-column {
+    flex: 0 0 220px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.03);
+}
+
+/* --- COLUMNA DERECHA: DATOS --- */
+.profile-right-column {
+    flex: 1;
+}
+
+.profile-header {
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.profile-name h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.profile-name p {
+    color: #666;
+    font-size: 16px;
+    margin: 5px 0 0;
+}
+
+/* --- FILAS DE INFORMACIÓN (TEMPLATE) --- */
+.profile-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 22px 0 !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.profile-info h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin: 0 0 8px 0;
+}
+
+.profile-info p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+/* --- BOTONES --- */
+.btn-modificar {
+    background: #f8f9fa !important;
+    border: 1px solid #ddd !important;
+    color: #333 !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-modificar:hover {
+    background: #1a1a1a !important;
+    color: #fff !important;
+    border-color: #1a1a1a !important;
+}
+
+.btn-baja {
+    margin-top: 40px;
+    background-color: #d32f2f !important;
+    color: white !important;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+    transition: background 0.2s;
+}
+
+.btn-baja:hover {
+    background-color: #b71c1c !important;
+}

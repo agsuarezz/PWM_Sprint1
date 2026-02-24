@@ -1,13 +1,56 @@
-<section id="profile_settings_container">
-    <header><h2>Configuración de Perfil</h2></header>
-    
-    <div id="profile-info-list">
-        <div xlu-include-file="profile-field-template.html"></div>
-        <div xlu-include-file="profile-field-template.html"></div>
-        <div xlu-include-file="profile-field-template.html"></div>
-    </div>
+<link rel="stylesheet" href="../styles.css"> 
+<link rel="stylesheet" href="../stylesProfile.css">
 
-    <footer class="profile-footer">
-        <button type="button" class="btn-danger">Darse de baja</button>
-    </footer>
-</section>
+<header class="header">
+    <div class="header-container">
+        <div class="header-left">
+            <div xlu-include-file="../logo.html"></div>
+        </div>
+        <div class="header-right">
+            <div xlu-include-file="../nav.html"></div>
+        </div>
+    </div>
+</header>
+
+<div class="profile-main-wrapper">
+    <div id="profile-layout-container">
+        
+        <div class="profile-left-column">
+            <div xlu-include-file="fotoPerfil.html"></div>
+        </div>
+
+        <div class="profile-right-column">
+            <div class="profile-header">
+                <div class="profile-name">
+                    <h2>Nombre</h2>
+                    <p>Apellido1 Apellido2</p>
+                </div>
+            </div>
+
+            <div xlu-include-file="profile-field-template.html" 
+                 data-labeltitle="Correo Electrónico" 
+                 data-uservalue="usuario@imperium.com">
+            </div>
+
+            <div xlu-include-file="profile-field-template.html" 
+                 data-labeltitle="Clave de Acceso" 
+                 data-uservalue="********">
+            </div>
+
+            <div xlu-include-file="profile-field-template.html" 
+                 data-labeltitle="Número de teléfono" 
+                 data-uservalue="+34 600 000 000">
+            </div>
+
+            <button type="button" class="btn-baja">Darse de baja</button>
+        </div>
+
+    </div>
+</div>
+
+<footer xlu-include-file="../footermain.html"></footer>
+
+<script src="../script.js"></script>
+<script>
+    xLuIncludeFile();
+</script>

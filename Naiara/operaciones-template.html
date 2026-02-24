@@ -1,17 +1,50 @@
-<section class="money-card">
-    <header>
-        <h2 class="money-title">{{titulo}}</h2>
-    </header>
-
-    <form class="money-body">
-        <div id="fields-area"></div>
-
-        <footer class="money-footer">
-            <button type="reset" class="btn-dark">Borrar</button>
-            <div class="footer-right">
-                <button type="button" class="btn-link">Cancelar</button>
-                <button type="submit" class="btn-white">{{btnText}}</button>
+<div class="transfer-card">
+    <div class="transfer-body">
+        <h2>Realizar Transferencia</h2>
+        
+        <form>
+            <div xlu-include-file="../field-template.html" 
+                 data-fieldid="nombre" 
+                 data-labelname="Nombre del beneficiario" 
+                 data-fieldtype="text" 
+                 data-phtext="Nombre Completo"
+                 data-valtext="">
             </div>
-        </footer>
-    </form>
-</section>
+
+            <div xlu-include-file="../field-template.html" 
+                 data-fieldid="iban" 
+                 data-labelname="Número de cuenta (IBAN)" 
+                 data-fieldtype="text" 
+                 data-phtext="ESXX XXXX XXXX XXXX XXXX XXXX"
+                 data-valtext="">
+            </div>
+
+            <div xlu-include-file="../field-template.html" 
+                 data-fieldid="importe" 
+                 data-labelname="Importe" 
+                 data-fieldtype="number" 
+                 data-phtext="0.0"
+                 data-valtext="">
+            </div>
+
+            <div xlu-include-file="../field-template.html" 
+                 data-fieldid="concepto" 
+                 data-labelname="Concepto" 
+                 data-fieldtype="text" 
+                 data-phtext="Motivo de la transferencia"
+                 data-valtext="">
+            </div>
+        </form>
+    </div>
+
+    <div class="transfer-footer">
+        <button class="btn-borrar" type="reset">Borrar</button>
+        <a href="#" class="btn-cancelar">Cancelar</a>
+        <button class="btn-transferir" type="submit">Transferir</button>
+    </div>
+</div>
+
+<script src="../script.js"></script>
+<script>
+    xLuIncludeFile();
+</script>

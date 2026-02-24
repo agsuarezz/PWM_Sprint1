@@ -1,27 +1,33 @@
-<section class="login-container">
-    <header>
-        <h1>Hola, introduce tu usuario y clave de acceso</h1>
-    </header>
+<div class="login-container">
+    <h1>Hola, introduce tu usuario y clave de acceso</h1>
 
-    <div class="login-card">
-        <form id="login-form">
-            
-            <div xlu-include-file="Naiara/field-template.html" 
-                 data-fieldId="usuario" 
-                 data-labelName="Usuario" 
-                 data-phText="NIF, NIE, Pasaporte..."></div>
+    <form>
+        <div xlu-include-file="../field-template.html" 
+             data-fieldid="usuario" 
+             data-labelname="Usuario" 
+             data-fieldtype="text" 
+             data-phtext="NIF, NIE, Pasaporte o Tarjeta Anónima"
+             data-valtext="">
+        </div>
 
-            <div xlu-include-file="Naiara/field-template.html" 
-                 data-fieldId="password" 
-                 data-labelName="Contraseña" 
-                 data-fieldType="password"></div>
+        <div xlu-include-file="../field-template.html" 
+             data-fieldid="password" 
+             data-labelname="Contraseña" 
+             data-fieldtype="password" 
+             data-phtext="Introduce tu clave"
+             data-valtext="">
+        </div>
 
-            <button type="submit" class="btn-black">Entrar</button>
+        <button type="submit">Entrar</button>
 
-            <div class="login-links">
-                <a href="#">¿Olvidó la contraseña?</a>
-                <a href="#">¿No eres cliente?</a>
-            </div>
-        </form>
-    </div>
-</section>
+        <div class="login-links">
+            <a href="#">¿Olvidó la contraseña?</a>
+            <a href="#">¿No eres cliente?</a>
+        </div>
+    </form>
+</div>
+
+<script src="../script.js"></script>
+<script>
+    xLuIncludeFile();
+</script>

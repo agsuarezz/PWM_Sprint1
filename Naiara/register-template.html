@@ -1,10 +1,85 @@
-<section class="register-card">
-    <header><h2>{{titulo}}</h2></header>
-    <form id="register-form">
-        <div class="grid-layout">
-            <div xlu-include-file="field-template.html"></div>
-            <div xlu-include-file="field-template.html"></div>
+<div class="register-container">
+
+    <form>
+        <div xlu-include-file="../field-template.html" 
+             data-fieldid="name" 
+             data-labelname="Name" 
+             data-fieldtype="text" 
+             data-phtext="Value">
+        </div>
+
+        <div xlu-include-file="../field-template.html" 
+             data-fieldid="surname" 
+             data-labelname="Surname" 
+             data-fieldtype="text" 
+             data-phtext="Value">
+        </div>
+
+        <div xlu-include-file="../field-template.html" 
+             data-fieldid="email" 
+             data-labelname="Email" 
+             data-fieldtype="email" 
+             data-phtext="Value">
+        </div>
+
+        <div xlu-include-file="../field-template.html" 
+             data-fieldid="phone" 
+             data-labelname="Phone" 
+             data-fieldtype="tel" 
+             data-phtext="Value">
+        </div>
+
+        <div xlu-include-file="../field-template.html" 
+             data-fieldid="birthdate" 
+             data-labelname="Fecha de nacimiento" 
+             data-fieldtype="text" 
+             data-phtext="DD/MM/AA">
+        </div>
+
+        <div class="form-row">
+            <div xlu-include-file="../field-template.html" 
+                 data-fieldid="address" 
+                 data-labelname="Dirección" 
+                 data-fieldtype="text" 
+                 data-phtext="Calle, num, piso, letra">
             </div>
-        <button type="submit">Submit</button>
+            <div xlu-include-file="../field-template.html" 
+                 data-fieldid="zip" 
+                 data-labelname="Código Postal" 
+                 data-fieldtype="text" 
+                 data-phtext="00000">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div xlu-include-file="../field-template.html" 
+                 data-fieldid="password" 
+                 data-labelname="Contraseña" 
+                 data-fieldtype="password" 
+                 data-phtext="Contraseña">
+            </div>
+            <div xlu-include-file="../field-template.html" 
+                 data-fieldid="confirm-password" 
+                 data-labelname="Confirmar Contraseña" 
+                 data-fieldtype="password" 
+                 data-phtext="Confirmar Contraseña">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="account-type">Tipo de cuenta</label>
+            <select id="account-type" name="account-type">
+                <option value="">Selecciona la opción</option>
+                <option value="personal">Personal</option>
+                <option value="business">Negocios</option>
+            </select>
+        </div>
+
+        <button type="submit">Registrarse</button>
     </form>
-</section>
+</div>
+
+<script src="../script.js"></script>
+<script>
+    xLuIncludeFile();
+</script>
