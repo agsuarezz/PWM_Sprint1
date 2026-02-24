@@ -1,3 +1,35 @@
+:root{
+    --primary-black: #0f0f0f;
+    --secondary-black: #1a1a1a;
+
+    --pure-white: #ffffff;
+    --marble: #f8f6f1;
+    --soft-gray: #f4f4f4;
+    --border-gray: #e0e0e0;
+
+    --gold-accent: #d4af37;
+    --gold-soft: #e6c676;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--pure-white);
+    color: var(--primary-black);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
 .account-content {
     padding: 80px 10%;
     background-color: var(--pure-white);
@@ -52,15 +84,13 @@
 
 /* 4. Contenedor de Tarjetas (card-container.html) */
 .cards-wrapper {
-    background: #f8f6f1; /* Beige claro */
     display: grid;
-    padding: 80px 15%;
+    padding: 60px 15%; 
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     align-items: stretch;
-    border-top: 1px solid #ece8df;
-    border-bottom: 1px solid #ece8df;
 }
+
 .card-container {
     background: var(--pure-white);
     /* Reducimos el padding vertical de 60px a 40px */
@@ -76,7 +106,6 @@
     /* Mantenemos el ancho máximo estrecho */
     max-width: 280px;
     margin: 0 auto;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
 .card-container:hover {
@@ -255,14 +284,12 @@ header{
    ========================================================================== */
 
 .benefit-section {
-    padding: 80px 10%;
-    background: #f1ede6; /* Beige ligeramente más oscuro */
+    padding: 60px 10%;
+    background: var(--pure-white);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     align-items: start;
-    border-top: 1px solid #e6e1d8;
-    border-bottom: 1px solid #e6e1d8;
 }
 
 .benefit-card {
@@ -273,7 +300,6 @@ header{
     overflow: hidden;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
 .benefit-card:hover {
