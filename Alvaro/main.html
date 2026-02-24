@@ -10,16 +10,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div xlu-include-file="header.html"></div>
+    <header xlu-include-file="header.html"></header>
 
 <main>
     <div xlu-include-file="ImageTextAccount.html"></div>
 
     <section class="cards-wrapper">
-        <div xlu-include-file="card-container.html"></div>
-        <div xlu-include-file="card-container.html"></div>
-        <div xlu-include-file="card-container.html"></div>
+        <div xlu-include-file="card-container.html" 
+            data-title="Cuenta Ahorro" 
+            data-content="Crece tu patrimonio con el 3% TAE."
+            data-image="https://cdn-icons-png.flaticon.com/512/2830/2830284.png"
+            data-imageCaption="Prueba">
+        </div>
+        
+        <div xlu-include-file="card-container.html" 
+            data-title="Préstamos" 
+            data-content="Financiación inmediata para tus proyectos."
+            data-image="https://cdn-icons-png.flaticon.com/512/2830/2830284.png"
+            data-imageCaption="Prueba">
+        </div>
+        
+        <div xlu-include-file="card-container.html" 
+            data-title="Seguros" 
+            data-content="Protege lo que más quieres con Imperium."
+            data-image="https://cdn-icons-png.flaticon.com/512/2830/2830284.png"
+            data-imageCaption="Prueba">
+        </div>
     </section>
 </main>
 
@@ -35,7 +51,6 @@
             benefits: "<li>Gestor personal 24/7</li><li>Tarjetas Black sin coste</li>",
 
             // Datos para las 3 cards
-            image: "https://cdn-icons-png.flaticon.com/512/2830/2830284.png",
             imageCaption: "Servicio Bancario",
             content: "Accede a préstamos personales con tasa preferencial."
             // Nota: 'title' lo tomará del 'title' de arriba si no lo separas

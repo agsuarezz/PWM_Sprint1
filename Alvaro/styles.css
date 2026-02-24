@@ -165,7 +165,6 @@ h1, h2, h3 {
     opacity: 1;
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
     .account-content__container {
         grid-template-columns: 1fr;
@@ -178,18 +177,83 @@ h1, h2, h3 {
     }
 }
 
-/* Contenedor para alinear las 3 tarjetas */
 .cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
-    gap: 30px;                             /* Espacio entre tarjetas */
-    padding: 40px 10%;                     /* Margen lateral señorial */
-    background-color: #ffffff;             /* Fondo limpio */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 10%;
+    align-items: stretch;
 }
 
-/* Ajuste para que las tarjetas no se peguen en móviles */
-@media (max-width: 900px) {
-    .cards-wrapper {
-        grid-template-columns: 1fr;        /* En móviles, una debajo de otra */
-    }
+.card-container {
+    background: var(--pure-white);
+    padding: 40px;
+    border: 1px solid var(--border-gray);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.header-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* LOGO */
+.header-left{
+    flex: 0 0 auto;
+}
+
+/* ZONA DERECHA ocupa todo el espacio restante */
+.header-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* WRAPPER del nav + botones */
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* NAV centrado REAL */
+.main-navigation{
+    margin: 0 auto;
+}
+
+.main-navigation ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* BOTONES DERECHA */
+.client-access{
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
