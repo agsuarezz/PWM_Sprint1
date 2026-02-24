@@ -45,8 +45,6 @@ h1, h2, h3 {
 .account-content__image img {
     width: 100%;
     height: auto;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
 }
 
 .account-content__image img:hover {
