@@ -298,3 +298,62 @@ header{
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(0,68,129,0.25);
 }
+
+.benefit-section{
+  padding: 40px 10%;
+  background: var(--pure-white);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.benefit-card{
+  width: 100%;
+  background: var(--pure-white);
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card:hover{
+  transform: translateY(-4px);
+  border-color: #cfcfcf;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.benefit-image{
+  width: 100%;
+  height: 180px;
+  background: var(--soft-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-image img{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  opacity: 0.35;
+}
+
+.benefit-content{
+  padding: 14px 14px 16px;
+}
+
+.benefit-content h3{
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.2px;
+}
+
+.benefit-content p{
+  font-size: 11px;
+  color: #777;
+  margin: 0;
+}
