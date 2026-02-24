@@ -1,0 +1,139 @@
+/*HEADER*/
+header{
+    width: 100%;
+    background: black;
+    border-bottom: 1px solid black;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+.header-container{
+    margin: 0 auto;
+    padding: 14px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header-left img{
+    display: block;
+    height: 80px;
+}
+
+.header-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.main-navigation{
+    margin: 0 auto;
+}
+
+.main-navigation ul{
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.main-navigation a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.main-navigation a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.25s ease;
+}
+
+.main-navigation a:hover{
+    color: #4da3ff;
+}
+
+.main-navigation a:hover::after{
+    width: 100%;
+}
+
+.client-access{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.login-link{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.login-link:hover{
+    opacity: 0.7;
+}
+
+.btn-signup{
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,68,129,0.15);
+}
+
+.btn-signup:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,68,129,0.25);
+}
+
+/*FOOTER*/
+.footer-socket {
+    background-color: var(--primary-black);
+    color: var(--pure-white);
+    padding: 40px 10%;
+}
+
+.socket-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.socket-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.socket-nav a {
+    color: var(--pure-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.socket-nav a:hover {
+    opacity: 1;
+}
