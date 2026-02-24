@@ -83,40 +83,61 @@ h1, h2, h3 {
 }
 
 /* 4. Contenedor de Tarjetas (card-container.html) */
-.services-grid {
-    padding: 60px 10%;
-    background-color: var(--soft-gray);
+.cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    padding: 60px 15%; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: stretch;
 }
 
 .card-container {
     background: var(--pure-white);
-    padding: 40px;
+    /* Reducimos el padding vertical de 60px a 40px */
+    padding: 40px 20px; 
     border: 1px solid var(--border-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Reducimos la altura mínima de 400px a 320px */
+    min-height: 320px; 
     transition: all 0.3s ease;
+    /* Mantenemos el ancho máximo estrecho */
+    max-width: 280px;
+    margin: 0 auto;
 }
 
 .card-container:hover {
     border-color: var(--primary-black);
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 .card-icon img {
-    width: 40px;
-    margin-bottom: 20px;
+    width: 45px;
+    height: auto;
+    /* Reducimos un poco el margen del icono */
+    margin-bottom: 25px;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .card-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 .card-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #555;
+    line-height: 1.5;
 }
 
 /* 5. Footer (footermain.html) */
@@ -149,48 +170,6 @@ h1, h2, h3 {
 
 .socket-nav a:hover {
     opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .account-content__container {
-        grid-template-columns: 1fr;
-    }
-    
-    .socket-container {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-}
-
-.cards-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 40px 10%;
-    align-items: stretch;
-}
-
-.card-container {
-    background: var(--pure-white);
-    padding: 40px;
-    border: 1px solid var(--border-gray);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: all 0.3s ease;
-}
-
-.card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-text {
-    flex-grow: 1;
-    font-size: 0.95rem;
-    color: #555;
 }
 
 header{
@@ -299,61 +278,73 @@ header{
     box-shadow: 0 6px 16px rgba(0,68,129,0.25);
 }
 
-.benefit-section{
-  padding: 40px 10%;
-  background: var(--pure-white);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  align-items: start;
+/* ==========================================================================
+   SECCIÓN DE BENEFICIOS (benefit-section)
+   ========================================================================== */
+
+.benefit-section {
+    padding: 60px 10%;
+    background: var(--pure-white);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: start;
 }
 
-.benefit-card{
-  width: 100%;
-  background: var(--pure-white);
-  border: 1px solid var(--border-gray);
-  border-radius: 6px;
-  overflow: hidden;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+.benefit-card {
+    width: 100%;
+    background: var(--pure-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 8px; /* Bordes ligeramente más redondeados */
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.benefit-card:hover{
-  transform: translateY(-4px);
-  border-color: #cfcfcf;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+.benefit-card:hover {
+    transform: translateY(-6px);
+    border-color: #cfcfcf;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 }
 
-.benefit-image{
-  width: 100%;
-  height: 180px;
-  background: var(--soft-gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Contenedor de la imagen: ahora configurado para llenar el espacio */
+.benefit-image {
+    width: 100%;
+    height: 200px; /* Altura fija para el área de la imagen */
+    background: var(--soft-gray);
+    overflow: hidden; /* Corta lo que sobresalga del zoom */
 }
 
-.benefit-image img{
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  opacity: 0.35;
+.benefit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Clave: la imagen llena el recuadro sin deformarse */
+    opacity: 1;        /* Imagen totalmente visible */
+    display: block;
+    transition: transform 0.5s ease; /* Transición suave para el efecto hover */
 }
 
-.benefit-content{
-  padding: 14px 14px 16px;
+/* Efecto de zoom sutil en la imagen al pasar el ratón */
+.benefit-card:hover .benefit-image img {
+    transform: scale(1.08);
 }
 
-.benefit-content h3{
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  margin: 0 0 4px 0;
-  letter-spacing: 0.2px;
+.benefit-content {
+    padding: 20px; /* Un poco más de aire interno */
 }
 
-.benefit-content p{
-  font-size: 11px;
-  color: #777;
-  margin: 0;
+.benefit-content h3 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px; /* Tamaño más legible */
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.1px;
+    color: var(--primary-black);
+}
+
+.benefit-content p {
+    font-size: 13px; /* Tamaño ajustado para lectura */
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
 }
