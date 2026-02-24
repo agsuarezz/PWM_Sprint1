@@ -1,5 +1,18 @@
-<div class="register-container">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../stylesRegister.css">
 
+<header class="header">
+    <div class="header-container">
+        <div class="header-left">
+            <div xlu-include-file="../logo.html"></div>
+        </div>
+        <div class="header-right">
+            <div xlu-include-file="../nav.html"></div>
+        </div>
+    </div>
+</header>
+
+<main class="register-container">
     <form>
         <div xlu-include-file="../field-template.html" 
              data-fieldid="name" 
@@ -75,9 +88,11 @@
             </select>
         </div>
 
-        <button type="submit">Registrarse</button>
+        <button type="submit">Submit</button>
     </form>
-</div>
+</main>
+
+<footer xlu-include-file="../footer.html"></footer>
 
 <script src="../script.js"></script>
 <script>
