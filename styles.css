@@ -236,7 +236,7 @@ header{
 }
 
 .main-navigation a:hover{
-    color: goldenrod;
+    color: #4da3ff;
 }
 
 .main-navigation a:hover::after{
