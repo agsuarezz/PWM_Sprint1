@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Unión de Templates - Naiara</title>
+</head>
+<body>
+    <div xlu-include-file="login-template.html"></div>
+
+    <script>
+        // Valores por defecto si no se pasan por data-attributes
+        window.attributes = {
+            "valText": ""
+        };
+    </script>
+
+    <script src="../script.js"></script>
+
+    <script>
+        window.onload = () => {
+            if (typeof xLuIncludeFile === "function") {
+                xLuIncludeFile();
+            }
+        };
+    </script>
+</body>
+</html>
