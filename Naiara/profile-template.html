@@ -12,19 +12,17 @@
     </div>
 </header>
 
-<div class="profile-main-wrapper">
-    <div id="profile-layout-container">
+<main class="perfil-fondo-general">
+    <div class="perfil-tarjeta-dos-columnas">
         
-        <div class="profile-left-column">
-            <div xlu-include-file="fotoPerfil.html"></div>
-        </div>
+        <aside class="perfil-columna-izquierda">
+            <img class="perfil-imagen-redonda" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Foto de Perfil">
+        </aside>
 
-        <div class="profile-right-column">
-            <div class="profile-header">
-                <div class="profile-name">
-                    <h2>Nombre</h2>
-                    <p>Apellido1 Apellido2</p>
-                </div>
+        <section class="perfil-columna-derecha">
+            <div class="perfil-cabecera-titulos">
+                <h2>Nombre</h2>
+                <p>Apellido1 Apellido2</p>
             </div>
 
             <div xlu-include-file="profile-field-template.html" 
@@ -42,13 +40,13 @@
                  data-uservalue="+34 600 000 000">
             </div>
 
-            <button type="button" class="btn-baja">Darse de baja</button>
-        </div>
+            <button type="button" class="perfil-boton-baja">Darse de baja</button>
+        </section>
 
     </div>
-</div>
+</main>
 
-<footer xlu-include-file="../footermain.html"></footer>
+<footer xlu-include-file="../footer.html"></footer>
 
 <script src="../script.js"></script>
 <script>
