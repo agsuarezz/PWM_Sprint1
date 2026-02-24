@@ -63,7 +63,7 @@ header{
 }
 
 .main-navigation a:hover{
-    color: #4da3ff;
+    color: goldenrod;
 }
 
 .main-navigation a:hover::after{
