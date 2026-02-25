@@ -3,5 +3,10 @@
         <h3>{{labeltitle}}</h3>
         <p>{{uservalue}}</p>
     </div>
-    <button type="button" class="btn-modificar">Modificar</button>
+    <div class="btn-edit-container" 
+         xlu-include-file="button.html" 
+         data-btnid="edit-{{labeltitle}}" 
+         data-text="Modificar" 
+         data-href="#">
+    </div>
 </article>

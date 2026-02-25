@@ -10,7 +10,7 @@
             <div class="transfer-body">
                 <h2 id="titulo-operacion" class="transfer-title">Cargando operación...</h2>
                 
-                <div class="transfer-flex-row" xlu-include-file="../field-template.html" 
+                <div class="transfer-flex-row" xlu-include-file="field-template.html" 
                      data-fieldid="nombre" 
                      data-labelname="Nombre del beneficiario" 
                      data-fieldtype="text" 
@@ -18,7 +18,7 @@
                      data-valtext="">
                 </div>
 
-                <div class="transfer-flex-row" xlu-include-file="../field-template.html" 
+                <div class="transfer-flex-row" xlu-include-file="field-template.html" 
                      data-fieldid="iban" 
                      data-labelname="Número de cuenta (IBAN)" 
                      data-fieldtype="text" 
@@ -26,7 +26,7 @@
                      data-valtext="">
                 </div>
 
-                <div class="transfer-flex-row" xlu-include-file="../field-template.html" 
+                <div class="transfer-flex-row" xlu-include-file="field-template.html" 
                      data-fieldid="importe" 
                      data-labelname="Importe" 
                      data-fieldtype="number" 
@@ -34,7 +34,7 @@
                      data-valtext="">
                 </div>
 
-                <div class="transfer-flex-row" xlu-include-file="../field-template.html" 
+                <div class="transfer-flex-row" xlu-include-file="field-template.html" 
                      data-fieldid="concepto" 
                      data-labelname="Concepto" 
                      data-fieldtype="text" 
@@ -44,16 +44,30 @@
             </div>
 
             <div class="transfer-footer">
+                
                 <div class="footer-left">
-                    <button class="btn-borrar" type="reset">Borrar</button>
+                    <div xlu-include-file="button.html" 
+                         data-btnid="btn-borrar" 
+                         data-text="Borrar" 
+                         data-href="#">
+                    </div>
                 </div>
                 
                 <div class="footer-right">
-                    <a href="#" class="btn-cancelar">Cancelar</a>
-                    <button id="btn-accion" class="btn-transferir" type="submit">Aceptar</button>
+                    <div xlu-include-file="button.html" 
+                         data-btnid="btn-cancelar" 
+                         data-text="Cancelar" 
+                         data-href="#">
+                    </div>
+
+                    <div xlu-include-file="button.html" 
+                         data-btnid="btn-accion" 
+                         data-text="Aceptar" 
+                         data-href="#">
+                    </div>
                 </div>
-            </div>
-        </form>
+
+            </div> </form>
 
     </div>
 </main>
