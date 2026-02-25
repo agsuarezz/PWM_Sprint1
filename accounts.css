@@ -1,0 +1,30 @@
+.category-nav-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-gray);
+    margin-bottom: 50px;
+}
+
+.category-navigation ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.category-navigation a {
+    text-decoration: none;
+    color: #999;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.category-navigation a.active, 
+.category-navigation a:hover {
+    color: var(--primary-black);
+    border-bottom: 2px solid goldenrod;
+}

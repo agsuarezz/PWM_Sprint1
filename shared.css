@@ -24,6 +24,21 @@ body {
     line-height: 1.6;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; 
+}
+
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -168,4 +183,56 @@ header{
 
 .socket-nav a:hover {
     opacity: 1;
+}
+
+.account-content {
+    padding: 80px 10%;
+    background-color: var(--pure-white);
+}
+
+.account-content__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.account-content__image img {
+    width: 100%;
+    height: auto;
+}
+
+.account-content__image img:hover {
+    filter: grayscale(0%);
+}
+
+.account-content__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.account-content__subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-black);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.account-content__benefits {
+    list-style: none;
+    border-top: 2px solid var(--primary-black);
+    padding-top: 20px;
+}
+
+.account-content__benefits li {
+    padding: 10px 0;
+    font-weight: 500;
+    border-bottom: 1px solid var(--soft-gray);
+}
+
+.account-content__benefits li::before {
+    content: "•";
+    margin-right: 10px;
+    color: var(--primary-black);
 }
