@@ -176,6 +176,23 @@ header{
     letter-spacing: 1px;
 }
 
+.store-badges {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.store-badges img {
+    height: 38px;
+    width: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.store-badges img:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
 .socket-nav ul {
     display: flex;
     list-style: none;
