@@ -1,6 +1,17 @@
-/* ==========================================================================
-   LAYOUT DE SERVICIOS (2x2 + IMAGEN DERECHA)
-   ========================================================================== */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; 
+}
 
 .services-main {
     padding: 100px 5%;
@@ -8,49 +19,43 @@
 }
 
 .services-container {
-    max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    gap: 60px;
-    align-items: center; /* Centra verticalmente los servicios respecto a la imagen */
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center;
 }
 
-/* Rejilla 2x2 para los servicios */
 .services-grid {
-    flex: 1; /* Ocupa el espacio restante */
+    flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Crea las 2 columnas */
-    grid-template-rows: auto auto;          /* Crea las 2 filas */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
     gap: 40px 30px;
 }
 
-/* Contenedor de la imagen a la derecha */
 .services-hero-image {
-    flex: 0 0 45%; /* La imagen ocupa el 45% del ancho total */
+    flex: 1;
 }
 
 .services-hero-image img {
     width: 100%;
-    height: 600px; /* Altura generosa para el estilo señorial */
+    height: 600px;
     object-fit: cover;
     border-radius: 4px;
-    box-shadow: 20px 20px 0px -5px goldenrod; /* Detalle decorativo en goldenrod */
+    box-shadow: 20px 20px 0px -5px goldenrod;
 }
-
-/* ==========================================================================
-   DETALLES SERVICE-INFO.HTML (GOLDENROD ACCENTS)
-   ========================================================================== */
 
 .service-item {
     display: flex;
-    flex-direction: column; /* Alineación vertical para el 2x2 */
+    flex-direction: column;
     gap: 15px;
 }
 
 .service-icon {
     width: 40px;
     height: 40px;
-    border-bottom: 2px solid goldenrod; /* Subrayado del icono */
+    border-bottom: 2px solid goldenrod;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -59,7 +64,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Tinte dorado para los iconos */
     filter: sepia(1) saturate(3) brightness(0.8) hue-rotate(5deg);
 }
 
@@ -75,26 +79,29 @@
     font-size: 0.95rem;
     color: #666;
     line-height: 1.6;
-    border-left: 1px solid #eee; /* Línea de separación sutil */
+    border-left: 1px solid #eee;
     padding-left: 15px;
 }
 
-/* Responsive para tablets y móviles */
 @media (max-width: 1024px) {
     .services-container {
         flex-direction: column;
+        gap: 50px;
     }
     .services-hero-image {
         width: 100%;
-        order: -1; /* La imagen pasa arriba en móviles */
+        order: -1;
     }
     .services-hero-image img {
         height: 300px;
+    }
+    .services-grid {
+        flex: 1;
     }
 }
 
 @media (max-width: 600px) {
     .services-grid {
-        grid-template-columns: 1fr; /* Una sola columna en móviles pequeños */
+        grid-template-columns: 1fr;
     }
 }
