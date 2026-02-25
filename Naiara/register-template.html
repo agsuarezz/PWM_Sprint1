@@ -16,37 +16,42 @@
     <form>
         <div xlu-include-file="../field-template.html" 
              data-fieldid="name" 
-             data-labelname="Name" 
+             data-labelname="Nombre" 
              data-fieldtype="text" 
-             data-phtext="Value">
+             data-valtext=""
+             data-phtext="Ej: Naiara">
         </div>
 
         <div xlu-include-file="../field-template.html" 
              data-fieldid="surname" 
-             data-labelname="Surname" 
+             data-labelname="Apellidos" 
              data-fieldtype="text" 
-             data-phtext="Value">
+             data-valtext=""
+             data-phtext="Ej: Pérez García">
         </div>
 
         <div xlu-include-file="../field-template.html" 
              data-fieldid="email" 
-             data-labelname="Email" 
+             data-labelname="Correo Electrónico" 
              data-fieldtype="email" 
-             data-phtext="Value">
+             data-valtext=""
+             data-phtext="usuario@correo.com">
         </div>
 
         <div xlu-include-file="../field-template.html" 
              data-fieldid="phone" 
-             data-labelname="Phone" 
+             data-labelname="Teléfono" 
              data-fieldtype="tel" 
-             data-phtext="Value">
+             data-valtext=""
+             data-phtext="+34 600 000 000">
         </div>
 
         <div xlu-include-file="../field-template.html" 
              data-fieldid="birthdate" 
              data-labelname="Fecha de nacimiento" 
              data-fieldtype="text" 
-             data-phtext="DD/MM/AA">
+             data-valtext=""
+             data-phtext="DD/MM/AAAA">
         </div>
 
         <div class="form-row">
@@ -54,12 +59,14 @@
                  data-fieldid="address" 
                  data-labelname="Dirección" 
                  data-fieldtype="text" 
+                 data-valtext=""
                  data-phtext="Calle, num, piso, letra">
             </div>
             <div xlu-include-file="../field-template.html" 
                  data-fieldid="zip" 
                  data-labelname="Código Postal" 
                  data-fieldtype="text" 
+                 data-valtext=""
                  data-phtext="00000">
             </div>
         </div>
@@ -69,13 +76,15 @@
                  data-fieldid="password" 
                  data-labelname="Contraseña" 
                  data-fieldtype="password" 
-                 data-phtext="Contraseña">
+                 data-valtext=""
+                 data-phtext="Crea una contraseña">
             </div>
             <div xlu-include-file="../field-template.html" 
                  data-fieldid="confirm-password" 
                  data-labelname="Confirmar Contraseña" 
                  data-fieldtype="password" 
-                 data-phtext="Confirmar Contraseña">
+                 data-valtext=""
+                 data-phtext="Repite la contraseña">
             </div>
         </div>
 
@@ -88,7 +97,7 @@
             </select>
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Completar Registro</button>
     </form>
 </main>
 
