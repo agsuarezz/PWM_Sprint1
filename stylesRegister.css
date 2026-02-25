@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
-    background-color: #f4f7f6;
+    background-color: white;
 }
 
 
@@ -23,7 +23,7 @@ body {
 
 
 .register-container form {
-    background: #ffffff;
+    background: white;
     width: 100%;
     max-width: 750px; 
     padding: 50px 60px;
@@ -61,7 +61,7 @@ body {
     padding: 16px;
     border: 1px solid #e8e8e8;
     border-radius: 12px;
-    background-color: #fdfdfd;
+    background-color: white;
     font-size: 15px;
     box-sizing: border-box;
     transition: all 0.3s ease;
@@ -71,7 +71,7 @@ body {
 .register-container select:focus {
     outline: none;
     border-color: #1a1a1a;
-    background-color: #ffffff;
+    background-color: white;
     box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
 }
 
