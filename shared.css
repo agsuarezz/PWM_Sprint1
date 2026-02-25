@@ -24,19 +24,27 @@ body {
     line-height: 1.6;
 }
 
+/* 1. Hacemos que toda la estructura ocupe el 100% de la pantalla */
 html, body {
     height: 100%;
     margin: 0;
 }
 
+/* 2. Convertimos el body en un contenedor flexible vertical */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* 100% del alto de la ventana del navegador */
 }
 
+/* 3. El truco mágico: el main se estira para ocupar todo el espacio vacío */
 main {
-    flex: 1; 
+    flex: 1 0 auto;
+}
+
+/* 4. El footer se quedará ahora siempre al fondo */
+footer {
+    flex-shrink: 0;
 }
 
 h1, h2, h3 {
