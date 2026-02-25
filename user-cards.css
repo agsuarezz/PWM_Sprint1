@@ -1,0 +1,244 @@
+/* ==========================================================
+   USER CARDS - ESTILO IMPERIUM BANK
+   ========================================================== */
+
+:root{
+  --imperium-black:#0b0b0b;
+  --imperium-white:#ffffff;
+  --imperium-ink:#121212;
+  --imperium-muted:#6b6b6b;
+  --imperium-line:#e7e3da;
+  --imperium-sand:#f8f6f1;
+  --imperium-gold:#c6a15b;
+}
+
+.dashboard{
+  font-family: "Inter", system-ui, sans-serif;
+  padding: 80px 10%;
+  background: var(--imperium-white);
+}
+
+/* ===== Balance ===== */
+.dashboard__balance{
+  display:flex;
+  justify-content:center;
+  margin-bottom:40px;
+}
+
+.balance-card{
+  width:420px;
+  height:160px;
+  background: var(--imperium-sand);
+  border:1px solid var(--imperium-line);
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.balance-content{ text-align:center; }
+
+.balance-label{
+  display:block;
+  font-weight:600;
+  font-size:14px;
+  margin-bottom:12px;
+  color:var(--imperium-muted);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+.balance-amount{
+  margin:0;
+  font-size:30px;
+  font-weight:800;
+  color:var(--imperium-black);
+}
+
+/* ===== Divider ===== */
+.dashboard__divider{
+  border:none;
+  border-top:1px solid var(--imperium-line);
+  margin:0 0 50px 0;
+}
+
+/* ===== Actions ===== */
+.dashboard__actions{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  margin-bottom:40px;
+}
+
+.action-card{
+  width:230px;
+  height:60px;
+  background:var(--imperium-white);
+  border:1px solid var(--imperium-line);
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  cursor:pointer;
+}
+
+.action-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(0,0,0,0.25);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.action-icon{ width:26px; height:26px; }
+
+.action-icon img{
+  width:24px;
+  height:24px;
+  object-fit:contain;
+  filter: grayscale(1) contrast(1.1);
+  opacity:.9;
+}
+
+.action-text{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.5px;
+  color:var(--imperium-ink);
+  text-transform:uppercase;
+}
+
+/* ===== Content ===== */
+.dashboard__content{
+  width:min(760px, 100%);
+  margin:0 auto;
+}
+
+.dashboard__hint{
+  margin:0 0 14px 0;
+  color:#c9c3b6;
+  font-weight:700;
+  font-size:16px;
+}
+
+/* ===== Tabs ===== */
+.tabs{
+  width:380px;
+  display:flex;
+  background:var(--imperium-white);
+  border:1px solid var(--imperium-line);
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:30px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+.tabs__tab{
+  flex:1;
+  border:none;
+  background:transparent;
+  padding:14px 16px;
+  cursor:pointer;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  color:var(--imperium-ink);
+  transition: background .2s ease, color .2s ease;
+}
+
+.tabs__tab:hover{
+  background:var(--imperium-sand);
+}
+
+.tabs__tab--active{
+  background:var(--imperium-black);
+  color:var(--imperium-white);
+}
+
+.tabs__icon{
+  color:var(--imperium-gold);
+  font-size:12px;
+}
+
+/* ==========================================================
+   TARJETAS (card-info.html)
+   ========================================================== */
+
+.cards-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.card-info{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+
+  padding:18px 18px;
+  background: #efeaff;              /* lila como tu captura */
+  border: 1px solid #b9b0db;
+  border-radius: 10px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card-info__text{
+  min-width: 120px;
+}
+
+.card-info__title{
+  margin:0;
+  font-weight:800;
+  font-size:13px;
+  color:#1f1f1f;
+  line-height:1.2;
+}
+
+.card-info__subtitle{
+  margin:6px 0 0;
+  font-size:12px;
+  color:#5b5b5b;
+}
+
+.card-info__preview{
+  width: 160px;
+  height: 90px;
+  border-radius: 10px;
+  overflow:hidden;
+  flex: 0 0 auto;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+
+.card-info__preview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
+  .dashboard{ padding: 60px 6%; }
+  .dashboard__actions{ flex-wrap: wrap; }
+  .action-card{ width: 100%; max-width: 420px; }
+  .tabs{ width: 100%; max-width: 420px; }
+
+  .card-info{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-info__preview{
+    width: 100%;
+    height: 120px;
+  }
+}

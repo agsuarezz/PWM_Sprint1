@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banco Imperium - Tarjetas</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="user-cards.css">
+</head>
+
+<body>
+
+  <!-- HEADER (ya incluye logo desde shared) -->
+  <header xlu-include-file="header.html"></header>
+
+  <main class="dashboard">
+
+    <!-- BALANCE -->
+    <section class="dashboard__balance">
+      <div
+        xlu-include-file="balance-template.html"
+        data-label="Dinero disponible"
+        data-amount="1.250,00 €">
+      </div>
+    </section>
+
+    <hr class="dashboard__divider" />
+
+    <!-- ACCIONES -->
+    <section class="dashboard__actions">
+      <div xlu-include-file="action-user.html"
+        data-icon="https://cdn-icons-png.flaticon.com/512/1828/1828640.png"
+        data-label="Transferir">
+      </div>
+
+      <div xlu-include-file="action-user.html"
+        data-icon="https://cdn-icons-png.flaticon.com/512/126/126083.png"
+        data-label="Pagar">
+      </div>
+
+      <div xlu-include-file="action-user.html"
+        data-icon="https://cdn-icons-png.flaticon.com/512/929/929426.png"
+        data-label="Recargar">
+      </div>
+    </section>
+
+    <section class="dashboard__content">
+
+      <p class="dashboard__hint">Connected button group</p>
+
+      <!-- TABS (Tarjetas activa) -->
+      <nav class="tabs" aria-label="Secciones">
+        <button
+          type="button"
+          class="tabs__tab"
+          aria-selected="false">
+          <span class="tabs__icon">★</span>
+          <span class="tabs__text">Movimientos</span>
+        </button>
+
+        <button
+          type="button"
+          class="tabs__tab tabs__tab--active"
+          aria-selected="true">
+          <span class="tabs__icon">★</span>
+          <span class="tabs__text">Tarjetas</span>
+        </button>
+      </nav>
+
+      <!-- ===== LISTA DE TARJETAS ===== -->
+      <div class="cards-list">
+
+        <!-- TARJETA 1 -->
+        <div xlu-include-file="card-info.html"
+          data-title="Tarjeta Black"
+          data-subtitle="Débito • Activa"
+          data-card_img_src="images/card-black-gold.png"
+          data-card_img_alt="Tarjeta Black Imperium">
+        </div>
+
+        <!-- TARJETA 2 -->
+        <div xlu-include-file="card-info.html"
+          data-title="Tarjeta Premium"
+          data-subtitle="Crédito • Activa"
+          data-card_img_src="images/card-black-gold.png"
+          data-card_img_alt="Tarjeta Premium Imperium">
+        </div>
+
+        <!-- TARJETA 3 -->
+        <div xlu-include-file="card-info.html"
+          data-title="Tarjeta Travel"
+          data-subtitle="Crédito • Internacional"
+          data-card_img_src="images/card-black-gold.png"
+          data-card_img_alt="Tarjeta Travel Imperium">
+        </div>
+
+      </div>
+      <!-- ===== /LISTA DE TARJETAS ===== -->
+
+    </section>
+
+  </main>
+
+  <footer xlu-include-file="footer.html"></footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+  </script>
+
+</body>
+</html>
