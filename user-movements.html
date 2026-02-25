@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banco Imperium - Movimientos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="user-movements.css">
+</head>
+
+<body>
+  <!-- Header (ya incluye logo según tu shared) -->
+  <header xlu-include-file="header.html"></header>
+
+  <main class="dashboard">
+
+    <!-- BALANCE -->
+    <section class="dashboard__balance">
+      <div
+        xlu-include-file="balance-template.html"
+        data-label="Dinero disponible"
+        data-amount="1.250,00 €">
+      </div>
+    </section>
+
+    <hr class="dashboard__divider" />
+
+    <!-- ACTIONS -->
+    <section class="dashboard__actions">
+
+      <div xlu-include-file="action-user.html"
+        data-icon="https://cdn-icons-png.flaticon.com/512/1828/1828640.png"
+        data-label="Transferir">
+      </div>
+
+      <div xlu-include-file="action-user.html"
+        data-icon="https://cdn-icons-png.flaticon.com/512/126/126083.png"
+        data-label="Pagar">
+      </div>
+
+      <div xlu-include-file="action-user.html"
+        data-icon="https://cdn-icons-png.flaticon.com/512/929/929426.png"
+        data-label="Recargar">
+      </div>
+
+    </section>
+
+    <section class="dashboard__content">
+
+      <p class="dashboard__hint">Connected button group</p>
+
+      <!-- TABS -->
+      <div class="dashboard__tabs" xlu-include-file="Button-movements-cards.html"></div>
+
+      <!-- ===== MOVIMIENTOS (TRANSFERENCIAS) ===== -->
+      <div class="dashboard__movements">
+
+        <!-- EJEMPLOS (en tu app esto debería salir de un array y un for) -->
+        <div xlu-include-file="money-moves.html"
+          data-icon_src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+          data-icon_alt="Transferencia"
+          data-title="Transferencia a Juan"
+          data-date="12/02/2026"
+          data-type="neg"
+          data-amount="- 200,00 €">
+        </div>
+
+        <div xlu-include-file="money-moves.html"
+          data-icon_src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+          data-icon_alt="Ingreso"
+          data-title="Nómina"
+          data-date="01/02/2026"
+          data-type="pos"
+          data-amount="+ 1.500,00 €">
+        </div>
+
+        <div xlu-include-file="money-moves.html"
+          data-icon_src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+          data-icon_alt="Pago"
+          data-title="Pago en tienda"
+          data-date="28/01/2026"
+          data-type="neg"
+          data-amount="- 35,20 €">
+        </div>
+
+      </div>
+      <!-- ===== /MOVIMIENTOS ===== -->
+
+    </section>
+
+  </main>
+
+  <footer xlu-include-file="footer.html"></footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+  </script>
+</body>
+</html>

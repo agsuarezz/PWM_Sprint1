@@ -1,0 +1,308 @@
+/* ==========================================================
+   USER MOVEMENTS - ESTILO IMPERIUM BANK
+   ========================================================== */
+
+:root{
+  --imperium-black:#0b0b0b;
+  --imperium-white:#ffffff;
+  --imperium-ink:#121212;
+  --imperium-muted:#6b6b6b;
+  --imperium-line:#e7e3da;
+  --imperium-sand:#f8f6f1;
+  --imperium-gold:#c6a15b;
+}
+
+/* ==========================================================
+   DASHBOARD BASE
+   ========================================================== */
+
+.dashboard{
+  font-family: "Inter", system-ui, sans-serif;
+  padding: 80px 10%;
+  background: var(--imperium-white);
+}
+
+/* ==========================================================
+   BALANCE
+   ========================================================== */
+
+.dashboard__balance{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.balance-card{
+  width: 420px;
+  height: 160px;
+  background: var(--imperium-sand);
+  border: 1px solid var(--imperium-line);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.balance-content{
+  text-align: center;
+}
+
+.balance-label{
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--imperium-muted);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.balance-amount{
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--imperium-black);
+}
+
+/* ==========================================================
+   DIVIDER
+   ========================================================== */
+
+.dashboard__divider{
+  border: none;
+  border-top: 1px solid var(--imperium-line);
+  margin: 0 0 50px 0;
+}
+
+/* ==========================================================
+   ACTION BUTTONS (Transferir / Pagar / Recargar)
+   ========================================================== */
+
+.dashboard__actions{
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.action-card{
+  width: 230px;
+  height: 60px;
+
+  background: var(--imperium-white);
+  border: 1px solid var(--imperium-line);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  cursor: pointer;
+}
+
+.action-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(0,0,0,0.25);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.action-icon{
+  width: 26px;
+  height: 26px;
+}
+
+.action-icon img{
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.1);
+  opacity: .9;
+}
+
+.action-text{
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: var(--imperium-ink);
+  text-transform: uppercase;
+}
+
+/* ==========================================================
+   CONTENT WRAPPER
+   ========================================================== */
+
+.dashboard__content{
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.dashboard__hint{
+  margin: 0 0 14px 0;
+  color: #c9c3b6;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* ==========================================================
+   TABS (Movimientos / Tarjetas)
+   ========================================================== */
+
+.tabs{
+  width: 380px;
+  display: flex;
+  background: var(--imperium-white);
+  border: 1px solid var(--imperium-line);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+.tabs__tab{
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 14px 16px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+
+  color: var(--imperium-ink);
+  transition: background .2s ease, color .2s ease;
+}
+
+.tabs__tab:hover{
+  background: var(--imperium-sand);
+}
+
+.tabs__tab--active{
+  background: var(--imperium-black);
+  color: var(--imperium-white);
+}
+
+.tabs__icon{
+  color: var(--imperium-gold);
+  font-size: 12px;
+}
+
+/* ==========================================================
+   MOVEMENTS LIST
+   ========================================================== */
+
+.dashboard__movements{
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--imperium-line);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+.movement-item{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 18px;
+  border-bottom: 1px solid var(--imperium-line);
+  background: var(--imperium-white);
+  transition: background .2s ease;
+}
+
+.movement-item:last-child{
+  border-bottom: none;
+}
+
+.movement-item:hover{
+  background: #faf8f3;
+}
+
+.movement-item__icon{
+  width: 60px;
+  height: 46px;
+  background: var(--imperium-black);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movement-item__icon img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.movement-item__info{
+  flex: 1;
+}
+
+.movement-item__title{
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--imperium-ink);
+}
+
+.movement-item__date{
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--imperium-muted);
+}
+
+.movement-item__amount{
+  min-width: 140px;
+  text-align: right;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+/* Colores según tipo */
+.movement-item__amount--pos{
+  color: #1c7c3a;
+}
+
+.movement-item__amount--neg{
+  color: #c0392b;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px){
+
+  .dashboard{
+    padding: 60px 6%;
+  }
+
+  .dashboard__actions{
+    flex-wrap: wrap;
+  }
+
+  .action-card{
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .tabs{
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .balance-card{
+    width: 100%;
+    max-width: 420px;
+  }
+
+}
