@@ -1,12 +1,14 @@
-<link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="../stylesOperaciones.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="stylesOperations.css">
+
+<div xlu-include-file="header.html"></div>
 
 <main class="transfer-page-wrapper">
     <div class="transfer-card">
         
-        <form>
+        <form id="formulario-operacion">
             <div class="transfer-body">
-                <h2 class="transfer-title">Realizar Transferencia</h2>
+                <h2 id="titulo-operacion" class="transfer-title">Cargando operación...</h2>
                 
                 <div class="transfer-flex-row" xlu-include-file="../field-template.html" 
                      data-fieldid="nombre" 
@@ -48,7 +50,7 @@
                 
                 <div class="footer-right">
                     <a href="#" class="btn-cancelar">Cancelar</a>
-                    <button class="btn-transferir" type="submit">Transferir</button>
+                    <button id="btn-accion" class="btn-transferir" type="submit">Aceptar</button>
                 </div>
             </div>
         </form>
@@ -56,7 +58,9 @@
     </div>
 </main>
 
-<script src="../script.js"></script>
+<div xlu-include-file="footer.html"></div>
+
+<script src="script.js"></script>
 <script>
     xLuIncludeFile();
 </script>

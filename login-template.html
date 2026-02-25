@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="stylesLogin.css">
+
+<div xlu-include-file="header.html"></div>
+
+<main class="login-page-wrapper">
+    <div class="login-main-container">
+        
+        <div class="login-content-section">
+            
+            <div class="login-image-column">
+                <img class="login-main-image" src="https://images.unsplash.com/photo-1616803140344-6682afb13cda?auto=format&fit=crop&q=80&w=800" alt="Imagen Decorativa">
+            </div>
+
+            <div class="login-form-column">
+                <div class="login-form-card">
+                    
+                    <h1 class="login-title">Te damos la bienvenida</h1>
+                    <p class="login-subtitle">Hola, introduce tu usuario y clave de acceso para continuar.</p>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="usuario">Usuario</label>
+                            <input type="text" id="usuario" placeholder="NIF, NIE, Pasaporte o Tarjeta Anónima">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="password" placeholder="">
+                                <span class="eye-icon">👁️</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-login-submit">Entrar</button>
+
+                        <div class="login-links">
+                            <a href="#">¿Olvidó la contraseña?</a>
+                            <a href="#">¿No eres cliente?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<div xlu-include-file="footer.html"></div>
+
+<script src="script.js"></script>
+<script>
+    xLuIncludeFile();
+</script>

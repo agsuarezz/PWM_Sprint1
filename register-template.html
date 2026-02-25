@@ -1,16 +1,7 @@
-<link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="../stylesRegister.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="stylesRegister.css">
 
-<header class="header">
-    <div class="header-container">
-        <div class="header-left">
-            <div xlu-include-file="../logo.html"></div>
-        </div>
-        <div class="header-right">
-            <div xlu-include-file="../nav.html"></div>
-        </div>
-    </div>
-</header>
+<div xlu-include-file="header.html"></div>
 
 <main class="register-container">
     <form>
@@ -19,7 +10,7 @@
              data-labelname="Nombre" 
              data-fieldtype="text" 
              data-valtext=""
-             data-phtext="Ej: Naiara">
+             data-phtext="Ej: Laura">
         </div>
 
         <div xlu-include-file="../field-template.html" 
@@ -101,9 +92,9 @@
     </form>
 </main>
 
-<footer xlu-include-file="../footer.html"></footer>
+<div xlu-include-file="footer.html"></div>
 
-<script src="../script.js"></script>
+<script src="script.js"></script>
 <script>
     xLuIncludeFile();
 </script>
