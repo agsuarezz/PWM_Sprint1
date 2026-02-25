@@ -1,11 +1,10 @@
-/* --- 1. FONDO Y ESTRUCTURA (INTOCABLE) --- */
 html, body { height: 100%; margin: 0; padding: 0; }
 
 body { 
     display: flex; 
     flex-direction: column; 
     font-family: 'Inter', sans-serif; 
-    background-color: var(--marble); /* Tu fondo arena oficial */
+    background-color: var(--marble);
 }
 
 .transfer-page-wrapper { flex: 1; display: flex; justify-content: center; align-items: center; padding: 4vh 5vw; }
@@ -19,10 +18,8 @@ body {
     overflow: hidden; 
 }
 
-/* --- 2. ZONA SUPERIOR (LIMPIA) --- */
 .transfer-body { padding: 45px 8%; }
 
-/* Título en negro absoluto para máxima autoridad */
 .transfer-title { 
     color: #1a1a1a !important; 
     font-size: 28px; 
@@ -32,7 +29,7 @@ body {
     letter-spacing: -0.5px;
 }
 
-/* --- 3. DISEÑO HORIZONTAL Y CAJAS --- */
+
 .transfer-body > div { 
     display: flex !important; 
     align-items: center !important; 
@@ -45,7 +42,7 @@ body {
     flex: 0 0 200px !important; 
     font-size: 14px !important; 
     font-weight: 600 !important; 
-    color: #555555 !important; /* Gris oscuro neutro */
+    color: #555555 !important;
     text-align: left !important;
 }
 
@@ -53,7 +50,7 @@ body {
     flex: 1 !important; 
     width: 100% !important;
     padding: 13px 18px !important; 
-    border: 1px solid #dcdcdc !important; /* Borde gris seda, muy fino */
+    border: 1px solid #dcdcdc !important;
     border-radius: 8px !important; 
     background-color: #ffffff !important; 
     font-size: 15px !important;
@@ -68,10 +65,8 @@ body {
     outline: none !important; 
 }
 
-/* --- 4. BARRA INFERIOR (GRIS PIEDRA ELEGANTE) --- */
-/* Cambiamos el verde por un gris cálido que funde con el beige del fondo */
 .transfer-footer { 
-    background-color: #d8d4cb !important; /* Gris piedra cálido */
+    background-color: #d8d4cb !important;
     padding: 25px 8%; 
     display: flex; 
     justify-content: space-between; 
@@ -80,7 +75,6 @@ body {
 
 .footer-right { display: flex; gap: 15px; align-items: center; }
 
-/* Botones con estilo premium */
 .transfer-footer .btn-primary {
     display: inline-block !important;
     padding: 12px 32px !important;
@@ -91,7 +85,7 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Botón Borrar (Gris Carbón suave) */
+
 .footer-left .btn-primary {
     background-color: #4a4a4a !important;
     color: #ffffff !important;
@@ -99,7 +93,7 @@ body {
 }
 .footer-left .btn-primary:hover { background-color: #333333 !important; }
 
-/* Botón Cancelar (Texto Gris Oscuro) */
+
 .footer-right > [data-btnid="btn-cancelar"] + .btn-primary,
 .footer-right .btn-primary:first-child {
     background-color: transparent !important;
@@ -108,7 +102,6 @@ body {
 }
 .footer-right .btn-primary:first-child:hover { color: #000000 !important; text-decoration: underline !important; }
 
-/* Botón Aceptar/Pagar (Negro Puro - Destaca sobre el gris piedra) */
 .footer-right > [data-btnid="btn-accion"] + .btn-primary,
 .footer-right .btn-primary:last-child {
     background-color: #1a1a1a !important; 
@@ -119,4 +112,27 @@ body {
     background-color: #000000 !important; 
     transform: translateY(-2px); 
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
+
+@media (max-width: 850px) { 
+    .transfer-body > div { 
+        flex-direction: column !important; 
+        align-items: flex-start !important; 
+        gap: 8px !important; 
+    } 
+
+    .transfer-body label { 
+        flex: none !important; 
+        width: 100% !important; 
+    } 
+
+    .transfer-footer { 
+        flex-direction: column !important; 
+        gap: 20px !important; 
+    }
+
+    .footer-right { 
+        width: 100% !important; 
+        justify-content: space-between !important; 
+    }
 }
