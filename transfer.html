@@ -8,7 +8,7 @@
         
         <form id="formulario-operacion">
             <div class="transfer-body">
-                <h2 id="titulo-operacion" class="transfer-title">Cargando operación...</h2>
+                <h2 id="titulo-operacion" class="transfer-title">Realizar Transferencia</h2>
                 
                 <div class="transfer-flex-row" xlu-include-file="field-template.html" 
                      data-fieldid="nombre" 
@@ -44,30 +44,16 @@
             </div>
 
             <div class="transfer-footer">
-                
                 <div class="footer-left">
-                    <div xlu-include-file="button.html" 
-                         data-btnid="btn-borrar" 
-                         data-text="Borrar" 
-                         data-href="#">
-                    </div>
+                    <div xlu-include-file="button.html" data-btnid="btn-borrar" data-text="Borrar" data-href="#"></div>
                 </div>
                 
                 <div class="footer-right">
-                    <div xlu-include-file="button.html" 
-                         data-btnid="btn-cancelar" 
-                         data-text="Cancelar" 
-                         data-href="#">
-                    </div>
-
-                    <div xlu-include-file="button.html" 
-                         data-btnid="btn-accion" 
-                         data-text="Aceptar" 
-                         data-href="#">
-                    </div>
+                    <div xlu-include-file="button.html" data-btnid="btn-cancelar" data-text="Cancelar" data-href="#"></div>
+                    <div xlu-include-file="button.html" data-btnid="btn-accion" data-text="Transferir" data-href="#"></div>
                 </div>
-
-            </div> </form>
+            </div> 
+        </form>
 
     </div>
 </main>

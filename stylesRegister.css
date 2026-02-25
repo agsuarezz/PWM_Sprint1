@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
-    background-color: #f1ede6;
+    background-color: var(--marble);
 }
 
 
