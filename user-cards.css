@@ -187,11 +187,6 @@
   background: var(--imperium-sand);
 }
 
-.tabs__tab--active{
-  background: var(--imperium-black);
-  color: var(--imperium-white);
-}
-
 .tabs__icon{
   color: var(--imperium-gold);
   font-size: 12px;
@@ -262,45 +257,4 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
-
-@media (max-width: 900px){
-
-  .dashboard{
-    padding: 60px 6%;
-  }
-
-  .dashboard__actions{
-    flex-wrap: wrap;
-  }
-
-  .action-card{
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .tabs{
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .balance-card{
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .card-info{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .card-info__preview{
-    width: 100%;
-    height: 120px;
-  }
-
 }
