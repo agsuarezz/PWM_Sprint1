@@ -49,26 +49,10 @@
 
     <section class="dashboard__content">
 
-      <p class="dashboard__hint">Connected button group</p>
-
-      <!-- TABS (Tarjetas activa) -->
-      <nav class="tabs" aria-label="Secciones">
-        <button
-          type="button"
-          class="tabs__tab"
-          aria-selected="false">
-          <span class="tabs__icon">★</span>
-          <span class="tabs__text">Movimientos</span>
-        </button>
-
-        <button
-          type="button"
-          class="tabs__tab tabs__tab--active"
-          aria-selected="true">
-          <span class="tabs__icon">★</span>
-          <span class="tabs__text">Tarjetas</span>
-        </button>
-      </nav>
+      <div xlu-include-file="Button-movements-cards.html"
+        data-movements_active=""
+        data-cards_active="tabs__tab--active">
+      </div>
 
       <!-- ===== LISTA DE TARJETAS ===== -->
       <div class="cards-list">
