@@ -275,15 +275,14 @@ header{
 }
 
 .main-cta-wrapper {
+    padding: 0 10%;             
+    margin-top: -140px;
+    margin-bottom: 40px;       
     display: flex;
-    justify-content: flex-end; 
-    
-    padding-right: 41%; 
-    
-    margin-top: -270px;
-    margin-bottom: +220px;
-    
-    position: relative;
-    z-index: 10;
+    justify-content: flex-start;
+}
+
+.main-cta-wrapper .btn-primary {
+    margin-left: calc(50% + 30px); 
 }
 
