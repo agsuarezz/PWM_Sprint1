@@ -268,9 +268,64 @@ header{
 }
 
 .benefit-content p {
-    font-size: 13px; /* Tamaño ajustado para lectura */
+    font-size: 13px;
     color: #666;
     line-height: 1.5;
     margin: 0;
+}
+
+.main-cta-wrapper {
+    display: flex;
+    justify-content: flex-end; 
+    
+    padding-right: 41%; 
+    
+    margin-top: -270px;
+    margin-bottom: +220px;
+    
+    position: relative;
+    z-index: 10;
+}
+
+.main-cta-wrapper .btn-signup {
+    background-color: #000;
+    color: goldenrod;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-cta-wrapper .btn-signup:hover {
+    background-color: goldenrod;
+    color: #000;
+}
+
+.main-cta-wrapper a, 
+.main-cta-wrapper button {
+    background-color: var(--primary-black, #1a1a1a);
+    color: goldenrod;
+    padding: 15px 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid goldenrod;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; 
+}
+
+.main-cta-wrapper a:hover, 
+.main-cta-wrapper button:hover {
+    background-color: goldenrod;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
 }
 
