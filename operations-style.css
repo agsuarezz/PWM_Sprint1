@@ -100,7 +100,7 @@ body {
     color: #4a4a4a !important;
     border: none !important;
 }
-.footer-right .btn-primary:first-child:hover { color: #000000 !important; text-decoration: underline !important; }
+.footer-right .btn-primary:first-child:hover { color: #000000 !important; text-decoration: none !important; }
 
 .footer-right > [data-btnid="btn-accion"] + .btn-primary,
 .footer-right .btn-primary:last-child {
@@ -112,27 +112,4 @@ body {
     background-color: #000000 !important; 
     transform: translateY(-2px); 
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
-}
-
-@media (max-width: 850px) { 
-    .transfer-body > div { 
-        flex-direction: column !important; 
-        align-items: flex-start !important; 
-        gap: 8px !important; 
-    } 
-
-    .transfer-body label { 
-        flex: none !important; 
-        width: 100% !important; 
-    } 
-
-    .transfer-footer { 
-        flex-direction: column !important; 
-        gap: 20px !important; 
-    }
-
-    .footer-right { 
-        width: 100% !important; 
-        justify-content: space-between !important; 
-    }
 }
