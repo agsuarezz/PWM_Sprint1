@@ -303,3 +303,62 @@ header{
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transform: translateY(-2px);
 }
+
+.header-profile {
+    width: 100%;
+    background: black;
+    border-bottom: 1px solid black;
+    font-family: "Inter", system-ui, sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 4%;
+}
+
+/* Parte izquierda */
+.header-profile__left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Logo igual que el anterior */
+.header-profile__logo {
+    display: block;
+    height: 80px;
+    width: auto;
+}
+
+/* Info usuario */
+.header-profile__user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.header-profile__username {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.header-profile__account {
+    font-size: 13px;
+    color: #cccccc;
+}
+
+/* Parte derecha */
+.header-profile__right {
+    display: flex;
+    align-items: center;
+}
+
+/* Icono perfil */
+.header-profile__profile-icon {
+    height: 28px;
+    width: 28px;
+    filter: invert(1); /* Hace que el icono se vea blanco si es negro */
+}
+

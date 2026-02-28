@@ -1,7 +1,13 @@
 <link rel="stylesheet" href="styles/shared.css">
 <link rel="stylesheet" href="styles/operations-style.css">
 
-<div xlu-include-file="templates/header.html"></div>
+<div xlu-include-file="templates/header-profile.html"
+        data-username="Marcos González Gómez"
+        data-accountnumber="ES12 3456 7890 1234"
+
+         data-profilesrc= "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg"
+        data-profilelink="user-movements.html">
+    </div>
 
 <main class="transfer-page-wrapper">
     <div class="transfer-card">
@@ -49,7 +55,7 @@
                 </div>
                 
                 <div class="footer-right">
-                    <div xlu-include-file="templates/button.html" data-btnid="btn-cancelar" data-text="Cancelar" data-href="#"></div>
+                    <div xlu-include-file="templates/button.html" data-btnid="btn-cancelar" data-text="Cancelar" data-href="user-movements.html"></div>
                     <div xlu-include-file="templates/button.html" data-btnid="btn-accion" data-text="Pagar Ahora" data-href="#"></div>
                 </div>
             </div> 
