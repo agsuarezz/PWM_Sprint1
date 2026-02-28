@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="styles/shared.css">
 <link rel="stylesheet" href="styles/operations-style.css">
 
-<div xlu-include-file="header.html"></div>
+<div xlu-include-file="templates/header.html"></div>
 
 <main class="transfer-page-wrapper">
     <div class="transfer-card">
@@ -10,7 +10,7 @@
             <div class="transfer-body">
                 <h2 id="titulo-operacion" class="transfer-title">Pagar Servicios</h2>
                 
-                <div class="transfer-flex-row" xlu-include-file="field-template.html" 
+                <div class="transfer-flex-row" xlu-include-file="templates/field-template.html" 
                      data-fieldid="servicio" 
                      data-labelname="Tipo de servicio" 
                      data-fieldtype="text" 
@@ -18,7 +18,7 @@
                      data-valtext="">
                 </div>
 
-                <div class="transfer-flex-row" xlu-include-file="field-template.html" 
+                <div class="transfer-flex-row" xlu-include-file="templates/field-template.html" 
                      data-fieldid="referencia" 
                      data-labelname="Número de referencia" 
                      data-fieldtype="text" 
@@ -26,7 +26,7 @@
                      data-valtext="">
                 </div>
 
-                <div class="transfer-flex-row" xlu-include-file="field-template.html" 
+                <div class="transfer-flex-row" xlu-include-file="templates/field-template.html" 
                      data-fieldid="importe" 
                      data-labelname="Importe" 
                      data-fieldtype="number" 
@@ -34,7 +34,7 @@
                      data-valtext="">
                 </div>
 
-                <div class="transfer-flex-row" xlu-include-file="field-template.html" 
+                <div class="transfer-flex-row" xlu-include-file="templates/field-template.html" 
                      data-fieldid="concepto" 
                      data-labelname="Concepto (Opcional)" 
                      data-fieldtype="text" 
@@ -45,12 +45,12 @@
 
             <div class="transfer-footer">
                 <div class="footer-left">
-                    <div xlu-include-file="button.html" data-btnid="btn-borrar" data-text="Borrar" data-href="#"></div>
+                    <div xlu-include-file="templates/button.html" data-btnid="btn-borrar" data-text="Borrar" data-href="#"></div>
                 </div>
                 
                 <div class="footer-right">
-                    <div xlu-include-file="button.html" data-btnid="btn-cancelar" data-text="Cancelar" data-href="#"></div>
-                    <div xlu-include-file="button.html" data-btnid="btn-accion" data-text="Pagar Ahora" data-href="#"></div>
+                    <div xlu-include-file="templates/button.html" data-btnid="btn-cancelar" data-text="Cancelar" data-href="#"></div>
+                    <div xlu-include-file="templates/button.html" data-btnid="btn-accion" data-text="Pagar Ahora" data-href="#"></div>
                 </div>
             </div> 
         </form>
@@ -58,7 +58,7 @@
     </div>
 </main>
 
-<div xlu-include-file="footer.html"></div>
+<div xlu-include-file="templates/footer.html"></div>
 
 <script src="script.js"></script>
 <script>

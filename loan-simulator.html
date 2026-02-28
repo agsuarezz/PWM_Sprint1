@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header xlu-include-file="header.html"></header>
+    <header xlu-include-file="templates/header.html"></header>
 
     <main class="simulator-main">
         
@@ -22,7 +22,7 @@
             <p class="simulator-description">Calcule las condiciones de su financiación personalizada.</p>
 
             <form id="loan-form">
-                <div xlu-include-file="field-template.html"
+                <div xlu-include-file="templates/field-template.html"
                     data-fieldId="loan-amount"
                     data-labelName="Capital solicitado (€)"
                     data-fieldType="number"
@@ -30,7 +30,7 @@
                     data-valText="10000">
                 </div>
 
-                <div xlu-include-file="field-template.html"
+                <div xlu-include-file="templates/field-template.html"
                     data-fieldId="loan-term"
                     data-labelName="Plazo de amortización (Meses)"
                     data-fieldType="number"
@@ -38,7 +38,7 @@
                     data-valText="24">
                 </div>
 
-                <div xlu-include-file="field-template.html"
+                <div xlu-include-file="templates/field-template.html"
                     data-fieldId="interest-rate"
                     data-labelName="TIN Anual (%)"
                     data-fieldType="number"
@@ -64,7 +64,7 @@
 
     </main>
 
-    <footer xlu-include-file="footer.html"></footer>
+    <footer xlu-include-file="templates/footer.html"></footer>
 
     <script src="script.js"></script>
     <script>

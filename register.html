@@ -10,11 +10,11 @@
 </head>
 <body>
 
-    <div xlu-include-file="header.html"></div>
+    <div xlu-include-file="templates/header.html"></div>
 
     <main class="register-container">
         <form>
-            <div xlu-include-file="../field-template.html" 
+            <div xlu-include-file="templates/field-template.html" 
                  data-fieldid="name" 
                  data-labelname="Nombre" 
                  data-fieldtype="text" 
@@ -22,7 +22,7 @@
                  data-phtext="Ej: Laura">
             </div>
 
-            <div xlu-include-file="../field-template.html" 
+            <div xlu-include-file="templates/field-template.html" 
                  data-fieldid="surname" 
                  data-labelname="Apellidos" 
                  data-fieldtype="text" 
@@ -30,7 +30,7 @@
                  data-phtext="Ej: Pérez García">
             </div>
 
-            <div xlu-include-file="../field-template.html" 
+            <div xlu-include-file="templates/field-template.html" 
                  data-fieldid="email" 
                  data-labelname="Correo Electrónico" 
                  data-fieldtype="email" 
@@ -38,7 +38,7 @@
                  data-phtext="usuario@correo.com">
             </div>
 
-            <div xlu-include-file="../field-template.html" 
+            <div xlu-include-file="templates/field-template.html" 
                  data-fieldid="phone" 
                  data-labelname="Teléfono" 
                  data-fieldtype="tel" 
@@ -46,7 +46,7 @@
                  data-phtext="+34 600 000 000">
             </div>
 
-            <div xlu-include-file="../field-template.html" 
+            <div xlu-include-file="templates/field-template.html" 
                  data-fieldid="birthdate" 
                  data-labelname="Fecha de nacimiento" 
                  data-fieldtype="text" 
@@ -55,14 +55,14 @@
             </div>
 
             <div class="form-row">
-                <div xlu-include-file="../field-template.html" 
+                <div xlu-include-file="templates/field-template.html" 
                      data-fieldid="address" 
                      data-labelname="Dirección" 
                      data-fieldtype="text" 
                      data-valtext=""
                      data-phtext="Calle, num, piso, letra">
                 </div>
-                <div xlu-include-file="../field-template.html" 
+                <div xlu-include-file="templates/field-template.html" 
                      data-fieldid="zip" 
                      data-labelname="Código Postal" 
                      data-fieldtype="text" 
@@ -72,14 +72,14 @@
             </div>
 
             <div class="form-row">
-                <div xlu-include-file="../field-template.html" 
+                <div xlu-include-file="templates/field-template.html" 
                      data-fieldid="password" 
                      data-labelname="Contraseña" 
                      data-fieldtype="password" 
                      data-valtext=""
                      data-phtext="Crea una contraseña">
                 </div>
-                <div xlu-include-file="../field-template.html" 
+                <div xlu-include-file="templates/field-template.html" 
                      data-fieldid="confirm-password" 
                      data-labelname="Confirmar Contraseña" 
                      data-fieldtype="password" 
@@ -98,7 +98,7 @@
                 </select>
             </div>
 
-            <div xlu-include-file="button.html" 
+            <div xlu-include-file="templates/button.html" 
                  data-btnid="btn-register-submit" 
                  data-text="Completar Registro" 
                  data-href="#">
@@ -106,7 +106,7 @@
         </form>
     </main>
 
-    <div xlu-include-file="footer.html"></div>
+    <div xlu-include-file="templates/footer.html"></div>
 
     <script src="script.js"></script>
     <script>

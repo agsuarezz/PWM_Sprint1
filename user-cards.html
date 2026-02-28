@@ -14,14 +14,14 @@
 <body>
 
   <!-- HEADER (ya incluye logo desde shared) -->
-  <header xlu-include-file="header.html"></header>
+  <header xlu-include-file="templates/header.html"></header>
 
   <main class="dashboard">
 
     <!-- BALANCE -->
     <section class="dashboard__balance">
       <div
-        xlu-include-file="balance-template.html"
+        xlu-include-file="templates/balance-template.html"
         data-label="Dinero disponible"
         data-amount="1.250,00 €">
       </div>
@@ -31,19 +31,19 @@
 
     <!-- ACCIONES -->
     <section class="dashboard__actions">
-      <div xlu-include-file="action-user.html"
+      <div xlu-include-file="templates/action-user.html"
         data-icon="https://cdn-icons-png.flaticon.com/512/1828/1828640.png"
         data-label="Transferir"
         data-href="transfer.html">
       </div>
 
-      <div xlu-include-file="action-user.html"
+      <div xlu-include-file="templates/action-user.html"
         data-icon="https://cdn-icons-png.flaticon.com/512/126/126083.png"
         data-label="Pagar"
         data-href="pay-services.html">
       </div>
 
-      <div xlu-include-file="action-user.html"
+      <div xlu-include-file="templates/action-user.html"
         data-icon="https://cdn-icons-png.flaticon.com/512/929/929426.png"
         data-label="Recargar"
         data-href="top-up.html">
@@ -52,7 +52,7 @@
 
     <section class="dashboard__content">
 
-      <div xlu-include-file="Button-movements-cards.html"
+      <div xlu-include-file="templates/selection-cards.html"
         data-movements_active=""
         data-cards_active="tabs__tab--active">
       </div>
@@ -61,7 +61,7 @@
       <div class="cards-list">
 
         <!-- TARJETA 1 -->
-        <div xlu-include-file="card-info.html"
+        <div xlu-include-file="templates/card-info.html"
           data-title="Tarjeta Black"
           data-subtitle="Débito • Activa"
           data-card_img_src="images/card-black-gold.png"
@@ -69,7 +69,7 @@
         </div>
 
         <!-- TARJETA 2 -->
-        <div xlu-include-file="card-info.html"
+        <div xlu-include-file="templates/card-info.html"
           data-title="Tarjeta Premium"
           data-subtitle="Crédito • Activa"
           data-card_img_src="images/card-black-gold.png"
@@ -77,7 +77,7 @@
         </div>
 
         <!-- TARJETA 3 -->
-        <div xlu-include-file="card-info.html"
+        <div xlu-include-file="templates/card-info.html"
           data-title="Tarjeta Travel"
           data-subtitle="Crédito • Internacional"
           data-card_img_src="images/card-black-gold.png"
@@ -91,7 +91,7 @@
 
   </main>
 
-  <footer xlu-include-file="footer.html"></footer>
+  <footer xlu-include-file="templates/footer.html"></footer>
 
   <script src="script.js"></script>
   <script>
