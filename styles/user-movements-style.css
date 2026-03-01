@@ -1,5 +1,5 @@
 /* ==========================================================
-   USER MOVEMENTS - ESTILO IMPERIUM BANK
+   USER MOVEMENTS
    ========================================================== */
 
 :root{
@@ -262,7 +262,6 @@
   font-size: 15px;
 }
 
-/* Colores según tipo */
 .movement-item__amount--pos{
   color: #1c7c3a;
 }

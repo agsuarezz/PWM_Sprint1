@@ -1,11 +1,11 @@
 /* ==========================================================================
-   CONTENIDO PRINCIPAL (MAIN - LOAN SIMULATOR)
+   CONTENIDO PRINCIPAL
    ========================================================================== */
 
 .simulator-main {
     background-color: var(--marble);
     padding: 100px 5%;
-    min-height: calc(100vh - 160px); /* Ajuste para centrar entre header y footer */
+    min-height: calc(100vh - 160px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@
     width: 100%;
     background: var(--pure-white);
     padding: 60px;
-    border-radius: 2px; /* Bordes rectos para un look más arquitectónico */
+    border-radius: 2px;
     border: 1px solid var(--border-gray);
     box-shadow: 0 30px 60px rgba(0,0,0,0.05);
 }
@@ -74,16 +74,14 @@
     border-bottom-color: var(--primary-black);
 }
 
-/* Chrome, Safari, Edge, Opera: Quitar flechas de número */
+
 .form-group input::-webkit-outer-spin-button,
 .form-group input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* ==========================================================================
-   RESULTADOS Y ACCIONES
-   ========================================================================== */
+
 
 .form-action {
     margin-top: 40px;
@@ -91,7 +89,7 @@
 
 .form-action .btn-signup {
     width: 100%;
-    height: 60px; /* Botón más imponente */
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -69,8 +69,6 @@ El proyecto utiliza un sistema de inyección dinámica mediante el motor `xLuInc
 
 * **Tareas implementadas con JavaScript:** Se ha desarrollado un motor de plantillas personalizado (`script.js`). Mediante el uso de la API `fetch()` asíncrona y la manipulación del DOM, el sistema busca etiquetas HTML específicas, carga componentes externos y reemplaza variables al vuelo, simulando el comportamiento de frameworks modernos sin salir de Vanilla JS.
 * **Organización de las hojas de estilo:** La carpeta `/styles` sigue una arquitectura modular separada por contextos. Existe un archivo base (`shared.css`) con variables CSS para la paleta de colores y el layout global. El resto de estilos se dividen por área (ej. `operations-style.css`, `login-style.css`), asegurando un código escalable.
-* **Uso de BEM para clases:** Se ha aplicado la metodología BEM (Block, Element, Modifier) en los componentes UI para garantizar el encapsulamiento de estilos. Ejemplos implementados: `.card-info__preview`, `.movement-item__amount--pos`.
 * **Aspectos de Look & Feel:** Interfaz premium basada en una paleta de tonos dorados, negros y blancos (Marble, Pure White).
   * Tipografía dual: *Playfair Display* para transmitir elegancia en los titulares e *Inter* para alta legibilidad en la interfaz.
-  * Diseño **100% Responsivo** adaptado a dispositivos móviles.
   * Uso de transiciones fluidas para mejorar la Experiencia de Usuario (UX) en botones, tarjetas y navegación.

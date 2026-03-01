@@ -1,5 +1,5 @@
 /* ==========================================================
-   USER CARDS - ESTILO IMPERIUM BANK (IGUAL QUE USER-MOVEMENTS)
+   USER CARDS
    ========================================================== */
 
 :root{
@@ -23,7 +23,7 @@
 }
 
 /* ==========================================================
-   BALANCE (MISMO QUE USER-MOVEMENTS)
+   BALANCE
    ========================================================== */
 
 .dashboard__balance{
@@ -193,7 +193,7 @@
 }
 
 /* ==========================================================
-   CARDS LIST (card-info.html) - COMO MOVIMIENTOS, SIN LILA
+   CARDS LIST (card-info.html)
    ========================================================== */
 
 .cards-list{
@@ -221,7 +221,7 @@
 }
 
 .card-info:hover{
-  background: #faf8f3; /* mismo hover que movimientos */
+  background: #faf8f3;
 }
 
 .card-info__text{

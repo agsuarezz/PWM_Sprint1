@@ -1,8 +1,6 @@
-
-
-/* 4. Contenedor de Tarjetas (card-container.html) */
+/* Contenedor de Tarjetas*/
 .cards-wrapper {
-    background: #f8f6f1; /* Beige claro */
+    background: #f8f6f1;
     display: grid;
     padding: 80px 15%;
     grid-template-columns: repeat(3, 1fr);
@@ -13,17 +11,14 @@
 }
 .card-container {
     background: var(--pure-white);
-    /* Reducimos el padding vertical de 60px a 40px */
     padding: 40px 20px; 
     border: 1px solid var(--border-gray);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* Reducimos la altura mínima de 400px a 320px */
     min-height: 320px; 
     transition: all 0.3s ease;
-    /* Mantenemos el ancho máximo estrecho */
     max-width: 280px;
     margin: 0 auto;
     box-shadow: 0 6px 18px rgba(0,0,0,0.04);
@@ -37,7 +32,6 @@
 .card-icon img {
     width: 45px;
     height: auto;
-    /* Reducimos un poco el margen del icono */
     margin-bottom: 25px;
 }
 
@@ -61,7 +55,7 @@
     line-height: 1.5;
 }
 
-/* 5. Footer (footermain.html) */
+/*Footer*/
 .footer-socket {
     background-color: var(--primary-black);
     color: var(--pure-white);
@@ -200,13 +194,10 @@ header{
     box-shadow: 0 6px 16px rgba(0,68,129,0.25);
 }
 
-/* ==========================================================================
-   SECCIÓN DE BENEFICIOS (benefit-section)
-   ========================================================================== */
 
 .benefit-section {
     padding: 80px 10%;
-    background: #f1ede6; /* Beige ligeramente más oscuro */
+    background: #f1ede6;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -219,7 +210,7 @@ header{
     width: 100%;
     background: var(--pure-white);
     border: 1px solid var(--border-gray);
-    border-radius: 8px; /* Bordes ligeramente más redondeados */
+    border-radius: 8px;
     overflow: hidden;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
@@ -232,35 +223,35 @@ header{
     box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 }
 
-/* Contenedor de la imagen: ahora configurado para llenar el espacio */
+/* Contenedor de la imagen */
 .benefit-image {
     width: 100%;
-    height: 200px; /* Altura fija para el área de la imagen */
+    height: 200px;
     background: var(--soft-gray);
-    overflow: hidden; /* Corta lo que sobresalga del zoom */
+    overflow: hidden;
 }
 
 .benefit-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Clave: la imagen llena el recuadro sin deformarse */
-    opacity: 1;        /* Imagen totalmente visible */
+    object-fit: cover;
+    opacity: 1;
     display: block;
-    transition: transform 0.5s ease; /* Transición suave para el efecto hover */
+    transition: transform 0.5s ease;
 }
 
-/* Efecto de zoom sutil en la imagen al pasar el ratón */
+/* Efecto de zoom */
 .benefit-card:hover .benefit-image img {
     transform: scale(1.08);
 }
 
 .benefit-content {
-    padding: 20px; /* Un poco más de aire interno */
+    padding: 20px;
 }
 
 .benefit-content h3 {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 15px; /* Tamaño más legible */
+    font-size: 15px;
     font-weight: 700;
     margin: 0 0 8px 0;
     letter-spacing: 0.1px;

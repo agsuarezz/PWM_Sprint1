@@ -24,25 +24,25 @@ body {
     line-height: 1.6;
 }
 
-/* 1. Hacemos que toda la estructura ocupe el 100% de la pantalla */
+
 html, body {
     height: 100%;
     margin: 0;
 }
 
-/* 2. Convertimos el body en un contenedor flexible vertical */
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100% del alto de la ventana del navegador */
+    min-height: 100vh;
 }
 
-/* 3. El truco mágico: el main se estira para ocupar todo el espacio vacío */
+
 main {
     flex: 1 0 auto;
 }
 
-/* 4. El footer se quedará ahora siempre al fondo */
+
 footer {
     flex-shrink: 0;
 }
@@ -324,7 +324,6 @@ header{
     gap: 18px;
 }
 
-/* Logo igual que el anterior */
 .header-profile__logo {
     display: block;
     height: 80px;
@@ -359,6 +358,6 @@ header{
 .header-profile__profile-icon {
     height: 28px;
     width: 28px;
-    filter: invert(1); /* Hace que el icono se vea blanco si es negro */
+    filter: invert(1);
 }
 
