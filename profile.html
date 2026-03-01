@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+
+    <link rel="stylesheet" href="styles/shared.css"> 
+    <link rel="stylesheet" href="styles/profile-style.css">
+</head>
+<body>
+
+    <div xlu-include-file="templates/header-profile.html"
+        data-username="Marcos González Gómez"
+        data-accountnumber="ES12 3456 7890 1234"
+
+        data-profilesrc= "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg"
+        data-profilelink="user-movements.html">
+    </div>
+
+    <main class="perfil-fondo-general">
+        <div class="perfil-tarjeta-dos-columnas">
+            
+            <aside class="perfil-columna-izquierda">
+                <img class="perfil-imagen-redonda" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Foto de Perfil">
+            </aside>
+
+            <section class="perfil-columna-derecha">
+                <div class="perfil-cabecera-titulos">
+                    <h2>Nombre</h2>
+                    <p>Apellido1 Apellido2</p>
+                </div>
+
+                <div xlu-include-file="templates/profile-field-text.html" 
+                     data-labeltitle="Correo Electrónico" 
+                     data-uservalue="xxxxxxxx@gmail.com">
+                </div>
+
+                <div xlu-include-file="templates/profile-field-text.html" 
+                     data-labeltitle="Clave de Acceso" 
+                     data-uservalue="xxxxxxxxxxxx">
+                </div>
+
+                <div xlu-include-file="templates/profile-field-text.html" 
+                     data-labeltitle="Número de teléfono" 
+                     data-uservalue="xxxxxxxxxxxx">
+                </div>
+
+                <div xlu-include-file="templates/profile-field-text.html" 
+                     data-labeltitle="Dirección" 
+                     data-uservalue="xxxxxxxxxxxx">
+                </div>
+
+                <div xlu-include-file="templates/button.html" 
+                     data-btnid="perfil-boton-baja" 
+                     data-text="Darse de baja" 
+                     data-href="#">
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div xlu-include-file="templates/footer.html"></div>
+
+    <script src="script.js"></script>
+    <script>
+        xLuIncludeFile();
+    </script>
+</body>
+</html>

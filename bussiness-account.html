@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Empresarial - Banco Imperium</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/accounts-style.css">
+    <link rel="stylesheet" href="styles/shared.css">
+</head>
+<body>
+    
+    <header xlu-include-file="templates/header.html"></header>
+
+    <main class="category-page-main">
+        
+        <nav class="category-nav-wrapper">
+            <div xlu-include-file="templates/nav-accounts.html"></div>
+        </nav>
+
+        <div xlu-include-file="templates/text-with-image.html"
+            data-image_src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200"
+            data-image_alt="Banca Corporativa Imperium"
+            data-title="Cuenta Empresarial Imperium"
+            data-subtitle="Potencia el crecimiento de su negocio con herramientas financieras de alto rendimiento."
+            data-benefits="<li>Gestión multiusuario con permisos de acceso personalizados</li><li>Emisión ilimitada de tarjetas corporativas físicas y virtuales</li><li>Integración directa con software de contabilidad y ERP</li><li>Líneas de crédito comerciales con aprobación preferente</li><li>Transferencias masivas de nóminas y pagos a proveedores sin coste</li>">
+        </div>
+
+    </main>
+
+    <footer xlu-include-file="templates/footer.html"></footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+    </script>
+</body>
+</html>

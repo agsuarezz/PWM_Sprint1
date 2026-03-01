@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Premium - Banco Imperium</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/accounts-style.css">
+    <link rel="stylesheet" href="styles/shared.css">
+</head>
+<body>
+    
+    <header xlu-include-file="templates/header.html"></header>
+
+    <main class="category-page-main">
+        
+        <nav class="category-nav-wrapper">
+            <div xlu-include-file="templates/nav-accounts.html"></div>
+        </nav>
+
+        <div xlu-include-file="templates/text-with-image.html"
+            data-image_src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200"
+            data-image_alt="Banca Privada Premium"
+            data-title="Cuenta Premium Imperium"
+            data-subtitle="Distinción y gestión experta para patrimonios exigentes."
+            data-benefits="<li>Gestor patrimonial personal y exclusivo</li><li>Tarjetas de metal con acceso a Salas VIP en aeropuertos</li><li>Servicio de Conserjería 24/7 para reservas y eventos</li><li>Seguros de viaje y protección de compras con cobertura total</li><li>Condiciones preferenciales en préstamos e inversión</li>">
+
+    </main>
+
+    <footer xlu-include-file="templates/footer.html"></footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+    </script>
+</body>
+</html>

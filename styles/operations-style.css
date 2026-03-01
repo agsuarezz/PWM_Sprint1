@@ -1,0 +1,115 @@
+html, body { height: 100%; margin: 0; padding: 0; }
+
+body { 
+    display: flex; 
+    flex-direction: column; 
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--marble);
+}
+
+.transfer-page-wrapper { flex: 1; display: flex; justify-content: center; align-items: center; padding: 4vh 5vw; }
+
+.transfer-card { 
+    background-color: #ffffff; 
+    width: 100%; 
+    max-width: 750px; 
+    border-radius: 12px; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06); 
+    overflow: hidden; 
+}
+
+.transfer-body { padding: 45px 8%; }
+
+.transfer-title { 
+    color: #1a1a1a !important; 
+    font-size: 28px; 
+    font-weight: 800; 
+    margin-top: 0;
+    margin-bottom: 35px; 
+    letter-spacing: -0.5px;
+}
+
+
+.transfer-body > div { 
+    display: flex !important; 
+    align-items: center !important; 
+    margin-bottom: 22px !important; 
+    gap: 20px !important; 
+    width: 100% !important;
+}
+
+.transfer-body label { 
+    flex: 0 0 200px !important; 
+    font-size: 14px !important; 
+    font-weight: 600 !important; 
+    color: #555555 !important;
+    text-align: left !important;
+}
+
+.transfer-body input { 
+    flex: 1 !important; 
+    width: 100% !important;
+    padding: 13px 18px !important; 
+    border: 1px solid #dcdcdc !important;
+    border-radius: 8px !important; 
+    background-color: #ffffff !important; 
+    font-size: 15px !important;
+    color: #1a1a1a !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease;
+}
+
+.transfer-body input:focus { 
+    border-color: #1a1a1a !important; 
+    box-shadow: 0 0 0 1px #1a1a1a !important; 
+    outline: none !important; 
+}
+
+.transfer-footer { 
+    background-color: #d8d4cb !important;
+    padding: 25px 8%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.footer-right { display: flex; gap: 15px; align-items: center; }
+
+.transfer-footer .btn-primary {
+    display: inline-block !important;
+    padding: 12px 32px !important;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+
+.footer-left .btn-primary {
+    background-color: #4a4a4a !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+.footer-left .btn-primary:hover { background-color: #333333 !important; }
+
+
+.footer-right > [data-btnid="btn-cancelar"] + .btn-primary,
+.footer-right .btn-primary:first-child {
+    background-color: transparent !important;
+    color: #4a4a4a !important;
+    border: none !important;
+}
+.footer-right .btn-primary:first-child:hover { color: #000000 !important; text-decoration: none !important; }
+
+.footer-right > [data-btnid="btn-accion"] + .btn-primary,
+.footer-right .btn-primary:last-child {
+    background-color: #1a1a1a !important; 
+    color: #ffffff !important;
+    border: none !important;
+}
+.footer-right .btn-primary:last-child:hover { 
+    background-color: #000000 !important; 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
