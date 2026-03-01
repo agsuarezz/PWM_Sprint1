@@ -72,3 +72,6 @@ El proyecto utiliza un sistema de inyección dinámica mediante el motor `xLuInc
 * **Aspectos de Look & Feel:** Interfaz premium basada en una paleta de tonos dorados, negros y blancos (Marble, Pure White).
   * Tipografía dual: *Playfair Display* para transmitir elegancia en los titulares e *Inter* para alta legibilidad en la interfaz.
   * Uso de transiciones fluidas para mejorar la Experiencia de Usuario (UX) en botones, tarjetas y navegación.
+
+## 8. Video
+https://youtu.be/b3tRfmVpzEQ
