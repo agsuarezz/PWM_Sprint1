@@ -20,7 +20,7 @@ Según lo definido en la planificación del proyecto, la plataforma cumple con l
 * **Integración de plantillas dinámicas:** Sistema modular para la reutilización de componentes UI.
 
 ## 4. PDF de Mockups y Storyboard
-* **Nombre del archivo PDF:** `Imperium bank.pdf` *(Este archivo contiene tanto los mockups como el storyboard visualizado a través de las diapositivas de la presentación).*
+* **Nombre del archivo PDF:** `Imperium Bank Presentation.pdf` *(Este archivo contiene tanto los mockups como el storyboard visualizado a través de las diapositivas de la presentación).*
 
 ## 5. Lista de Páginas HTML
 > **Página principal de la aplicación web (Homepage):** `index.html`
