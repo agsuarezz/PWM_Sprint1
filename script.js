@@ -1,21 +1,16 @@
 async function xLuIncludeFile() {
-    // 1. CARGA DINÁMICA DEL JSON SEGÚN LA PÁGINA
     if (!window.templateData) {
         try {
-            // Obtenemos el nombre de la página desde el body (por defecto 'index' si no existe)
             const pageName = document.body.getAttribute('data-page') || 'index';
 
-            // Construimos la ruta: data/index.json, data/premium.json, etc.
             const response = await fetch(`data/${pageName}.json`);
 
             if (!response.ok) throw new Error(`No se encontró el archivo: data/${pageName}.json`);
 
             const config = await response.json();
 
-            // Si tu JSON tiene una raíz llamada "templates" o "sections"
             window.templateData = config.templates || config.sections || [];
 
-            // Inyectamos los datos en el HTML
             window.templateData.forEach(item => {
                 const el = document.querySelector(item.selector);
                 if (el) {
@@ -30,7 +25,6 @@ async function xLuIncludeFile() {
         }
     }
 
-    // 2. LÓGICA DE PROCESAMIENTO DE TEMPLATES (Igual que antes)
     let el = document.querySelector("[xlu-include-file]");
     if (!el) return;
 
@@ -69,9 +63,6 @@ async function xLuIncludeFile() {
         console.error("Error:", error);
     }
 }
-
-// Código para la validación del register.html y login.html
-// sin tener que esperar a darle al botón para saber que es valido
 
 document.addEventListener('blur', function(evento) {
     const campo = evento.target;
