@@ -34,3 +34,15 @@ async function xLuIncludeFile() {
         console.error("Error:", error);
     }
 }
+
+// Código para la validación del register.html y login.html
+// sin tener que esperar a darle al botón para saber que es valido
+
+document.addEventListener('blur', function(evento) {
+    const campo = evento.target;
+
+    if (campo.tagName === 'INPUT' || campo.tagName === 'SELECT') {
+        
+        campo.reportValidity();
+    }
+}, true);
