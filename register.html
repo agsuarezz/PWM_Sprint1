@@ -25,7 +25,8 @@
                  data-labelname="Nombre" 
                  data-fieldtype="text" 
                  data-valtext=""
-                 data-phtext="Ej: Laura">
+                 data-phtext="Ej: Laura"
+                 data-validation="required pattern='[a-zA-ZÁ-Úá-úÑñ ]+' title='Solo se permiten letras'">
             </div>
 
             <div xlu-include-file="templates/field-template.html" 
@@ -33,7 +34,8 @@
                  data-labelname="Apellidos" 
                  data-fieldtype="text" 
                  data-valtext=""
-                 data-phtext="Ej: Pérez García">
+                 data-phtext="Ej: Pérez García"
+                 data-validation="required pattern='[a-zA-ZÁ-Úá-úÑñ ]+' title='Solo se permiten letras'">
             </div>
 
             <div xlu-include-file="templates/field-template.html" 
@@ -41,7 +43,8 @@
                  data-labelname="Correo Electrónico" 
                  data-fieldtype="email" 
                  data-valtext=""
-                 data-phtext="usuario@correo.com">
+                 data-phtext="usuario@correo.com"
+                 data-validation="required">
             </div>
 
             <div xlu-include-file="templates/field-template.html" 
@@ -49,15 +52,17 @@
                  data-labelname="Teléfono" 
                  data-fieldtype="tel" 
                  data-valtext=""
-                 data-phtext="+34 600 000 000">
+                 data-phtext="+34 600 000 000"
+                 data-validation="required pattern='[0-9]{9}' title='Debe introducir 9 dígitos'">
             </div>
 
             <div xlu-include-file="templates/field-template.html" 
                  data-fieldid="birthdate" 
                  data-labelname="Fecha de nacimiento" 
-                 data-fieldtype="text" 
                  data-valtext=""
-                 data-phtext="DD/MM/AAAA">
+                 data-phtext="DD/MM/AAAA"
+                 data-fieldtype="date"
+                 data-validation="required">
             </div>
 
             <div class="form-row">
@@ -66,14 +71,16 @@
                      data-labelname="Dirección" 
                      data-fieldtype="text" 
                      data-valtext=""
-                     data-phtext="Calle, num, piso, letra">
+                     data-phtext="Calle, num, piso, letra"
+                     data-validation="required">
                 </div>
                 <div xlu-include-file="templates/field-template.html" 
                      data-fieldid="zip" 
                      data-labelname="Código Postal" 
                      data-fieldtype="text" 
                      data-valtext=""
-                     data-phtext="00000">
+                     data-phtext="00000"
+                     data-validation="required pattern='[0-9]{5}' title='Debe contener 5 números'">
                 </div>
             </div>
 
@@ -83,7 +90,8 @@
                      data-labelname="Contraseña" 
                      data-fieldtype="password" 
                      data-valtext=""
-                     data-phtext="Crea una contraseña">
+                     data-phtext="Crea una contraseña"
+                     data-validation="required minlength='8' title='Mínimo 8 caracteres'">
                 </div>
                 <div xlu-include-file="templates/field-template.html" 
                      data-fieldid="confirm-password" 
@@ -96,7 +104,7 @@
 
             <div class="form-group">
                 <label for="account-type">Tipo de cuenta</label>
-                <select id="account-type" name="account-type">
+                <select id="account-type" name="account-type" required>
                     <option value="">Selecciona la opción</option>
                     <option value="personal">Personal</option>
                     <option value="premium">Premium</option>
@@ -104,10 +112,9 @@
                 </select>
             </div>
 
-            <div xlu-include-file="templates/button.html" 
+            <div xlu-include-file="templates/button-submit.html" 
                  data-btnid="btn-register-submit" 
-                 data-text="Completar Registro" 
-                 data-href="#">
+                 data-text="Completar Registro">
             </div>
         </form>
     </main>
