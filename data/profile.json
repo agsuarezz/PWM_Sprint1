@@ -1,0 +1,63 @@
+{
+  "templates": [
+    {
+      "selector": "#header-profile",
+      "data": {
+        "username": "Marcos González Gómez",
+        "accountnumber": "ES12 3456 7890 1234",
+        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
+        "profilelink": "user-movements.html"
+      }
+    },
+    {
+      "selector": "#profile-image",
+      "data": {
+        "src": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+        "alt": "Foto de Perfil"
+      }
+    },
+    {
+      "selector": "#profile-name-block",
+      "data": {
+        "title": "Nombre",
+        "value": "Apellido1 Apellido2"
+      }
+    },
+    {
+      "selector": "#profile-email",
+      "data": {
+        "labeltitle": "Correo Electrónico",
+        "uservalue": "xxxxxxxx@gmail.com"
+      }
+    },
+    {
+      "selector": "#profile-password",
+      "data": {
+        "labeltitle": "Clave de Acceso",
+        "uservalue": "xxxxxxxxxxxx"
+      }
+    },
+    {
+      "selector": "#profile-phone",
+      "data": {
+        "labeltitle": "Número de teléfono",
+        "uservalue": "xxxxxxxxxxxx"
+      }
+    },
+    {
+      "selector": "#profile-address",
+      "data": {
+        "labeltitle": "Dirección",
+        "uservalue": "xxxxxxxxxxxx"
+      }
+    },
+    {
+      "selector": "#profile-delete-button",
+      "data": {
+        "btnid": "perfil-boton-baja",
+        "text": "Darse de baja",
+        "href": "#"
+      }
+    }
+  ]
+}
