@@ -6,6 +6,19 @@
       "surname": "González",
       "email": "marcos@gmail.com",
       "password": "password123"
+    },
+    {
+      "id": "e60a",
+      "nombre": "Naiara",
+      "apellidos": "Día",
+      "email": "naiara.@alu.ulpgc.es",
+      "telefono": "111111111",
+      "fechaNacimiento": "1111-11-11",
+      "direccion": "xxxx",
+      "codigoPostal": "11111",
+      "password": "12341234",
+      "tipoCuenta": "premium"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

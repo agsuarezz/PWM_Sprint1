@@ -122,8 +122,11 @@
     <div xlu-include-file="templates/footer.html"></div>
 
     <script src="script.js"></script>
+    <script src="register.js"></script>
     <script>
-        xLuIncludeFile();
+        xLuIncludeFile().then(() => {
+          document.dispatchEvent(new CustomEvent('templatesReady'));
+        });
     </script>
 </body>
 </html>

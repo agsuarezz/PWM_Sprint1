@@ -63,12 +63,3 @@ async function xLuIncludeFile() {
         console.error("Error:", error);
     }
 }
-
-document.addEventListener('blur', function(evento) {
-    const campo = evento.target;
-
-    if (campo.tagName === 'INPUT' || campo.tagName === 'SELECT') {
-        
-        campo.reportValidity();
-    }
-}, true);
