@@ -1,0 +1,43 @@
+{
+  "templates": [
+    {
+      "selector": "#service-hipoteca",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/602/602258.png",
+        "title": "Hipoteca",
+        "content": "Soluciones de financiación para su hogar con tipos de interés preferenciales."
+      }
+    },
+    {
+      "selector": "#service-seguros",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/2966/2966327.png",
+        "title": "Seguros",
+        "content": "Protección integral diseñada a la medida de sus necesidades y las de su familia."
+      }
+    },
+    {
+      "selector": "#service-pensiones",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/2488/2488749.png",
+        "title": "Plan de Pensiones",
+        "content": "Asegure su futuro con una gestión patrimonial experta y máxima rentabilidad."
+      }
+    },
+    {
+      "selector": "#service-tarjetas",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/3522/3522533.png",
+        "title": "Tarjetas",
+        "content": "Acceso a servicios exclusivos y beneficios premium en cada una de sus compras."
+      }
+    },
+    {
+      "selector": "#services-hero",
+      "data": {
+        "image_src": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1000",
+        "image_alt": "Banca de Inversión"
+      }
+    }
+  ]
+}
