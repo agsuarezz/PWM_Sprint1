@@ -1,0 +1,78 @@
+{
+  "templates": [
+    {
+      "selector": "#user-header",
+      "data": {
+        "username": "Marcos González Gómez",
+        "accountnumber": "ES12 3456 7890 1234",
+        "profilesrc": "https://cdn-icons-png.flaticon.com/512/1077/1077114.png",
+        "profilelink": "profile.html"
+      }
+    },
+    {
+      "selector": "#user-balance",
+      "data": {
+        "label": "Dinero disponible",
+        "amount": "1.250,00 €"
+      }
+    },
+    {
+      "selector": "#action-transfer",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828640.png",
+        "label": "Transferir",
+        "href": "transfer.html"
+      }
+    },
+    {
+      "selector": "#action-pay",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/126/126083.png",
+        "label": "Pagar",
+        "href": "pay-services.html"
+      }
+    },
+    {
+      "selector": "#action-topup",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/929/929426.png",
+        "label": "Recargar",
+        "href": "top-up.html"
+      }
+    },
+    {
+      "selector": "#tabs-selection",
+      "data": {
+        "movements_active": "",
+        "cards_active": "tabs__tab--active"
+      }
+    },
+    {
+      "selector": "#card-1",
+      "data": {
+        "title": "Tarjeta Black",
+        "subtitle": "Débito • Activa",
+        "card_img_src": "images/card-black-gold.png",
+        "card_img_alt": "Tarjeta Black Imperium"
+      }
+    },
+    {
+      "selector": "#card-2",
+      "data": {
+        "title": "Tarjeta Premium",
+        "subtitle": "Crédito • Activa",
+        "card_img_src": "images/card-black-gold.png",
+        "card_img_alt": "Tarjeta Premium Imperium"
+      }
+    },
+    {
+      "selector": "#card-3",
+      "data": {
+        "title": "Tarjeta Travel",
+        "subtitle": "Crédito • Internacional",
+        "card_img_src": "images/card-black-gold.png",
+        "card_img_alt": "Tarjeta Travel Imperium"
+      }
+    }
+  ]
+}
