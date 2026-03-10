@@ -1,0 +1,93 @@
+{
+  "templates": [
+
+    {
+      "selector": "#header-profile",
+      "data": {
+        "username": "Marcos González Gómez",
+        "accountnumber": "ES12 3456 7890 1234",
+        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
+        "profilelink": "user-movements.html"
+      }
+    },
+
+    {
+      "selector": "#operation-title",
+      "data": {
+        "title": "Pagar Servicios"
+      }
+    },
+
+    {
+      "selector": "#field-service",
+      "data": {
+        "fieldid": "servicio",
+        "labelname": "Tipo de servicio",
+        "fieldtype": "text",
+        "phtext": "Nombre Servicio",
+        "valtext": ""
+      }
+    },
+
+    {
+      "selector": "#field-reference",
+      "data": {
+        "fieldid": "referencia",
+        "labelname": "Número de referencia",
+        "fieldtype": "text",
+        "phtext": "Ref. de la factura",
+        "valtext": ""
+      }
+    },
+
+    {
+      "selector": "#field-amount",
+      "data": {
+        "fieldid": "importe",
+        "labelname": "Importe",
+        "fieldtype": "number",
+        "phtext": "0.0",
+        "valtext": ""
+      }
+    },
+
+    {
+      "selector": "#field-concept",
+      "data": {
+        "fieldid": "concepto",
+        "labelname": "Concepto (Opcional)",
+        "fieldtype": "text",
+        "phtext": "Detalles adicionales",
+        "valtext": ""
+      }
+    },
+
+    {
+      "selector": "#button-clear",
+      "data": {
+        "btnid": "btn-borrar",
+        "text": "Borrar",
+        "href": "#"
+      }
+    },
+
+    {
+      "selector": "#button-cancel",
+      "data": {
+        "btnid": "btn-cancelar",
+        "text": "Cancelar",
+        "href": "user-movements.html"
+      }
+    },
+
+    {
+      "selector": "#button-action",
+      "data": {
+        "btnid": "btn-accion",
+        "text": "Pagar Ahora",
+        "href": "#"
+      }
+    }
+
+  ]
+}
