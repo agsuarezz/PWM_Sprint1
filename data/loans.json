@@ -1,0 +1,34 @@
+{
+  "templates": [
+    {
+      "selector": "#field-amount",
+      "data": {
+        "fieldId": "loan-amount",
+        "labelName": "Capital solicitado (€)",
+        "fieldType": "number",
+        "phText": "Ej: 50000",
+        "valText": "10000"
+      }
+    },
+    {
+      "selector": "#field-term",
+      "data": {
+        "fieldId": "loan-term",
+        "labelName": "Plazo de amortización (Meses)",
+        "fieldType": "number",
+        "phText": "Ej: 48",
+        "valText": "24"
+      }
+    },
+    {
+      "selector": "#field-interest",
+      "data": {
+        "fieldId": "interest-rate",
+        "labelName": "TIN Anual (%)",
+        "fieldType": "number",
+        "phText": "Ej: 5.25",
+        "valText": "4.50"
+      }
+    }
+  ]
+}

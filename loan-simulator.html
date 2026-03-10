@@ -6,70 +6,51 @@
     <title>Simulador de Préstamos - Banco Imperium</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/loan-style.css">
     <link rel="stylesheet" href="styles/shared.css">
 </head>
-<body>
+<body data-page="loans">
 
-    <header xlu-include-file="templates/header.html"></header>
+<header xlu-include-file="templates/header.html"></header>
 
-    <main class="simulator-main">
-        
-        <section class="simulator-wrapper">
-            
-            <h1 class="simulator-title">Simulador Imperium</h1>
-            <p class="simulator-description">Calcule las condiciones de su financiación personalizada.</p>
+<main class="simulator-main">
 
-            <form id="loan-form">
-                <div xlu-include-file="templates/field-template.html"
-                    data-fieldId="loan-amount"
-                    data-labelName="Capital solicitado (€)"
-                    data-fieldType="number"
-                    data-phText="Ej: 50000"
-                    data-valText="10000">
-                </div>
+    <section class="simulator-wrapper">
 
-                <div xlu-include-file="templates/field-template.html"
-                    data-fieldId="loan-term"
-                    data-labelName="Plazo de amortización (Meses)"
-                    data-fieldType="number"
-                    data-phText="Ej: 48"
-                    data-valText="24">
-                </div>
+        <h1 class="simulator-title">Simulador Imperium</h1>
+        <p class="simulator-description">Calcule las condiciones de su financiación personalizada.</p>
 
-                <div xlu-include-file="templates/field-template.html"
-                    data-fieldId="interest-rate"
-                    data-labelName="TIN Anual (%)"
-                    data-fieldType="number"
-                    data-phText="Ej: 5.25"
-                    data-valText="4.50">
-                </div>
+        <form id="loan-form">
+            <div id="field-amount" xlu-include-file="templates/field-template.html"></div>
 
-                <div class="form-action">
-                    <button type="button" class="btn-signup">
-                        Calcular Cuota
-                    </button>
-                </div>
-            </form>
+            <div id="field-term" xlu-include-file="templates/field-template.html"></div>
 
-            <div id="loan-result" class="result-container">
-                <span class="result-label">Mensualidad Estimada</span>
-                <div class="result-value">
-                    0.00€
-                </div>
+            <div id="field-interest" xlu-include-file="templates/field-template.html"></div>
+
+            <div class="form-action">
+                <button type="button" class="btn-signup">
+                    Calcular Cuota
+                </button>
             </div>
+        </form>
 
-        </section>
+        <div id="loan-result" class="result-container">
+            <span class="result-label">Mensualidad Estimada</span>
+            <div class="result-value">
+                0.00€
+            </div>
+        </div>
 
-    </main>
+    </section>
 
-    <footer xlu-include-file="templates/footer.html"></footer>
+</main>
 
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", xLuIncludeFile);
-    </script>
+<footer xlu-include-file="templates/footer.html"></footer>
+
+<script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+</script>
 
 </body>
 </html>
