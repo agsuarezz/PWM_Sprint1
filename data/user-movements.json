@@ -1,0 +1,77 @@
+{
+  "templates": [
+    {
+      "selector": "#header-profile",
+      "data": {
+        "username": "Marcos González Gómez",
+        "accountnumber": "ES12 3456 7890 1234",
+        "profilesrc": "https://cdn-icons-png.flaticon.com/512/1077/1077114.png",
+        "profilelink": "profile.html"
+      }
+    },
+    {
+      "selector": "#balance-main",
+      "data": {
+        "label": "Dinero disponible",
+        "amount": "1.250,00 €"
+      }
+    },
+    {
+      "selector": "#action-transfer",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828640.png",
+        "label": "Transferir",
+        "href": "transfer.html"
+      }
+    },
+    {
+      "selector": "#action-pay",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/126/126083.png",
+        "label": "Pagar",
+        "href": "pay-services.html"
+      }
+    },
+    {
+      "selector": "#action-topup",
+      "data": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/929/929426.png",
+        "label": "Recargar",
+        "href": "top-up.html"
+      }
+    },
+    {
+      "selector": "#movement-1",
+      "data": {
+        "icon_src": "https://cdn-icons-png.flaticon.com/512/1077/1077114.png",
+        "icon_alt": "Transferencia",
+        "title": "Transferencia a Juan",
+        "date": "12/02/2026",
+        "type": "neg",
+        "amount": "- 200,00 €"
+      }
+    },
+    {
+      "selector": "#movement-2",
+      "data": {
+        "icon_src": "https://cdn-icons-png.flaticon.com/512/1077/1077114.png",
+        "icon_alt": "Ingreso",
+        "title": "Nómina",
+        "date": "01/02/2026",
+        "type": "pos",
+        "amount": "+ 1.500,00 €"
+      }
+    },
+    {
+      "selector": "#movement-3",
+      "data": {
+        "icon_src": "https://cdn-icons-png.flaticon.com/512/1077/1077114.png",
+        "icon_alt": "Pago",
+        "title": "Pago en tienda",
+        "date": "28/01/2026",
+        "type": "neg",
+        "amount": "- 35,20 €"
+      }
+    }
+  ]
+}
