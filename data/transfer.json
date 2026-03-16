@@ -1,0 +1,83 @@
+{
+  "templates": [
+    {
+      "selector": "#header-profile",
+      "data": {
+        "username": "Marcos González Gómez",
+        "accountnumber": "ES12 3456 7890 1234",
+        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
+        "profilelink": "user-movements.html"
+      }
+    },
+    {
+      "selector": "#titulo-operacion",
+      "data": {
+        "title": "Realizar Transferencia"
+      }
+    },
+    {
+      "selector": "#field-nombre",
+      "data": {
+        "fieldid": "nombre",
+        "labelname": "Nombre del beneficiario",
+        "fieldtype": "text",
+        "phtext": "Nombre Completo",
+        "valtext": ""
+      }
+    },
+    {
+      "selector": "#field-iban",
+      "data": {
+        "fieldid": "iban",
+        "labelname": "Número de cuenta (IBAN)",
+        "fieldtype": "text",
+        "phtext": "ESXX XXXX XXXX XXXX XXXX XXXX",
+        "valtext": ""
+      }
+    },
+    {
+      "selector": "#field-importe",
+      "data": {
+        "fieldid": "importe",
+        "labelname": "Importe",
+        "fieldtype": "number",
+        "phtext": "0.0",
+        "valtext": ""
+      }
+    },
+    {
+      "selector": "#field-concepto",
+      "data": {
+        "fieldid": "concepto",
+        "labelname": "Concepto",
+        "fieldtype": "text",
+        "phtext": "Motivo de la transferencia",
+        "valtext": ""
+      }
+    },
+    {
+      "selector": "#btn-borrar",
+      "data": {
+        "btnid": "btn-borrar",
+        "text": "Borrar",
+        "href": "#"
+      }
+    },
+    {
+      "selector": "#btn-cancelar",
+      "data": {
+        "btnid": "btn-cancelar",
+        "text": "Cancelar",
+        "href": "user-movements.html"
+      }
+    },
+    {
+      "selector": "#btn-accion",
+      "data": {
+        "btnid": "btn-accion",
+        "text": "Transferir",
+        "href": "#"
+      }
+    }
+  ]
+}

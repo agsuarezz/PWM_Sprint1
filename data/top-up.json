@@ -1,0 +1,73 @@
+{
+  "templates": [
+    {
+      "selector": "#header-profile",
+      "data": {
+        "username": "Marcos González Gómez",
+        "accountnumber": "ES12 3456 7890 1234",
+        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
+        "profilelink": "user-movements.html"
+      }
+    },
+    {
+      "selector": "#operation-title",
+      "data": {
+        "title": "Recargar"
+      }
+    },
+    {
+      "selector": "#field-operator",
+      "data": {
+        "fieldid": "operador",
+        "labelname": "Operador",
+        "fieldtype": "text",
+        "phtext": "Nombre Operador",
+        "valtext": ""
+      }
+    },
+    {
+      "selector": "#field-phone",
+      "data": {
+        "fieldid": "telefono",
+        "labelname": "Número de teléfono",
+        "fieldtype": "tel",
+        "phtext": "600 000 000",
+        "valtext": ""
+      }
+    },
+    {
+      "selector": "#field-amount",
+      "data": {
+        "fieldid": "cantidad",
+        "labelname": "Cantidad",
+        "fieldtype": "number",
+        "phtext": "0.0",
+        "valtext": ""
+      }
+    },
+    {
+      "selector": "#button-clear",
+      "data": {
+        "btnid": "btn-borrar",
+        "text": "Borrar",
+        "href": "#"
+      }
+    },
+    {
+      "selector": "#button-cancel",
+      "data": {
+        "btnid": "btn-cancelar",
+        "text": "Cancelar",
+        "href": "user-movements.html"
+      }
+    },
+    {
+      "selector": "#button-action",
+      "data": {
+        "btnid": "btn-accion",
+        "text": "Recargar",
+        "href": "#"
+      }
+    }
+  ]
+}
