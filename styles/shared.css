@@ -361,3 +361,344 @@ header{
     filter: invert(1);
 }
 
+/* =========================
+   RESPONSIVE PERSONAL-ACCOUNT
+   Pegar al final de shared.css
+   ========================= */
+
+/* Evita desbordamientos horizontales */
+html, body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== HEADER: móvil primero ===== */
+.header-container {
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-left,
+.header-right {
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    justify-content: center;
+}
+
+.header-left img,
+.header-logo {
+    height: 60px;
+    width: auto;
+}
+
+.header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-wrapper {
+    width: 100%;
+    justify-content: center;
+}
+
+.main-navigation {
+    width: 100%;
+}
+
+.main-navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-navigation a {
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ===== MAIN DE LA PÁGINA ===== */
+.category-page-main {
+    width: 100%;
+}
+
+/* ===== NAVEGACIÓN DE CUENTAS ===== */
+.category-nav-wrapper {
+    width: 100%;
+    padding: 24px 20px 0;
+}
+
+.category-navigation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-navigation a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background-color: var(--primary-black);
+    color: var(--pure-white);
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.category-navigation a:hover {
+    background-color: var(--gold-accent);
+    color: var(--primary-black);
+    transform: translateY(-1px);
+}
+
+/* ===== BLOQUE TEXT + IMAGE ===== */
+.account-content {
+    padding: 40px 20px;
+    background-color: var(--pure-white);
+}
+
+.account-content__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.account-content__image {
+    width: 100%;
+}
+
+.account-content__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.account-content__info {
+    width: 100%;
+}
+
+.account-content__title {
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.account-content__subtitle {
+    font-size: 1rem;
+    color: var(--secondary-black);
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.account-content__benefits {
+    list-style: none;
+    border-top: 2px solid var(--primary-black);
+    padding-top: 20px;
+}
+
+.account-content__benefits li {
+    padding: 10px 0;
+    font-weight: 500;
+    border-bottom: 1px solid var(--soft-gray);
+    line-height: 1.5;
+}
+
+.account-content__benefits li::before {
+    content: "•";
+    margin-right: 10px;
+    color: var(--primary-black);
+}
+
+/* ===== FOOTER ===== */
+.footer-socket {
+    padding: 32px 20px;
+}
+
+.socket-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.store-badges {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.socket-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 768px) {
+    .header-container {
+        padding: 14px 4%;
+    }
+
+    .header-left img,
+    .header-logo {
+        height: 70px;
+    }
+
+    .main-navigation ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 22px;
+    }
+
+    .category-nav-wrapper {
+        padding: 28px 4% 0;
+    }
+
+    .category-navigation ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .category-navigation a {
+        width: auto;
+        min-width: 180px;
+    }
+
+    .account-content {
+        padding: 60px 6%;
+    }
+
+    .account-content__title {
+        font-size: 2.3rem;
+    }
+
+    .account-content__subtitle {
+        font-size: 1.1rem;
+    }
+
+    .footer-socket {
+        padding: 36px 6%;
+    }
+
+    .socket-container {
+        gap: 24px;
+    }
+
+    .socket-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+}
+
+/* ===== ESCRITORIO ===== */
+@media (min-width: 1024px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 4%;
+        gap: 24px;
+    }
+
+    .header-left,
+    .header-right {
+        width: auto;
+    }
+
+    .header-left {
+        justify-content: flex-start;
+    }
+
+    .header-left img,
+    .header-logo {
+        height: 80px;
+    }
+
+    .header-right {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .nav-wrapper {
+        justify-content: center;
+    }
+
+    .main-navigation {
+        margin: 0 auto;
+    }
+
+    .main-navigation ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .category-nav-wrapper {
+        padding: 32px 10% 0;
+    }
+
+    .account-content {
+        padding: 80px 10%;
+    }
+
+    .account-content__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+
+    .account-content__title {
+        font-size: 2.5rem;
+    }
+
+    .account-content__subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    .footer-socket {
+        padding: 40px 10%;
+    }
+
+    .socket-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .socket-nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
