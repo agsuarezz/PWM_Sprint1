@@ -1,0 +1,45 @@
+{
+  "templates": [
+    {
+      "selector": "#login-header",
+      "data": {
+        "username": "",
+        "accountnumber": "",
+        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
+        "profilelink": "index.html"
+      }
+    },
+    {
+      "selector": "#login-visual",
+      "data": {
+        "image_src": "https://images.unsplash.com/photo-1616803140344-6682afb13cda?auto=format&fit=crop&q=80&w=800",
+        "image_alt": "Imagen Decorativa Imperium"
+      }
+    },
+    {
+      "selector": "#password-icon-container",
+      "data": {
+        "xmlns": "http://www.w3.org/2000/svg",
+        "width": "20",
+        "height": "20",
+        "viewbox": "0 0 24 24",
+        "fill": "none",
+        "stroke": "#888",
+        "stroke_width": "2",
+        "stroke_linecap": "round",
+        "stroke_linejoin": "round",
+        "path_d": "M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z",
+        "circle_cx": "12",
+        "circle_cy": "12",
+        "circle_r": "3"
+      }
+    },
+    {
+      "selector": "#login-submit-container",
+      "data": {
+        "btnid": "btn-login-submit",
+        "text": "Entrar"
+      }
+    }
+  ]
+}

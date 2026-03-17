@@ -2,50 +2,48 @@ async function xLuIncludeFile() {
     if (!window.templateData) {
         try {
             const pageName = document.body.getAttribute('data-page') || 'index';
-
             const response = await fetch(`data/${pageName}.json`);
 
-            if (!response.ok) throw new Error(`No se encontró el archivo: data/${pageName}.json`);
+            if (response.ok) {
+                const config = await response.json();
+                window.templateData = config.templates || [];
 
-            const config = await response.json();
-
-            window.templateData = config.templates || config.sections || [];
-
-            window.templateData.forEach(item => {
-                const el = document.querySelector(item.selector);
-                if (el) {
-                    Object.keys(item.data).forEach(key => {
-                        el.setAttribute(`data-${key}`, item.data[key]);
-                    });
-                }
-            });
-        } catch (error) {
-            console.error("Error cargando configuración de página:", error);
-            window.templateData = [];
+                window.templateData.forEach(item => {
+                    const el = document.querySelector(item.selector);
+                    if (el) {
+                        Object.keys(item.data).forEach(key => {
+                            el.setAttribute(`data-${key.toLowerCase()}`, item.data[key]);
+                        });
+                    }
+                });
+            }
+        } catch (e) {
+            console.error("Error al cargar el archivo JSON:", e);
         }
     }
 
     let el = document.querySelector("[xlu-include-file]");
-    if (!el) return;
+
+    if (!el) {
+        initHamburgerMenu();
+        return;
+    }
 
     let file = el.getAttribute("xlu-include-file");
-    const globalAttrs = window.attributes || {};
 
     try {
         let response = await fetch(file);
+
         if (response.ok) {
             let content = await response.text();
 
-            let allKeys = new Set([
-                ...Object.keys(globalAttrs),
-                ...Array.from(el.attributes)
-                    .filter(a => a.name.startsWith('data-'))
-                    .map(a => a.name.replace('data-', ''))
-            ]);
+            let allKeys = Array.from(el.attributes)
+                .filter(a => a.name.startsWith('data-'))
+                .map(a => a.name.replace('data-', ''));
 
             allKeys.forEach(key => {
                 let regex = new RegExp(`{{${key}}}`, "g");
-                let value = el.getAttribute(`data-${key}`) || globalAttrs[key] || "";
+                let value = el.getAttribute(`data-${key}`);
                 content = content.replace(regex, value);
             });
 
@@ -53,13 +51,62 @@ async function xLuIncludeFile() {
             temp.innerHTML = content.trim();
             let newNode = temp.firstElementChild || temp;
 
+            Array.from(el.attributes).forEach(attr => {
+                if (attr.name !== 'xlu-include-file') {
+                    newNode.setAttribute(attr.name, attr.value);
+                }
+            });
+
             el.parentNode.replaceChild(newNode, el);
+
             await xLuIncludeFile();
         } else {
+            console.error("Error al cargar el template:", file);
             el.removeAttribute("xlu-include-file");
             await xLuIncludeFile();
         }
     } catch (error) {
-        console.error("Error:", error);
+        console.error("Error de red o procesamiento:", error);
     }
+}
+
+function initHamburgerMenu() {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mainMenu = document.getElementById("main-menu");
+    const overlay = document.getElementById("mobile-overlay");
+
+    if (!toggleBtn || !mainMenu) return;
+
+    if (toggleBtn.dataset.listenerAdded === "true") return;
+    toggleBtn.dataset.listenerAdded = "true";
+
+    function openMenu() {
+        mainMenu.classList.add("active");
+        if (overlay) overlay.classList.add("active");
+        document.body.classList.add("menu-open");
+    }
+
+    function closeMenu() {
+        mainMenu.classList.remove("active");
+        if (overlay) overlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+    }
+
+    toggleBtn.addEventListener("click", function () {
+        if (mainMenu.classList.contains("active")) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    if (overlay) {
+        overlay.addEventListener("click", closeMenu);
+    }
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth >= 768) {
+            closeMenu();
+        }
+    });
 }
