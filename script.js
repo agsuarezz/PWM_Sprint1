@@ -3,6 +3,7 @@ async function xLuIncludeFile() {
         try {
             const pageName = document.body.getAttribute('data-page') || 'index';
             const response = await fetch(`data/${pageName}.json`);
+
             if (response.ok) {
                 const config = await response.json();
                 window.templateData = config.templates || [];
@@ -22,18 +23,23 @@ async function xLuIncludeFile() {
     }
 
     let el = document.querySelector("[xlu-include-file]");
-    if (!el) return;
+
+    if (!el) {
+        initHamburgerMenu();
+        return;
+    }
 
     let file = el.getAttribute("xlu-include-file");
 
     try {
         let response = await fetch(file);
+
         if (response.ok) {
             let content = await response.text();
 
             let allKeys = Array.from(el.attributes)
-                               .filter(a => a.name.startsWith('data-'))
-                               .map(a => a.name.replace('data-', ''));
+                .filter(a => a.name.startsWith('data-'))
+                .map(a => a.name.replace('data-', ''));
 
             allKeys.forEach(key => {
                 let regex = new RegExp(`{{${key}}}`, "g");
@@ -62,4 +68,45 @@ async function xLuIncludeFile() {
     } catch (error) {
         console.error("Error de red o procesamiento:", error);
     }
+}
+
+function initHamburgerMenu() {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mainMenu = document.getElementById("main-menu");
+    const overlay = document.getElementById("mobile-overlay");
+
+    if (!toggleBtn || !mainMenu) return;
+
+    if (toggleBtn.dataset.listenerAdded === "true") return;
+    toggleBtn.dataset.listenerAdded = "true";
+
+    function openMenu() {
+        mainMenu.classList.add("active");
+        if (overlay) overlay.classList.add("active");
+        document.body.classList.add("menu-open");
+    }
+
+    function closeMenu() {
+        mainMenu.classList.remove("active");
+        if (overlay) overlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+    }
+
+    toggleBtn.addEventListener("click", function () {
+        if (mainMenu.classList.contains("active")) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    if (overlay) {
+        overlay.addEventListener("click", closeMenu);
+    }
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth >= 768) {
+            closeMenu();
+        }
+    });
 }
