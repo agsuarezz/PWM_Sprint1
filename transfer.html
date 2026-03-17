@@ -21,13 +21,13 @@
 
                 <div id="titulo-operacion" xlu-include-file="templates/operation-title.html"></div>
 
-                <div class="transfer-flex-row" id="field-nombre" xlu-include-file="templates/field-template.html"></div>
+                <div class="transfer-flex-row" id="field-nombre" xlu-include-file="templates/field-template.html" data-validation="required pattern='[a-zA-ZÁ-Úá-úÑñ ]+' title='Solo letras'"></div>
 
-                <div class="transfer-flex-row" id="field-iban" xlu-include-file="templates/field-template.html"></div>
+                <div class="transfer-flex-row" id="field-iban" xlu-include-file="templates/field-template.html" data-validation="required pattern='[A-Z]{2}[0-9]{22}' title='ES seguido de 22 números'"></div>
 
-                <div class="transfer-flex-row" id="field-importe" xlu-include-file="templates/field-template.html"></div>
+                <div class="transfer-flex-row" id="field-importe" xlu-include-file="templates/field-template.html" data-validation="required min='0.01' step='0.01'"></div>
 
-                <div class="transfer-flex-row" id="field-concepto" xlu-include-file="templates/field-template.html"></div>
+                <div class="transfer-flex-row" id="field-concepto" xlu-include-file="templates/field-template.html" data-validation="required"></div>
 
             </div>
 
@@ -49,9 +49,14 @@
 <div xlu-include-file="templates/footer.html"></div>
 
 <script src="script.js"></script>
+<script src="operations.js"></script> 
 <script>
-document.addEventListener("DOMContentLoaded", xLuIncludeFile);
-</script>
+        document.addEventListener("DOMContentLoaded", () => {
+            xLuIncludeFile().then(() => {
+                document.dispatchEvent(new CustomEvent('templatesReady'));
+            });
+        });
+    </script>
 
 </body>
 </html>

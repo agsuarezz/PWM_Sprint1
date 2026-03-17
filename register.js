@@ -2,8 +2,49 @@ document.addEventListener('templatesReady', () => {
     const registerForm = document.querySelector('.register-container form');
 
     if (registerForm) {
+        
+
+        registerForm.addEventListener('input', (evento) => {
+            const campo = evento.target;
+            
+            if (campo.tagName === 'INPUT' || campo.tagName === 'SELECT') {
+                let mensaje = campo.parentNode.querySelector('.mensaje-flotante');
+
+                if (campo.value.trim() !== '' && !campo.checkValidity()) {
+                    
+                    campo.style.border = "2px solid red";
+                    campo.style.outline = "2px solid red";
+                    
+                    if (!mensaje) {
+                        mensaje = document.createElement('span');
+                        mensaje.className = 'mensaje-flotante';
+                        mensaje.style.color = "#d9534f"; 
+                        mensaje.style.fontSize = "13px";
+                        mensaje.style.fontWeight = "600";
+                        mensaje.style.display = "block";
+                        mensaje.style.marginTop = "4px";
+                        campo.parentNode.insertBefore(mensaje, campo.nextSibling);
+                    }
+                    
+                    mensaje.textContent = "⚠️ " + (campo.title || "Formato incorrecto");
+
+                } else {
+                    campo.style.border = "";
+                    campo.style.outline = "";
+                    if (mensaje) {
+                        mensaje.remove();
+                    }
+                }
+            }
+        }, true);
+
         registerForm.addEventListener('submit', async (evento) => {
-            evento.preventDefault();
+            evento.preventDefault(); 
+
+            if (!registerForm.checkValidity()) {
+                registerForm.reportValidity(); 
+                return; 
+            }
 
             const datosUsuario = {
                 nombre: document.getElementById('name')?.value,
@@ -19,14 +60,12 @@ document.addEventListener('templatesReady', () => {
 
             const confirmPass = document.getElementById('confirm-password')?.value;
 
-
             if (datosUsuario.password !== confirmPass) {
                 alert("Las contraseñas no coinciden.");
                 return;
             }
 
             try {
-
                 const res = await fetch(`http://localhost:3000/usuarios?email=${datosUsuario.email}`);
                 const existentes = await res.json();
 

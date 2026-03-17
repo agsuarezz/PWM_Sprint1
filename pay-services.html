@@ -25,17 +25,20 @@
 
 <div class="transfer-flex-row"
      id="field-service"
-     xlu-include-file="templates/field-template.html">
+     xlu-include-file="templates/field-template.html"
+     data-validation="required">
 </div>
 
 <div class="transfer-flex-row"
      id="field-reference"
-     xlu-include-file="templates/field-template.html">
+     xlu-include-file="templates/field-template.html"
+     data-validation="required pattern='[0-9]{10,20}' title='De 10 a 20 números'">
 </div>
 
 <div class="transfer-flex-row"
      id="field-amount"
-     xlu-include-file="templates/field-template.html">
+     xlu-include-file="templates/field-template.html"
+     data-validation="required min='0.01' step='0.01'">
 </div>
 
 <div class="transfer-flex-row"
@@ -75,8 +78,13 @@
 <div xlu-include-file="templates/footer.html"></div>
 
 <script src="script.js"></script>
+<script src="operations.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+        document.addEventListener("DOMContentLoaded", () => {
+            xLuIncludeFile().then(() => {
+                document.dispatchEvent(new CustomEvent('templatesReady'));
+            });
+        });
 </script>
 
 </body>
