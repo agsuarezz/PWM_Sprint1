@@ -1,0 +1,17 @@
+{
+  "templates": [
+    {
+      "selector": "#main-footer",
+      "data": {
+        "copyright": "Banco Imperium © 2026. Todos los derechos reservados.",
+        "link_privacidad": "#",
+        "link_cookies": "#",
+        "link_legal": "#",
+        "appstore_link": "#",
+        "appstore_img": "images/apple_logo.png",
+        "playstore_link": "#",
+        "playstore_img": "images/gp_logo.png"
+      }
+    }
+  ]
+}

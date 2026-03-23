@@ -3,12 +3,14 @@ async function xLuIncludeFile() {
         try {
             const pageName = document.body.getAttribute('data-page') || 'index';
 
-            const [headerResponse, pageResponse] = await Promise.all([
+            const [headerResponse, footerResponse, pageResponse] = await Promise.all([
                 fetch('data/header.json'),
+                fetch('data/footer.json'),
                 fetch(`data/${pageName}.json`)
             ]);
 
             let headerTemplates = [];
+            let footerTemplates = [];
             let pageTemplates = [];
 
             if (headerResponse.ok) {
@@ -16,12 +18,21 @@ async function xLuIncludeFile() {
                 headerTemplates = headerConfig.templates || [];
             }
 
+            if (footerResponse.ok) {
+                const footerConfig = await footerResponse.json();
+                footerTemplates = footerConfig.templates || [];
+            }
+
             if (pageResponse.ok) {
                 const pageConfig = await pageResponse.json();
                 pageTemplates = pageConfig.templates || [];
             }
 
-            window.templateData = [...headerTemplates, ...pageTemplates];
+            window.templateData = [
+                ...headerTemplates,
+                ...footerTemplates,
+                ...pageTemplates
+            ];
 
             window.templateData.forEach(item => {
                 const elements = document.querySelectorAll(item.selector);
