@@ -78,9 +78,9 @@ document.addEventListener('click', async (evento) => {
         
         datosOperacion.fecha = new Date().toLocaleDateString('es-ES');
         datosOperacion.tipo = document.body.getAttribute('data-page');
-        
+        datosOperacion.id = Date.now();
 
-        const usuarioString = localStorage.getItem('usuarioActivo'); 
+        const usuarioString = localStorage.getItem('usuarioSesion'); 
         
         if (!usuarioString) {
             alert("Error: No has iniciado sesión. Por favor, vuelve al Login.");
@@ -94,18 +94,16 @@ document.addEventListener('click', async (evento) => {
 
 
         try {
-            const resPost = await fetch('http://localhost:3000/movimientos', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(datosOperacion)
-            });
+            const movimientosGuardados = localStorage.getItem('movimientos');
+            const movimientosDB = movimientosGuardados ? JSON.parse(movimientosGuardados) : [];
 
-            if (resPost.ok) {
-                alert("¡Operación guardada con éxito!");
-                window.location.href = "index.html"; 
-            } else {
-                alert("Error al guardar en el servidor.");
-            }
+            
+            movimientosDB.push(datosOperacion);
+            localStorage.setItem('movimientos', JSON.stringify(movimientosDB));
+
+            
+            alert("¡Operación guardada con éxito!");
+            window.location.href = "user-movements.html";
         } catch (error) {
             alert("Error: ¿Está encendido el json-server?");
         }

@@ -71,6 +71,15 @@
       "fecha": "17/3/2026",
       "tipo": "top-up",
       "usuarioId": "fee7"
+    },
+    {
+      "id": "ce58",
+      "operador": "1",
+      "telefono": "111111111",
+      "cantidad": "1",
+      "fecha": "17/3/2026",
+      "tipo": "top-up",
+      "usuarioId": "fee7"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
