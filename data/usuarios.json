@@ -1,0 +1,77 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "name": "Marcos",
+      "surname": "González",
+      "email": "marcos@gmail.com",
+      "password": "password123"
+    },
+    {
+      "id": "e60a",
+      "nombre": "Naiara",
+      "apellidos": "Día",
+      "email": "naiara.@alu.ulpgc.es",
+      "telefono": "111111111",
+      "fechaNacimiento": "1111-11-11",
+      "direccion": "xxxx",
+      "codigoPostal": "11111",
+      "password": "12341234",
+      "tipoCuenta": "premium"
+    },
+    {
+      "id": "c6a2",
+      "nombre": "Ana",
+      "apellidos": "Pérez",
+      "email": "ana@hotmail.com",
+      "telefono": "101010101",
+      "fechaNacimiento": "2222-11-11",
+      "direccion": "yyyyyy",
+      "codigoPostal": "22222",
+      "password": "12345678",
+      "tipoCuenta": "business"
+    },
+    {
+      "id": "fee7",
+      "nombre": "ana",
+      "apellidos": "aaaaa",
+      "email": "a@a",
+      "telefono": "111111111",
+      "fechaNacimiento": "1111-11-11",
+      "direccion": "1",
+      "codigoPostal": "11111",
+      "password": "11111111",
+      "tipoCuenta": "premium"
+    }
+  ],
+  "movimientos": [
+    {
+      "id": "0e10",
+      "operador": "111",
+      "telefono": "111111111",
+      "cantidad": "1",
+      "fecha": "17/3/2026",
+      "tipo": "top-up",
+      "usuarioId": "fee7"
+    },
+    {
+      "id": "65d6",
+      "operador": "111",
+      "telefono": "111111111",
+      "cantidad": "1",
+      "fecha": "17/3/2026",
+      "tipo": "top-up",
+      "usuarioId": "fee7"
+    },
+    {
+      "id": "2355",
+      "operador": "111",
+      "telefono": "111111111",
+      "cantidad": "1",
+      "fecha": "17/3/2026",
+      "tipo": "top-up",
+      "usuarioId": "fee7"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
