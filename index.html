@@ -6,45 +6,45 @@
     <title>Banco Imperium - Dashboard</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/shared.css">
     <link rel="stylesheet" href="styles/index-style.css">
     <link rel="stylesheet" href="styles/responsive-style.css">
     <link rel="stylesheet" href="styles/sidebar-style.css">
-    
 </head>
 
 <body data-page="index">
 
-<header xlu-include-file="templates/header.html"></header>
+    <header id="main-header" xlu-include-file="templates/header.html"></header>
 
-<main>
-    <div id="hero-premium" xlu-include-file="templates/text-with-image.html"></div>
+    <main>
+        <div id="hero-premium" xlu-include-file="templates/text-with-image.html"></div>
 
-    <div class="main-cta-wrapper">
-        <div id="main-cta" xlu-include-file="templates/button.html"></div>
-    </div>
+        <div class="main-cta-wrapper">
+            <div id="main-cta" xlu-include-file="templates/button.html"></div>
+        </div>
 
-    <section class="cards-wrapper">
-        <div id="card-excelencia" xlu-include-file="templates/card-container.html"></div>
-        <div id="card-patrimonio" xlu-include-file="templates/card-container.html"></div>
-        <div id="card-libertad" xlu-include-file="templates/card-container.html"></div>
-    </section>
+        <section class="cards-wrapper">
+            <div id="card-excelencia" xlu-include-file="templates/card-container.html"></div>
+            <div id="card-patrimonio" xlu-include-file="templates/card-container.html"></div>
+            <div id="card-libertad" xlu-include-file="templates/card-container.html"></div>
+        </section>
 
-    <div id="compromiso-verde" xlu-include-file="templates/text-with-image.html"></div>
+        <div id="compromiso-verde" xlu-include-file="templates/text-with-image.html"></div>
 
-    <section class="benefit-section">
-        <div id="benefit-pago" xlu-include-file="templates/benefit.html"></div>
-        <div id="benefit-comisiones" xlu-include-file="templates/benefit.html"></div>
-        <div id="benefit-seguridad" xlu-include-file="templates/benefit.html"></div>
-    </section>
-</main>
+        <section class="benefit-section">
+            <div id="benefit-pago" xlu-include-file="templates/benefit.html"></div>
+            <div id="benefit-comisiones" xlu-include-file="templates/benefit.html"></div>
+            <div id="benefit-seguridad" xlu-include-file="templates/benefit.html"></div>
+        </section>
+    </main>
 
-<footer xlu-include-file="templates/footer.html"></footer>
+    <footer xlu-include-file="templates/footer.html"></footer>
 
-<script src="script.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", xLuIncludeFile);
-</script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+    </script>
 
 </body>
 </html>

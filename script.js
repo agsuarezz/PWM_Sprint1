@@ -2,23 +2,40 @@ async function xLuIncludeFile() {
     if (!window.templateData) {
         try {
             const pageName = document.body.getAttribute('data-page') || 'index';
-            const response = await fetch(`data/${pageName}.json`);
 
-            if (response.ok) {
-                const config = await response.json();
-                window.templateData = config.templates || [];
+            const [headerResponse, pageResponse] = await Promise.all([
+                fetch('data/header.json'),
+                fetch(`data/${pageName}.json`)
+            ]);
 
-                window.templateData.forEach(item => {
-                    const el = document.querySelector(item.selector);
-                    if (el) {
-                        Object.keys(item.data).forEach(key => {
-                            el.setAttribute(`data-${key.toLowerCase()}`, item.data[key]);
-                        });
-                    }
-                });
+            let headerTemplates = [];
+            let pageTemplates = [];
+
+            if (headerResponse.ok) {
+                const headerConfig = await headerResponse.json();
+                headerTemplates = headerConfig.templates || [];
             }
+
+            if (pageResponse.ok) {
+                const pageConfig = await pageResponse.json();
+                pageTemplates = pageConfig.templates || [];
+            }
+
+            window.templateData = [...headerTemplates, ...pageTemplates];
+
+            window.templateData.forEach(item => {
+                const elements = document.querySelectorAll(item.selector);
+
+                elements.forEach(el => {
+                    Object.keys(item.data).forEach(key => {
+                        el.setAttribute(`data-${key.toLowerCase()}`, item.data[key]);
+                    });
+                });
+            });
+
         } catch (e) {
-            console.error("Error al cargar el archivo JSON:", e);
+            console.error("Error al cargar los archivos JSON:", e);
+            window.templateData = [];
         }
     }
 
@@ -43,7 +60,7 @@ async function xLuIncludeFile() {
 
             allKeys.forEach(key => {
                 let regex = new RegExp(`{{${key}}}`, "g");
-                let value = el.getAttribute(`data-${key}`);
+                let value = el.getAttribute(`data-${key}`) || "";
                 content = content.replace(regex, value);
             });
 

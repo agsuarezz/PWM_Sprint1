@@ -1,0 +1,12 @@
+{
+  "templates": [
+    {
+      "selector": "#main-header",
+      "data": {
+        "logo_link": "index.html",
+        "logo_src": "images/logo.jfif",
+        "logo_alt": "Logo del Banco"
+      }
+    }
+  ]
+}
