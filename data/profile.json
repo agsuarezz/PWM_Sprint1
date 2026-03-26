@@ -55,7 +55,7 @@
       "selector": "#profile-delete-button",
       "data": {
         "btnid": "perfil-boton-baja",
-        "text": "Darse de baja",
+        "text": "Cerrar Sesión",
         "href": "#"
       }
     }
