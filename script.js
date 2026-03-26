@@ -44,6 +44,21 @@ async function xLuIncludeFile() {
                 });
             });
 
+            // --- PEGAR AQUÍ (Justo después del último forEach de window.templateData) ---
+            window.templateData.forEach(item => {
+                const el = document.querySelector(item.selector);
+                // Si el elemento existe en el HTML y NO es un archivo externo (no tiene xlu-include-file)
+                if (el && !el.hasAttribute('xlu-include-file')) {
+                    let content = el.innerHTML;
+                    Object.keys(item.data).forEach(key => {
+                        const regex = new RegExp(`{{${key}}}`, "g");
+                        content = content.replace(regex, item.data[key]);
+                    });
+                    el.innerHTML = content;
+                }
+            });
+            // --------------------------------------------------------------------------
+
         } catch (e) {
             console.error("Error al cargar los archivos JSON:", e);
             window.templateData = [];

@@ -17,6 +17,18 @@
       }
     },
     {
+      "selector": "#login-text-content",
+      "data": {
+        "title": "Te damos la bienvenida",
+        "subtitle": "Hola, introduce tu usuario y clave de acceso para continuar.",
+        "label_user": "Usuario",
+        "placeholder_user": "Email, NIF o NIE",
+        "label_pass": "Contraseña",
+        "link_forgot": "¿Olvidó la contraseña?",
+        "link_signup": "¿No eres cliente?"
+      }
+    },
+    {
       "selector": "#password-icon-container",
       "data": {
         "xmlns": "http://www.w3.org/2000/svg",
