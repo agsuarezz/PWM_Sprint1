@@ -68,7 +68,9 @@ async function xLuIncludeFile() {
     let el = document.querySelector("[xlu-include-file]");
 
     if (!el) {
-        initHamburgerMenu();
+        if (typeof initHamburgerMenu === "function") initHamburgerMenu();
+        
+        document.dispatchEvent(new CustomEvent('templatesReady'));
         return;
     }
 

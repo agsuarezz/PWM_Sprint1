@@ -1,9 +1,11 @@
+// register.js
 document.addEventListener('templatesReady', () => {
-    const registerForm = document.querySelector('.register-container form');
+    // Seleccionamos el formulario (soporta tanto si le pusiste ID como si no)
+    const registerForm = document.getElementById('register-form') || document.querySelector('.register-container form');
 
     if (registerForm) {
         
-        // --- MANTENEMOS TU LÓGICA DE VALIDACIÓN VISUAL EN TIEMPO REAL ---
+        // --- 1. VALIDACIÓN VISUAL EN TIEMPO REAL (Tu código original intacto) ---
         registerForm.addEventListener('input', (evento) => {
             const campo = evento.target;
             
@@ -37,56 +39,60 @@ document.addEventListener('templatesReady', () => {
             }
         }, true);
 
-        // --- LÓGICA DE ENVÍO ADAPTADA A LOCALSTORAGE ---
+
+        // --- 2. LÓGICA DE ENVÍO CON LOCALSTORAGE (Orden corregido) ---
         registerForm.addEventListener('submit', (evento) => {
             evento.preventDefault(); 
 
-            // Comprobación de validez nativa de HTML5
+            // A. Comprobación de validez nativa de HTML5
             if (!registerForm.checkValidity()) {
                 registerForm.reportValidity(); 
                 return; 
             }
 
-            const datosUsuario = {
-                nombre: document.getElementById('name')?.value,
-                apellidos: document.getElementById('surname')?.value,
-                email: document.getElementById('email')?.value,
-                telefono: document.getElementById('phone')?.value,
-                fechaNacimiento: document.getElementById('birthdate')?.value,
-                direccion: document.getElementById('address')?.value,
-                codigoPostal: document.getElementById('zip')?.value,
-                password: document.getElementById('password')?.value,
-                tipoCuenta: document.getElementById('account-type')?.value,
-                id: Date.now() // Añadimos ID único local
-            };
-
+            // B. Comprobación de contraseñas
+            const password = document.getElementById('password')?.value;
             const confirmPass = document.getElementById('confirm-password')?.value;
 
-            // Comprobación de coincidencia de contraseñas
-            if (datosUsuario.password !== confirmPass) {
+            if (password !== confirmPass) {
                 alert("Las contraseñas no coinciden.");
                 return;
             }
 
-            // --- OPERACIONES DE CARGA LOCAL ---
+            // C. Capturar y limpiar el email (minúsculas y sin espacios a los lados)
+            const emailIngresado = document.getElementById('email')?.value.trim().toLowerCase();
 
-            // 1. Obtener usuarios actuales del navegador
+            // D. LEER LA BASE DE DATOS LOCAL
             const usuariosGuardados = localStorage.getItem('usuarios');
             const usuariosDB = usuariosGuardados ? JSON.parse(usuariosGuardados) : [];
 
-            // 2. Comprobar si el email ya existe localmente
-            const existe = usuariosDB.find(u => u.email === datosUsuario.email);
+            // E. COMPROBAR DUPLICADOS (La corrección clave está aquí)
+            const existe = usuariosDB.find(u => u.email === emailIngresado);
 
             if (existe) {
                 alert("Este email ya está registrado en el sistema local.");
-                return;
+                return; // Cortamos la ejecución, NO se guarda nada
             }
 
-            // 3. Guardar en el array y actualizar LocalStorage
+            // F. CONSTRUIR EL USUARIO (Solo llegamos aquí si no existe)
+            const datosUsuario = {
+                nombre: document.getElementById('name')?.value.trim(),
+                apellidos: document.getElementById('surname')?.value.trim(),
+                email: emailIngresado,
+                telefono: document.getElementById('phone')?.value.trim(),
+                fechaNacimiento: document.getElementById('birthdate')?.value,
+                direccion: document.getElementById('address')?.value.trim(),
+                codigoPostal: document.getElementById('zip')?.value.trim(),
+                password: password,
+                tipoCuenta: document.getElementById('account-type')?.value,
+                id: Date.now() // Generamos ID único
+            };
+
+            // G. GUARDAR EN LOCALSTORAGE
             usuariosDB.push(datosUsuario);
             localStorage.setItem('usuarios', JSON.stringify(usuariosDB));
 
-            // 4. Éxito y redirección
+            // H. ÉXITO Y REDIRECCIÓN
             alert("¡Usuario registrado con éxito en el almacenamiento local!");
             window.location.href = "login.html";
         });

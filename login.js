@@ -1,6 +1,6 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('.login-form-card form');
+document.addEventListener('templatesReady', () => { 
+    const loginForm = document.getElementById('login-form');
 
     if (loginForm) {
         loginForm.addEventListener('submit', (evento) => {
