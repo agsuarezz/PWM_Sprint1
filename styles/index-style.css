@@ -237,6 +237,7 @@
     }
 }
 
+/* ===== AJUSTE TABLET: CENTRAR 3ª TARJETA ===== */
 @media (max-width: 1023px) and (min-width: 768px) {
 
     .cards-wrapper {
@@ -256,6 +257,7 @@
     }
 }
 
+/* ===== AJUSTE TABLET BENEFITS ===== */
 @media (max-width: 1023px) and (min-width: 768px) {
 
     .benefit-section {
