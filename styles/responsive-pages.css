@@ -71,20 +71,16 @@
 
     /* --- Login, Registro, Perfil y Operaciones (Ajustes de contenedores) --- */
     .login-main-container, .register-container form, .perfil-tarjeta-dos-columnas, .transfer-card {
-        width: 90% !important; margin: 40px auto !important; padding: 0 !important; 
+        width: 80% !important; margin: 40px auto !important; padding: 0 !important; 
         border-radius: 12px !important; box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important; overflow: hidden !important;
     }
 
     /* Login y Perfil: Apilamiento forzado a bloques */
-    .login-content-section, .perfil-tarjeta-dos-columnas { 
-        display: block !important; width: 100% !important; margin: 0 !important; padding: 0 !important; 
-    }
+    .login-content-section, .perfil-tarjeta-dos-columnas { display: block !important; width: 100% !important; }
     .login-image-column, .perfil-columna-izquierda {
         display: block !important; width: 100% !important; height: 250px !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; 
     }
-    .login-main-image { 
-        display: block !important; width: 100% !important; height: 250px !important; object-fit: cover !important; margin: 0 !important; padding: 0 !important; border-radius: 12px 12px 0 0 !important; 
-    }
+    .login-main-image { display: block !important; width: 100% !important; height: 250px !important; object-fit: cover !important; border-radius: 12px 12px 0 0 !important; }
     .login-form-column, .perfil-columna-derecha {
         display: block !important; width: 100% !important; background-color: #ffffff !important; padding: 40px !important; box-sizing: border-box !important; position: relative !important; z-index: 10 !important; 
     }
@@ -130,7 +126,7 @@
 
     /* --- Login, Registro y Perfil --- */
     .login-main-container, .register-container form, .perfil-tarjeta-dos-columnas, .transfer-card {
-        width: 95% !important; margin: 20px auto !important; border-radius: 8px !important;
+        width: 92% !important; margin: 20px auto !important; border-radius: 8px !important;
     }
     .login-image-column { display: none !important; }
     .login-form-column, .register-container form, .perfil-tarjeta-dos-columnas { padding: 30px 20px !important; }
