@@ -1,0 +1,161 @@
+/* ==========================================================================
+   BANCO IMPERIUM - RESPONSIVE DESIGN (RWD) UNIFICADO
+   ========================================================================== */
+
+/* ==========================================================================
+   1. PANTALLAS GRANDES Y ESCRITORIO (Desde 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    /* --- Cuentas y Footer (Código original) --- */
+    .account-content { padding: 80px 10%; }
+    .account-content__container { grid-template-columns: 1fr 1fr; gap: 60px; }
+    .account-content__title { font-size: 2.5rem; }
+    .account-content__subtitle { font-size: 1.2rem; margin-bottom: 30px; }
+    .category-nav-wrapper { padding: 32px 10% 0; }
+    
+    .footer-socket { padding: 40px 10%; }
+    .socket-container { flex-direction: row; justify-content: space-between; align-items: center; text-align: left; }
+    .socket-nav ul { flex-direction: row; gap: 20px; }
+
+    /* --- Login, Perfil y Servicios --- */
+    .login-main-container { padding: 60px; }
+    .perfil-tarjeta-dos-columnas { gap: 60px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==========================================================================
+   2. REGLAS ESPECÍFICAS PARA EL HEADER (Desktop y Tablet)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .header-container { padding: 14px 4%; }
+    .main-navigation ul { flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 22px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Ajustes específicos del Header en Tablet */
+    .header-container { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 18px 4%; }
+    .header-left { position: static; transform: none; left: auto; display: flex; justify-content: center; width: 100%; }
+    .header-logo, .header-left img { height: 72px; width: auto; }
+    .header-right { position: static; transform: none; width: 100%; height: auto; background: transparent; padding: 0; display: flex; justify-content: center; align-items: center; box-shadow: none; overflow: visible; }
+    .nav-wrapper { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; width: 100%; }
+    .main-navigation { width: 100%; margin: 0; }
+    .main-navigation ul { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 18px 28px; list-style: none; margin: 0; padding: 0; }
+    .main-navigation li { width: auto; }
+    .main-navigation a { display: inline-block; width: auto; font-size: 15px; text-align: center; padding: 0; border-bottom: none; position: relative; }
+    .main-navigation a::after { display: block; }
+    .client-access { display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: wrap; gap: 14px 18px; width: 100%; margin: 0; }
+    .login-link { width: auto; padding: 0; border-bottom: none; font-size: 14px; text-align: center; }
+    .btn-signup { width: auto; padding: 10px 18px; font-size: 14px; text-align: center; }
+    .menu-toggle, .mobile-overlay { display: none !important; }
+}
+
+/* ==========================================================================
+   3. PANTALLAS MEDIANAS Y TABLETS (Hasta 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    
+    /* --- Cuentas y Navegación --- */
+    .account-content { padding: 60px 6%; }
+    .account-content__container { grid-template-columns: 1fr; gap: 30px; }
+    .account-content__title { font-size: 2.3rem; line-height: 1.15; }
+    .account-content__subtitle { font-size: 1.1rem; margin-bottom: 20px; line-height: 1.5; }
+    .account-content__info { width: 100%; }
+    .category-nav-wrapper { padding: 28px 4% 0; }
+    .category-navigation ul { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+    .category-navigation a { width: auto; min-width: 180px; }
+    
+    /* --- Footer --- */
+    .footer-socket { padding: 36px 6%; }
+    .socket-container { flex-direction: column; gap: 24px; text-align: center; }
+    .socket-nav ul { justify-content: center; flex-wrap: wrap; }
+
+    /* --- Login, Registro, Perfil y Operaciones (Ajustes de contenedores) --- */
+    .login-main-container, .register-container form, .perfil-tarjeta-dos-columnas, .transfer-card {
+        width: 90% !important; margin: 40px auto !important; padding: 0 !important; 
+        border-radius: 12px !important; box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important; overflow: hidden !important;
+    }
+
+    /* Login y Perfil: Apilamiento forzado a bloques */
+    .login-content-section, .perfil-tarjeta-dos-columnas { 
+        display: block !important; width: 100% !important; margin: 0 !important; padding: 0 !important; 
+    }
+    .login-image-column, .perfil-columna-izquierda {
+        display: block !important; width: 100% !important; height: 250px !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; 
+    }
+    .login-main-image { 
+        display: block !important; width: 100% !important; height: 250px !important; object-fit: cover !important; margin: 0 !important; padding: 0 !important; border-radius: 12px 12px 0 0 !important; 
+    }
+    .login-form-column, .perfil-columna-derecha {
+        display: block !important; width: 100% !important; background-color: #ffffff !important; padding: 40px !important; box-sizing: border-box !important; position: relative !important; z-index: 10 !important; 
+    }
+
+    /* Perfil Centrado */
+    .perfil-tarjeta-dos-columnas { display: flex !important; flex-direction: column !important; align-items: center !important; padding: 50px 30px !important; gap: 30px !important; }
+    .perfil-columna-izquierda { display: flex !important; justify-content: center !important; height: auto !important; flex: none !important; }
+    .perfil-imagen-redonda { margin: 0 auto !important; }
+    .perfil-columna-derecha { display: flex !important; flex-direction: column !important; }
+    .perfil-cabecera-titulos { text-align: center !important; }
+    .perfil-columna-derecha .btn-primary { align-self: center !important; }
+
+    /* Registro y Servicios */
+    .form-row { display: flex !important; flex-direction: column !important; gap: 15px !important; }
+    .register-container form { padding: 40px !important; }
+    .services-container { display: flex !important; flex-direction: column !important; gap: 40px !important; }
+    .services-hero-image img { height: 350px !important; width: 100% !important; object-fit: cover !important; }
+
+    /* Dashboards */
+    .dashboard { padding: 60px 5% !important; }
+}
+
+/* ==========================================================================
+   4. PANTALLAS PEQUEÑAS Y MÓVILES (Hasta 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    
+    /* --- Header y Cuentas --- */
+    .header-left img, .header-logo { height: 60px; }
+    .account-content { padding: 40px 20px; }
+    .account-content__title { font-size: 2rem; }
+    .account-content__subtitle { font-size: 1rem; }
+    .account-content__benefits li { line-height: 1.5; }
+    .category-nav-wrapper { padding: 24px 20px 0; }
+    .category-navigation ul { flex-direction: column; gap: 12px; }
+    .category-navigation a { width: 100%; min-width: unset; }
+    
+    /* --- Footer --- */
+    .footer-socket { padding: 32px 20px; }
+    .socket-container { gap: 20px; }
+    .store-badges { justify-content: center; flex-wrap: wrap; }
+    .socket-nav ul { flex-direction: column; gap: 12px; align-items: center; padding: 0; margin: 0; }
+
+    /* --- Login, Registro y Perfil --- */
+    .login-main-container, .register-container form, .perfil-tarjeta-dos-columnas, .transfer-card {
+        width: 95% !important; margin: 20px auto !important; border-radius: 8px !important;
+    }
+    .login-image-column { display: none !important; }
+    .login-form-column, .register-container form, .perfil-tarjeta-dos-columnas { padding: 30px 20px !important; }
+    .perfil-columna-izquierda { height: auto !important; padding-top: 30px !important; }
+    .perfil-imagen-redonda { width: 140px !important; height: 140px !important; }
+
+    /* --- Servicios --- */
+    .services-grid { grid-template-columns: 1fr !important; gap: 25px !important; }
+    .services-hero-image img { height: 250px !important; }
+
+    /* --- Operaciones (Transferencias, Pagos, Simulador) --- */
+    .transfer-body { padding: 30px 20px !important; }
+    .transfer-body > div { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+    .transfer-body label { flex: none !important; width: 100% !important; }
+    .transfer-footer { flex-direction: column !important; gap: 15px !important; text-align: center !important; padding: 25px 20px !important; }
+    .footer-right { flex-direction: column !important; width: 100% !important; }
+    .footer-right .btn-primary, .footer-left .btn-primary { width: 100% !important; }
+
+    /* --- Dashboards (Movimientos y Tarjetas) --- */
+    .dashboard { padding: 40px 20px !important; }
+    .balance-card { width: 100% !important; max-width: 420px !important; height: auto !important; padding: 30px 20px !important; }
+    .dashboard__actions { flex-direction: column !important; gap: 15px !important; align-items: center !important; }
+    .action-card, .tabs { width: 100% !important; max-width: 300px !important; }
+    .movement-item { flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; position: relative !important; }
+    .movement-item__amount { text-align: left !important; min-width: auto !important; margin-top: 5px !important; font-size: 18px !important; }
+    .card-info { flex-direction: column !important; align-items: flex-start !important; }
+    .card-info__preview { width: 100% !important; height: 180px !important; margin-top: 15px !important; }
+}
