@@ -1,0 +1,118 @@
+{
+  "templates": [
+    {
+      "selector": "[xlu-include-file='templates/header-profile.html']",
+      "data": {
+        "username": "",
+        "accountnumber": "",
+        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
+        "profilelink": "index.html"
+      }
+    },
+    {
+      "selector": "[data-fieldid='name']",
+      "data": {
+        "fieldid": "name",
+        "labelname": "Nombre",
+        "fieldtype": "text",
+        "valtext": "",
+        "phtext": "Ej: Laura",
+        "validation": "required pattern='[a-zA-ZÁ-Úá-úÑñ ]+' title='Solo se permiten letras'"
+      }
+    },
+    {
+      "selector": "[data-fieldid='surname']",
+      "data": {
+        "fieldid": "surname",
+        "labelname": "Apellidos",
+        "fieldtype": "text",
+        "valtext": "",
+        "phtext": "Ej: Pérez García",
+        "validation": "required pattern='[a-zA-ZÁ-Úá-úÑñ ]+' title='Solo se permiten letras'"
+      }
+    },
+    {
+      "selector": "[data-fieldid='email']",
+      "data": {
+        "fieldid": "email",
+        "labelname": "Correo Electrónico",
+        "fieldtype": "email",
+        "valtext": "",
+        "phtext": "usuario@correo.com",
+        "validation": "required"
+      }
+    },
+    {
+      "selector": "[data-fieldid='phone']",
+      "data": {
+        "fieldid": "phone",
+        "labelname": "Teléfono",
+        "fieldtype": "tel",
+        "valtext": "",
+        "phtext": "600 000 000",
+        "validation": "required pattern='[0-9]{9}' title='Debe introducir 9 dígitos'"
+      }
+    },
+    {
+      "selector": "[data-fieldid='birthdate']",
+      "data": {
+        "fieldid": "birthdate",
+        "labelname": "Fecha de nacimiento",
+        "valtext": "",
+        "phtext": "DD/MM/AAAA",
+        "fieldtype": "date",
+        "validation": "required"
+      }
+    },
+    {
+      "selector": "[data-fieldid='address']",
+      "data": {
+        "fieldid": "address",
+        "labelname": "Dirección",
+        "fieldtype": "text",
+        "valtext": "",
+        "phtext": "Calle, num, piso, letra",
+        "validation": "required"
+      }
+    },
+    {
+      "selector": "[data-fieldid='zip']",
+      "data": {
+        "fieldid": "zip",
+        "labelname": "Código Postal",
+        "fieldtype": "text",
+        "valtext": "",
+        "phtext": "00000",
+        "validation": "required pattern='[0-9]{5}' title='Debe contener 5 números'"
+      }
+    },
+    {
+      "selector": "[data-fieldid='password']",
+      "data": {
+        "fieldid": "password",
+        "labelname": "Contraseña",
+        "fieldtype": "password",
+        "valtext": "",
+        "phtext": "Crea una contraseña",
+        "validation": "required minlength='8' title='Mínimo 8 caracteres'"
+      }
+    },
+    {
+      "selector": "[data-fieldid='confirm-password']",
+      "data": {
+        "fieldid": "confirm-password",
+        "labelname": "Confirmar Contraseña",
+        "fieldtype": "password",
+        "valtext": "",
+        "phtext": "Repite la contraseña"
+      }
+    },
+    {
+      "selector": "[xlu-include-file='templates/button-submit.html']",
+      "data": {
+        "btnid": "btn-register-submit",
+        "text": "Completar Registro"
+      }
+    }
+  ]
+}

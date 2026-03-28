@@ -1,10 +1,9 @@
-// profile.js
 document.addEventListener("DOMContentLoaded", async () => {
     if (document.body.getAttribute('data-page') !== 'profile') return;
 
     await xLuIncludeFile();
 
-    const usuarioString = localStorage.getItem('usuarioSesion');
+    const usuarioString = sessionStorage.getItem('usuarioSesion');
     
     if (!usuarioString) {
         window.location.href = "login.html";
@@ -48,5 +47,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             bloques[4].innerHTML = bloques[4].innerHTML
                 .replace(/x{5,}/ig, usuarioLogueado.direccion || "No especificada");
         }
+    }
+
+    const logoutButton = document.getElementById('profile-delete-button');
+    if (logoutButton) {
+        logoutButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            sessionStorage.removeItem('usuarioSesion');
+            window.location.href = "login.html";
+        });
     }
 });

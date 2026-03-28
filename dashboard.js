@@ -25,6 +25,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     // 5. Actualizamos el nombre en el header
     const elementoNombre = document.getElementById('nombre-usuario-header');
     if (elementoNombre) {
-        elementoNombre.textContent = `${usuarioLogueado.nombre} ${usuarioLogueado.apellidos}`; 
+        elementoNombre.textContent = `Bienvenido, ${usuarioLogueado.nombre} ${usuarioLogueado.apellidos}`; 
     }
 });
