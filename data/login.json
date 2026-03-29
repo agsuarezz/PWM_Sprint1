@@ -1,14 +1,18 @@
 {
   "templates": [
     {
-      "selector": "#login-header",
-      "data": {
-        "username": "",
-        "accountnumber": "",
-        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
-        "profilelink": "index.html"
-      }
-    },
+  "selector": "#profile-header",
+  "data": {
+    "logo_link": "index.html",
+    "logo_src": "images/logo.jfif",
+    "logo_alt": "Logo del Banco Imperium",
+    "username": "",
+    "accountnumber": "",
+    "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-left.svg",
+    "profilealt": "Index",
+    "profilelink": "index.html"
+  }
+},
     {
       "selector": "#login-visual",
       "data": {
