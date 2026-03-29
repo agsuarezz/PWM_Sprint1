@@ -3,7 +3,7 @@
     {
       "selector": "#header-profile",
       "data": {
-        "username": "Marcos González Gómez",
+        "username": "",
         "accountnumber": "ES12 3456 7890 1234",
         "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
         "profilelink": "user-movements.html"
