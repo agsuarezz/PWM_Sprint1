@@ -258,3 +258,68 @@
   object-fit: cover;
   display: block;
 }
+
+/* ==========================================================
+   TABS (Movimientos / Tarjetas)
+   ========================================================== */
+
+/* Contenedor principal de las pestañas (id="selection-tabs" o class="dashboard__tabs") */
+.dashboard__tabs {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  margin-bottom: 30px;
+}
+
+/* El nav interno que carga el template selection-cards.html */
+.tabs {
+  width: auto; /* Se ajusta al contenido */
+  min-width: 380px; /* Mantiene un ancho mínimo parecido al original */
+  display: flex;
+  justify-content: center; /* Centra los enlaces dentro del nav */
+  background: var(--imperium-white);
+  border: 1px solid var(--imperium-line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Sombra más suave parecida a la imagen */
+}
+
+/* Estilo para cada enlace de pestaña */
+.tabs__tab {
+  flex: 0 1 auto; /* No forzamos a que ocupen todo el ancho equitativamente si no es necesario */
+  border: none;
+  background: transparent;
+  padding: 14px 24px; /* Un poco más de padding lateral */
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: var(--imperium-ink);
+  text-decoration: none; /* Aseguramos que no haya subrayado por defecto del enlace */
+  transition: background .2s ease, color .2s ease;
+}
+
+.tabs__tab:hover {
+  background: var(--imperium-sand);
+}
+
+/* El contenedor del texto, donde aplicaremos el subrayado */
+.tabs__text {
+  border-bottom: 1.5px solid var(--imperium-black); /* Subrayado oscuro debajo del texto */
+  padding-bottom: 2px; /* Espacio entre el texto y la línea */
+}
+
+/* Icono de la estrella */
+.tabs__icon {
+  color: var(--imperium-gold);
+  font-size: 14px;
+  /* Si la estrella no está centrada verticalmente con el texto, puedes ajustar con line-height o margin-top */
+  display: flex;
+  align-items: center;
+}
