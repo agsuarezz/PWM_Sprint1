@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const elementoNombreHeader = document.getElementById('nombre-usuario-header');
     if (elementoNombreHeader) {
-        elementoNombreHeader.textContent = `Hola, ${usuarioLogueado.nombre}`; 
+        elementoNombreHeader.textContent = `Bienvenido, ${usuarioLogueado.nombre} ${usuarioLogueado.apellidos}`; 
     }
 
     const columnaDerecha = document.querySelector('.perfil-columna-derecha');

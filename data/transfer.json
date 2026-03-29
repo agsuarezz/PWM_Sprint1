@@ -1,14 +1,19 @@
 {
   "templates": [
     {
-      "selector": "#header-profile",
-      "data": {
-        "username": "Marcos González Gómez",
-        "accountnumber": "ES12 3456 7890 1234",
-        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
-        "profilelink": "user-movements.html"
-      }
-    },
+  "selector": "#profile-header",
+  "data": {
+    "logo_link": "index.html",
+    "logo_src": "images/logo.jfif",
+    "logo_alt": "Logo del Banco Imperium",
+    "username": "",
+    "accountnumber": "ES12 3456 7890 1234",
+    "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-left.svg",
+    "profilealt": "user-movements",
+    "profilelink": "user-movements.html"
+  }
+},
+
     {
       "selector": "#titulo-operacion",
       "data": {

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const paginaActual = document.body.getAttribute("data-page");
-    const paginasPermitidas = ["user-movements", "user-cards"];
+    const paginasPermitidas = ["user-movements", "user-cards", "transfer", "pay-services", "top-up"];
 
     if (!paginasPermitidas.includes(paginaActual)) return;
 
