@@ -1,11 +1,11 @@
 {
   "templates": [
     {
-      "selector": "[xlu-include-file='templates/header-profile.html']",
+      "selector": "#profile-header",
       "data": {
         "username": "",
         "accountnumber": "",
-        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-right.svg",
+        "profilesrc": "https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-left.svg",
         "profilelink": "index.html"
       }
     },

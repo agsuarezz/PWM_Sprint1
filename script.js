@@ -3,19 +3,26 @@ async function xLuIncludeFile() {
         try {
             const pageName = document.body.getAttribute('data-page') || 'index';
 
-            const [headerResponse, footerResponse, pageResponse] = await Promise.all([
+            const [headerResponse, headerProfileResponse, footerResponse, pageResponse] = await Promise.all([
                 fetch('data/header.json'),
+                fetch('data/header-profile.json'),
                 fetch('data/footer.json'),
                 fetch(`data/${pageName}.json`)
             ]);
 
             let headerTemplates = [];
+            let headerProfileTemplates = [];
             let footerTemplates = [];
             let pageTemplates = [];
 
             if (headerResponse.ok) {
                 const headerConfig = await headerResponse.json();
                 headerTemplates = headerConfig.templates || [];
+            }
+
+            if (headerProfileResponse.ok) {
+                const headerProfileConfig = await headerProfileResponse.json();
+                headerProfileTemplates = headerProfileConfig.templates || [];
             }
 
             if (footerResponse.ok) {
@@ -30,6 +37,7 @@ async function xLuIncludeFile() {
 
             window.templateData = [
                 ...headerTemplates,
+                ...headerProfileTemplates,
                 ...footerTemplates,
                 ...pageTemplates
             ];
@@ -44,20 +52,22 @@ async function xLuIncludeFile() {
                 });
             });
 
-            // --- PEGAR AQUÍ (Justo después del último forEach de window.templateData) ---
             window.templateData.forEach(item => {
-                const el = document.querySelector(item.selector);
-                // Si el elemento existe en el HTML y NO es un archivo externo (no tiene xlu-include-file)
-                if (el && !el.hasAttribute('xlu-include-file')) {
-                    let content = el.innerHTML;
-                    Object.keys(item.data).forEach(key => {
-                        const regex = new RegExp(`{{${key}}}`, "g");
-                        content = content.replace(regex, item.data[key]);
-                    });
-                    el.innerHTML = content;
-                }
+                const elements = document.querySelectorAll(item.selector);
+
+                elements.forEach(el => {
+                    if (!el.hasAttribute('xlu-include-file')) {
+                        let content = el.innerHTML;
+
+                        Object.keys(item.data).forEach(key => {
+                            const regex = new RegExp(`{{${key}}}`, "g");
+                            content = content.replace(regex, item.data[key]);
+                        });
+
+                        el.innerHTML = content;
+                    }
+                });
             });
-            // --------------------------------------------------------------------------
 
         } catch (e) {
             console.error("Error al cargar los archivos JSON:", e);
@@ -65,36 +75,39 @@ async function xLuIncludeFile() {
         }
     }
 
-    let el = document.querySelector("[xlu-include-file]");
+    const el = document.querySelector("[xlu-include-file]");
 
     if (!el) {
-        if (typeof initHamburgerMenu === "function") initHamburgerMenu();
-        
+        if (typeof initHamburgerMenu === "function") {
+            initHamburgerMenu();
+        }
+
         document.dispatchEvent(new CustomEvent('templatesReady'));
         return;
     }
 
-    let file = el.getAttribute("xlu-include-file");
+    const file = el.getAttribute("xlu-include-file");
 
     try {
-        let response = await fetch(file);
+        const response = await fetch(file);
 
         if (response.ok) {
             let content = await response.text();
 
-            let allKeys = Array.from(el.attributes)
-                .filter(a => a.name.startsWith('data-'))
-                .map(a => a.name.replace('data-', ''));
+            const allKeys = Array.from(el.attributes)
+                .filter(attr => attr.name.startsWith('data-'))
+                .map(attr => attr.name.replace('data-', ''));
 
             allKeys.forEach(key => {
-                let regex = new RegExp(`{{${key}}}`, "g");
-                let value = el.getAttribute(`data-${key}`) || "";
+                const regex = new RegExp(`{{${key}}}`, "g");
+                const value = el.getAttribute(`data-${key}`) || "";
                 content = content.replace(regex, value);
             });
 
-            let temp = document.createElement('div');
+            const temp = document.createElement('div');
             temp.innerHTML = content.trim();
-            let newNode = temp.firstElementChild || temp;
+
+            const newNode = temp.firstElementChild || temp;
 
             Array.from(el.attributes).forEach(attr => {
                 if (attr.name !== 'xlu-include-file') {
