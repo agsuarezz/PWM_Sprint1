@@ -1,35 +1,13 @@
-<main style="padding: 50px; background-color: #f4f4f4; min-height: 100vh;">
-  
-  <h1>Banco de Pruebas Angular 🏗️</h1>
-  <hr style="margin-bottom: 30px;">
+<h1>Prueba de botón</h1>
 
-  <app-balance-card 
-    label="SALDO DISPONIBLE" 
-    amount="15.420,50 €">
-  </app-balance-card>
+<app-button
+  [href]="'https://google.com'"
+  [text]="'Ir a Google'">
+</app-button>
 
-  <br><br>
+<br><br>
 
-  <div style="display: flex; gap: 20px;">
-    <app-action-user 
-      href="/transfer" 
-      icon="assets/transfer-icon.png" 
-      label="Transferir">
-    </app-action-user>
-
-    <app-action-user 
-      href="/pay" 
-      icon="assets/pay-icon.png" 
-      label="Pagar Recibo">
-    </app-action-user>
-  </div>
-
-  <br><br>
-
-  <app-benefit 
-    image="assets/premium-card.jpg" 
-    title="Tarjeta Imperium Black" 
-    content="Acceso a salas VIP y cero comisiones en el extranjero.">
-  </app-benefit>
-
-</main>
+<app-button
+  [href]="'/services'"
+  [text]="'Ir a servicios'">
+</app-button>
