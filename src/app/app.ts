@@ -1,12 +1,18 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+// Importamos nuestras nuevas piezas:
+import { ActionUserComponent } from './components/action-user/action-user';
+import { BalanceCardComponent } from './components/balance-card/balance-card';
+import { BenefitComponent } from './components/benefit/benefit';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  // ¡OJO AQUÍ! Hay que meterlos en el array de imports para poder usarlos en el HTML
+  imports: [RouterOutlet, ActionUserComponent, BalanceCardComponent, BenefitComponent], 
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('Sprint03_Angular');
+export class AppComponent {
+  title = 'banco-imperium';
 }
