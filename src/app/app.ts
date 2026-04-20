@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core'; // 1. Importamos ViewEncapsulation
 import { RouterOutlet } from '@angular/router';
-// Importamos nuestras nuevas piezas:
-import { ActionUserComponent } from './components/action-user/action-user';
-import { BalanceCardComponent } from './components/balance-card/balance-card';
-import { BenefitComponent } from './components/benefit/benefit';
-import { ButtonComponent } from './components/button/button';
+
+// Importación de componentes
+import { HeaderComponent } from './components/header/header';
+import { FooterComponent } from './components/footer/footer';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  // ¡OJO AQUÍ! Hay que meterlos en el array de imports para poder usarlos en el HTML
-  imports: [RouterOutlet, ActionUserComponent, BalanceCardComponent, BenefitComponent, ButtonComponent], 
+  imports: [
+    RouterOutlet, 
+    HeaderComponent, 
+    FooterComponent
+  ], 
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrls: ['./app.css'],
+  // 2. Añadimos esta línea para que el CSS de app.css afecte a toda la aplicación
+  encapsulation: ViewEncapsulation.None 
 })
 export class AppComponent {
   title = 'banco-imperium';

@@ -1,13 +1,7 @@
-<h1>Prueba de botón</h1>
+<app-header></app-header>
 
-<app-button
-  [href]="'https://google.com'"
-  [text]="'Ir a Google'">
-</app-button>
+<main>
+    <router-outlet></router-outlet>
+</main>
 
-<br><br>
-
-<app-button
-  [href]="'/services'"
-  [text]="'Ir a servicios'">
-</app-button>
+<app-footer></app-footer>

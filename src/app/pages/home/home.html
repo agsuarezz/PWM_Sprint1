@@ -1,0 +1,77 @@
+<main>
+    <app-text-with-image 
+        [image_src]="'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?q=80&w=500'" 
+        [image_alt]="'Banca Premium'"
+        [title]="'Cuenta Nómina Premium'"
+        [subtitle]="'Exclusividad en cada movimiento.'">
+        <ul class="account-content__benefits">
+            <li [innerHTML]="'Gestor personal 24/7'"></li>
+            <li [innerHTML]="'Tarjetas Black sin coste'"></li>
+        </ul>
+    </app-text-with-image>
+
+    <div class="main-cta-wrapper">
+        <app-button 
+            [href]="'premium-account.html'" 
+            [text]="'Información'">
+        </app-button>
+    </div>
+
+    <section class="cards-wrapper">
+        <app-card-container 
+            [image]="'https://cdn-icons-png.flaticon.com/512/4149/4149883.png'" 
+            [imageCaption]="'Satisfacción'"
+            [title]="'Excelencia Avalada'" 
+            [content]="'El 92% de nuestros clientes activos recomienda Imperium a su círculo cercano por nuestra gestión impecable.'">
+        </app-card-container>
+
+        <app-card-container 
+            [image]="'https://cdn-icons-png.flaticon.com/512/2488/2488749.png'" 
+            [imageCaption]="'Rentabilidad'"
+            [title]="'Patrimonio Inteligente'" 
+            [content]="'Rentabilice su capital desde el primer día con tipos de interés líderes en el mercado y total disponibilidad de sus fondos.'">
+        </app-card-container>
+
+        <app-card-container 
+            [image]="'https://cdn-icons-png.flaticon.com/512/1162/1162953.png'" 
+            [imageCaption]="'Sin Comisiones'"
+            [title]="'Libertad Operativa'" 
+            [content]="'Únase a la banca premium sin costes de mantenimiento. Una transición simplificada para una gestión financiera sin ataduras.'">
+        </app-card-container>
+    </section>
+
+    <app-text-with-image 
+        [image_src]="'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=800'" 
+        [image_alt]="'Bosque Imperium Sostenible'"
+        [title]="'Compromiso Verde Imperium'"
+        [subtitle]="'Tu dinero crece mientras protegemos el planeta.'">
+        <ul class="account-content__benefits">
+            <li [innerHTML]="'Inversión en energías 100% renovables'"></li>
+            <li [innerHTML]="'Tarjetas fabricadas con plástico reciclado del océano'"></li>
+            <li [innerHTML]="'Por cada nueva cuenta, plantamos un árbol en tu nombre'"></li>
+        </ul>
+    </app-text-with-image>
+
+    <section class="benefit-section">
+        <app-benefit 
+            [image]="'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=500'" 
+            [imageCaption]="'Tecnología de pago'"
+            [title]="'Pago Contactless'" 
+            [content]="'Vincule sus tarjetas para compras instantáneas.'">
+        </app-benefit>
+
+        <app-benefit 
+            [image]="'https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=500'" 
+            [imageCaption]="'Viajes'"
+            [title]="'Zero Comisiones'" 
+            [content]="'Retire efectivo en cualquier lugar del mundo.'">
+        </app-benefit>
+
+        <app-benefit 
+            [image]="'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500'" 
+            [imageCaption]="'Seguridad digital'"
+            [title]="'Control Total'" 
+            [content]="'Gestione su seguridad desde nuestra App.'">
+        </app-benefit>
+    </section>
+</main>

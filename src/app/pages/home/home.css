@@ -1,0 +1,273 @@
+/* =========================
+   INDEX - ESTILOS PROPIOS
+   ========================= */
+
+/* Contenedor de Tarjetas */
+.cards-wrapper {
+    background: #f8f6f1;
+    display: grid;
+    padding: 80px 15%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: stretch;
+    border-top: 1px solid #ece8df;
+    border-bottom: 1px solid #ece8df;
+}
+
+.card-container {
+    background: var(--pure-white);
+    padding: 40px 20px;
+    border: 1px solid var(--border-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 320px;
+    transition: all 0.3s ease;
+    max-width: 280px;
+    margin: 0 auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.card-container:hover {
+    border-color: var(--primary-black);
+    transform: translateY(-8px);
+}
+
+.card-icon img {
+    width: 45px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Beneficios */
+.benefit-section {
+    padding: 80px 10%;
+    background: #f1ede6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: start;
+    border-top: 1px solid #e6e1d8;
+    border-bottom: 1px solid #e6e1d8;
+}
+
+.benefit-card {
+    width: 100%;
+    background: var(--pure-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+    border-color: #cfcfcf;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.benefit-image {
+    width: 100%;
+    height: 200px;
+    background: var(--soft-gray);
+    overflow: hidden;
+}
+
+.benefit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.benefit-card:hover .benefit-image img {
+    transform: scale(1.08);
+}
+
+.benefit-content {
+    padding: 20px;
+}
+
+.benefit-content h3 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.1px;
+    color: var(--primary-black);
+}
+
+.benefit-content p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* CTA principal */
+.main-cta-wrapper {
+    padding: 0 10%;
+    margin-top: -140px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-cta-wrapper .btn-primary {
+    margin-left: calc(50% + 30px);
+}
+
+/* =========================
+   RESPONSIVE INDEX
+   ========================= */
+
+/* ===== TABLET ===== */
+@media (max-width: 1023px) {
+    .cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 60px 6%;
+        gap: 28px;
+    }
+
+    .card-container {
+        max-width: 100%;
+        min-height: 280px;
+    }
+
+    .benefit-section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 60px 6%;
+        gap: 24px;
+    }
+
+    .main-cta-wrapper {
+        padding: 0 6%;
+        margin-top: -60px;
+        margin-bottom: 32px;
+        justify-content: center;
+    }
+
+    .main-cta-wrapper .btn-primary,
+    .main-cta-wrapper a {
+        margin-left: 0;
+    }
+}
+
+/* ===== MÓVIL ===== */
+@media (max-width: 767px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .card-container {
+        max-width: 100%;
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+
+    .benefit-section {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .benefit-image {
+        height: 180px;
+    }
+
+    .benefit-content {
+        padding: 18px;
+    }
+
+    .benefit-content h3 {
+        font-size: 1rem;
+    }
+
+    .benefit-content p {
+        font-size: 0.95rem;
+    }
+
+    .main-cta-wrapper {
+        padding: 0 20px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        justify-content: center;
+    }
+
+    .main-cta-wrapper .btn-primary,
+    .main-cta-wrapper a {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+}
+
+/* ===== AJUSTE TABLET: CENTRAR 3ª TARJETA ===== */
+@media (max-width: 1023px) and (min-width: 768px) {
+
+    .cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .cards-wrapper > div:nth-child(3) {
+        grid-column: 1 / -1;   /* ocupa toda la fila */
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards-wrapper > div:nth-child(3) .card-container {
+        max-width: 320px;
+        width: 100%;
+    }
+}
+
+/* ===== AJUSTE TABLET BENEFITS ===== */
+@media (max-width: 1023px) and (min-width: 768px) {
+
+    .benefit-section {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .benefit-section .benefit-card:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        width: 100%;
+    }
+}

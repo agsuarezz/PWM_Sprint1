@@ -1,20 +1,25 @@
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
+  standalone: true,
+  imports: [RouterModule], // Esto soluciona los errores de [routerLink]
   templateUrl: './footer.html',
   styleUrls: ['./footer.css']
 })
 export class FooterComponent {
-  // Textos y enlaces legales
+  // Variables de texto
   @Input() copyright: string = '© 2024 Banco Imperium. Todos los derechos reservados.';
-  @Input() linkPrivacidad: string = '/privacidad';
+
+  // Enlaces de navegación (RouterLinks)
+  @Input() linkPrivacidad: string = '/privacy';
   @Input() linkCookies: string = '/cookies';
   @Input() linkLegal: string = '/legal';
 
-  // Enlaces a las tiendas de apps
+  // Enlaces externos y recursos
   @Input() appstoreLink: string = '#';
+  @Input() appstoreImg: string = 'assets/img/appstore-badge.png';
   @Input() playstoreLink: string = '#';
-  @Input() appstoreImg: string = 'assets/images/app-store.svg'; // Ajusta la ruta a la tuya
-  @Input() playstoreImg: string = 'assets/images/google-play.svg'; // Ajusta la ruta a la tuya
+  @Input() playstoreImg: string = 'assets/img/playstore-badge.png';
 }
