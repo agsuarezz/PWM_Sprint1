@@ -1,0 +1,22 @@
+<div class="footer-socket">
+    <div class="socket-container">
+        <p>{{ copyright }}</p>
+        
+        <nav class="socket-nav">
+            <ul>
+                <li><a [routerLink]="linkPrivacidad">Privacidad</a></li>
+                <li><a [routerLink]="linkCookies">Cookies</a></li>
+                <li><a [routerLink]="linkLegal">Legal</a></li>
+            </ul>
+        </nav>
+
+        <div class="store-badges">
+            <a [href]="appstoreLink" target="_blank">
+                <img [src]="appstoreImg" alt="Descargar en App Store">
+            </a>
+            <a [href]="playstoreLink" target="_blank">
+                <img [src]="playstoreImg" alt="Disponible en Google Play">
+            </a>
+        </div>
+    </div>
+</div>

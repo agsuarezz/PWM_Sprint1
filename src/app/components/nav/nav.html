@@ -1,0 +1,17 @@
+<div class="nav-wrapper">
+    <nav class="main-navigation">
+        <ul>
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
+            <li><a routerLink="/services" routerLinkActive="active">Servicios</a></li>
+            <li><a routerLink="/loan-simulator" routerLinkActive="active">Sim. Préstamos</a></li>
+            <li><a routerLink="/accounts/personal" routerLinkActive="active">Cuentas</a></li>
+        </ul>
+    </nav>
+
+    <div class="client-access">
+        <a routerLink="/login" class="login-link">Acceso Cliente</a>
+        <a routerLink="/register">
+            <button type="button" class="btn-signup">Hazte Cliente</button>
+        </a>
+    </div>
+</div>

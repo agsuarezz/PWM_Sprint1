@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-benefit',
-  templateUrl: './benefit.html',
-  styleUrls: ['./benefit.css']
+  selector: 'app-card-container',
+  templateUrl: './card-container.html',
+  styleUrls: ['./card-container.css']
 })
-export class BenefitComponent {
+export class CardContainerComponent {
   @Input() image: string = '';
   @Input() imageCaption: string = '';
   @Input() title: string = '';
