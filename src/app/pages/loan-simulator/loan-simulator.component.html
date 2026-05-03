@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<main class="simulator-main">
+  <section class="simulator-wrapper">
+    <h1 class="simulator-title">Simulador Imperium</h1>
+    <p class="simulator-description">Calcule las condiciones de su financiación personalizada.</p>
+
+    <form>
+      @if (ui?.fields) {
+        @for (field of ui.fields; track field.fieldId) {
+          <div class="form-group">
+            <label>{{ field.labelName }}</label>
+            @if (field.fieldId === 'loan-amount') {
+              <input type="number" [(ngModel)]="amount" [name]="field.fieldId" [placeholder]="field.placeholder">
+            }
+            @if (field.fieldId === 'loan-term') {
+              <input type="number" [(ngModel)]="term" [name]="field.fieldId" [placeholder]="field.placeholder">
+            }
+            @if (field.fieldId === 'interest-rate') {
+              <input type="number" [(ngModel)]="rate" [name]="field.fieldId" [placeholder]="field.placeholder">
+            }
+          </div>
+        }
+      } @else {
+        <div class="form-group">
+          <label>Capital solicitado (€)</label>
+          <input type="number" [(ngModel)]="amount" name="amount" placeholder="Ej: 50000">
+        </div>
+        <div class="form-group">
+          <label>Plazo de amortización (Meses)</label>
+          <input type="number" [(ngModel)]="term" name="term" placeholder="Ej: 48">
+        </div>
+        <div class="form-group">
+          <label>TIN Anual (%)</label>
+          <input type="number" [(ngModel)]="rate" name="rate" placeholder="Ej: 5.25">
+        </div>
+      }
+
+      <div class="form-action">
+        <button type="button" class="btn-signup" (click)="calcular()">Calcular Cuota</button>
+      </div>
+    </form>
+
+    <div class="result-container">
+      <span class="result-label">Mensualidad Estimada</span>
+      <div class="result-value">{{ resultado }}</div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+@if (hero) {
+  <app-services-layout
+    [imageSrc]="hero.imageSrc"
+    [imageAlt]="hero.imageAlt">
+
+    @for (service of services; track service.title) {
+      <app-card-container
+        [image]="service.icon"
+        [imageCaption]="service.title"
+        [title]="service.title"
+        [content]="service.content">
+      </app-card-container>
+    }
+
+  </app-services-layout>
+}
+
+<app-footer></app-footer>

@@ -1,0 +1,82 @@
+/* 1. RESET BÁSICO */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+}
+
+/* 2. ESCONDER ETIQUETAS FANTASMA DE ANGULAR */
+router-outlet {
+    display: none !important;
+}
+
+/* 3. ESTRUCTURA FLEX PARA BAJAR EL FOOTER */
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Las páginas en sí ocupan todo el espacio */
+app-root > * {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+}
+
+/* Los contenedores centrales se estiran para empujar al footer */
+main,
+app-transfer-form-card,
+app-register-form-card,
+app-services-layout,
+app-dashboard-layout {
+    flex: 1 0 auto;
+    display: block;
+    width: 100%;
+}
+
+/* 4. CABECERA: PEGARLA AL TECHO SIN FRANJAS (El escudo antimárgenes) */
+app-header, 
+app-header-profile {
+    display: block;
+    width: 100%;
+    flex-shrink: 0;
+    margin: 0 !important;
+    /* Esto es la clave: evita que los márgenes de tus títulos empujen la web hacia abajo */
+    overflow: hidden; 
+}
+
+/* 5. FOOTER: PEGADO AL SUELO */
+app-footer {
+    display: block;
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: auto !important;
+}
+
+/* ==========================================================================
+   6. FIX DEFINITIVO PARA LA PÁGINA DE CUENTAS
+   ========================================================================== */
+
+/* 1. Obligamos a los componentes anidados de cuentas a estirarse como los demás */
+app-account-page, 
+app-accounts,
+app-account-premium,
+app-account-personal {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+}
+
+/* 2. EL TRUCO MAGISTRAL: Angular mete estas etiquetas personalizadas en medio 
+      de tus Grids. Con 'display: contents', el navegador se vuelve "ciego" 
+      a la etiqueta de Angular y tu CSS original detecta las tarjetas a la primera. */
+app-card-container,
+app-benefit,
+app-card-info,
+app-movement-item,
+app-profile-item {
+    display: contents !important;
+}

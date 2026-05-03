@@ -1,0 +1,73 @@
+<app-header></app-header>
+
+<main>
+  <!-- HERO -->
+  @if (hero) {
+    <section class="account-content">
+      <div class="account-content__container">
+        <div class="account-content__image">
+          <img [src]="hero.imageSrc" [alt]="hero.imageAlt">
+        </div>
+        <div class="account-content__info">
+          <h2 class="account-content__title">{{ hero.title }}</h2>
+          <h3 class="account-content__subtitle">{{ hero.subtitle }}</h3>
+          <ul class="account-content__benefits">
+            @for (benefit of hero.benefits; track benefit) {
+              <li>{{ benefit }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="main-cta-wrapper">
+      <a [routerLink]="hero.ctaLink" class="btn-primary">{{ hero.ctaText }}</a>
+    </div>
+  }
+
+  <!-- CARDS -->
+  <section class="cards-wrapper">
+    @for (card of cards; track card.title) {
+      <app-card-container
+        [image]="card.icon"
+        [imageCaption]="card.title"
+        [title]="card.title"
+        [content]="card.content">
+      </app-card-container>
+    }
+  </section>
+
+  <!-- COMPROMISO VERDE -->
+  @if (compromisoVerde) {
+    <section class="account-content">
+      <div class="account-content__container">
+        <div class="account-content__image">
+          <img [src]="compromisoVerde.imageSrc" [alt]="compromisoVerde.imageAlt">
+        </div>
+        <div class="account-content__info">
+          <h2 class="account-content__title">{{ compromisoVerde.title }}</h2>
+          <h3 class="account-content__subtitle">{{ compromisoVerde.subtitle }}</h3>
+          <ul class="account-content__benefits">
+            @for (benefit of compromisoVerde.benefits; track benefit) {
+              <li>{{ benefit }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+  }
+
+  <!-- BENEFITS -->
+  <section class="benefit-section">
+    @for (benefit of benefits; track benefit.title) {
+      <app-benefit
+        [image]="benefit.image"
+        [imageCaption]="benefit.title"
+        [title]="benefit.title"
+        [content]="benefit.content">
+      </app-benefit>
+    }
+  </section>
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,130 @@
+<app-header-profile
+  username=""
+  accountNumber=""
+  backLink="/"
+  profileSrc="https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-left.svg"
+  profileAlt="Inicio">
+</app-header-profile>
+
+<app-register-form-card
+  submitLabel="Completar Registro"
+  loadingMsg="Creando tu cuenta en Firebase..."
+  [errorMsg]="errorMsg"
+  [cargando]="cargando"
+  (submitted)="onSubmit()">
+
+  <app-form-field
+    fieldId="name"
+    labelName="Nombre"
+    fieldType="text"
+    phText="Ej: Laura"
+    [value]="form.nombre"
+    (valueChange)="form.nombre = $event"
+    [isRequired]="true"
+    pattern="[a-zA-ZÁ-Úá-úÑñ ]+"
+    patternTitle="Solo se permiten letras">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="surname"
+    labelName="Apellidos"
+    fieldType="text"
+    phText="Ej: Pérez García"
+    [value]="form.apellidos"
+    (valueChange)="form.apellidos = $event"
+    [isRequired]="true"
+    pattern="[a-zA-ZÁ-Úá-úÑñ ]+"
+    patternTitle="Solo se permiten letras">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="email"
+    labelName="Correo Electrónico"
+    fieldType="email"
+    phText="usuario@correo.com"
+    [value]="form.email"
+    (valueChange)="form.email = $event"
+    [isRequired]="true">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="phone"
+    labelName="Teléfono"
+    fieldType="tel"
+    phText="600 000 000"
+    [value]="form.telefono"
+    (valueChange)="form.telefono = $event"
+    [isRequired]="true"
+    pattern="[0-9]{9}"
+    patternTitle="Debe introducir 9 dígitos">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="birthdate"
+    labelName="Fecha de nacimiento"
+    fieldType="date"
+    [value]="form.fechaNacimiento"
+    (valueChange)="form.fechaNacimiento = $event"
+    [isRequired]="true">
+  </app-form-field>
+
+  <div class="form-row">
+    <app-form-field
+      fieldId="address"
+      labelName="Dirección"
+      fieldType="text"
+      phText="Calle, num, piso, letra"
+      [value]="form.direccion"
+      (valueChange)="form.direccion = $event"
+      [isRequired]="true">
+    </app-form-field>
+
+    <app-form-field
+      fieldId="zip"
+      labelName="Código Postal"
+      fieldType="text"
+      phText="00000"
+      [value]="form.codigoPostal"
+      (valueChange)="form.codigoPostal = $event"
+      [isRequired]="true"
+      pattern="[0-9]{5}"
+      patternTitle="Debe contener 5 números">
+    </app-form-field>
+  </div>
+
+  <div class="form-row">
+    <app-form-field
+      fieldId="password"
+      labelName="Contraseña"
+      fieldType="password"
+      phText="Mínimo 6 caracteres"
+      [value]="password"
+      (valueChange)="password = $event"
+      [isRequired]="true"
+      minlength="6">
+    </app-form-field>
+
+    <app-form-field
+      fieldId="confirm-password"
+      labelName="Confirmar Contraseña"
+      fieldType="password"
+      phText="Repite la contraseña"
+      [value]="confirmPassword"
+      (valueChange)="confirmPassword = $event"
+      [isRequired]="true">
+    </app-form-field>
+  </div>
+
+  <app-select-field
+    fieldId="account-type"
+    labelName="Tipo de cuenta"
+    placeholder="Selecciona la opción"
+    [value]="form.tipoCuenta"
+    (valueChange)="form.tipoCuenta = $event"
+    [isRequired]="true"
+    [options]="accountTypeOptions">
+  </app-select-field>
+
+</app-register-form-card>
+
+<app-footer></app-footer>

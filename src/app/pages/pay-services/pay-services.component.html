@@ -1,0 +1,61 @@
+<app-header-profile
+  [username]="'Bienvenido, ' + (usuario?.nombre || '') + ' ' + (usuario?.apellidos || '')"
+  accountNumber="ES12 3456 7890 1234"
+  backLink="/movimientos"
+  profileSrc="https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-left.svg"
+  profileAlt="Volver">
+</app-header-profile>
+
+<app-transfer-form-card
+  [title]="ui?.titulo || 'Pagar Servicios'"
+  [submitLabel]="ui?.buttons?.submit || 'Pagar Ahora'"
+  cancelLink="/movimientos"
+  (submitted)="onSubmit()"
+  (cleared)="limpiar()">
+
+  <app-form-field
+    fieldId="servicio"
+    labelName="Tipo de servicio"
+    fieldType="text"
+    phText="Nombre Servicio"
+    [value]="form.servicio"
+    (valueChange)="form.servicio = $event"
+    [isRequired]="true">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="referencia"
+    labelName="Número de referencia"
+    fieldType="text"
+    phText="Ref. de la factura"
+    [value]="form.referencia"
+    (valueChange)="form.referencia = $event"
+    [isRequired]="true"
+    pattern="[0-9]{10,20}"
+    patternTitle="De 10 a 20 números">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="importe"
+    labelName="Importe"
+    fieldType="number"
+    phText="0.0"
+    [value]="form.importe"
+    (valueChange)="form.importe = $event"
+    [isRequired]="true"
+    min="0.01"
+    step="0.01">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="concepto"
+    labelName="Concepto (Opcional)"
+    fieldType="text"
+    phText="Detalles adicionales"
+    [value]="form.concepto"
+    (valueChange)="form.concepto = $event">
+  </app-form-field>
+
+</app-transfer-form-card>
+
+<app-footer></app-footer>
