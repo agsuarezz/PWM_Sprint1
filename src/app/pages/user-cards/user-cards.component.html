@@ -1,0 +1,26 @@
+<app-header-profile
+  [username]="'Bienvenido, ' + (usuario?.nombre || '') + ' ' + (usuario?.apellidos || '')"
+  accountNumber="ES12 3456 7890 1234"
+  backLink="/perfil"
+  profileSrc="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+  profileAlt="Perfil">
+</app-header-profile>
+
+<app-dashboard-layout
+  balanceLabel="Dinero disponible"
+  balanceAmount="{{ saldoFormateado }}"
+  [actions]="actions"
+  activeTab="tarjetas">
+
+  <div class="cards-list">
+    @for (card of cards; track card.title) {
+      <app-card-info
+        [title]="card.title"
+        [subtitle]="card.subtitle">
+      </app-card-info>
+    }
+  </div>
+
+</app-dashboard-layout>
+
+<app-footer></app-footer>

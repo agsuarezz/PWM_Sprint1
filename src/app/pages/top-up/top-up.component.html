@@ -1,0 +1,53 @@
+<app-header-profile
+  [username]="'Bienvenido, ' + (usuario?.nombre || '') + ' ' + (usuario?.apellidos || '')"
+  accountNumber="ES12 3456 7890 1234"
+  backLink="/movimientos"
+  profileSrc="https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-left.svg"
+  profileAlt="Volver">
+</app-header-profile>
+
+<app-transfer-form-card
+  [title]="ui?.titulo || 'Recargar'"
+  [submitLabel]="ui?.buttons?.submit || 'Recargar'"
+  cancelLink="/movimientos"
+  (submitted)="onSubmit()"
+  (cleared)="limpiar()">
+
+  <app-form-field
+    fieldId="operador"
+    labelName="Operador"
+    fieldType="text"
+    phText="Nombre Operador"
+    [value]="form.operador"
+    (valueChange)="form.operador = $event"
+    [isRequired]="true">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="telefono"
+    labelName="Número de teléfono"
+    fieldType="tel"
+    phText="600 000 000"
+    [value]="form.telefono"
+    (valueChange)="form.telefono = $event"
+    [isRequired]="true"
+    pattern="[0-9]{9}"
+    patternTitle="Debe contener 9 números">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="cantidad"
+    labelName="Cantidad"
+    fieldType="number"
+    phText="0.0"
+    [value]="form.cantidad"
+    (valueChange)="form.cantidad = $event"
+    [isRequired]="true"
+    min="0.01"
+    max="100"
+    step="0.01">
+  </app-form-field>
+
+</app-transfer-form-card>
+
+<app-footer></app-footer>

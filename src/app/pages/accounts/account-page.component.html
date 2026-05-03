@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<main>
+  <div class="category-nav-wrapper">
+    <nav class="category-navigation">
+      <ul>
+        <li><a routerLink="/cuentas/personal">Personal</a></li>
+        <li><a routerLink="/cuentas/premium">Premium</a></li>
+        <li><a routerLink="/cuentas/empresarial">Empresarial</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="account-content">
+    <div class="account-content__container">
+      <div class="account-content__image">
+        <img [src]="data.imageSrc" [alt]="data.imageAlt">
+      </div>
+      <div class="account-content__info">
+        <h2 class="account-content__title">{{ data.title }}</h2>
+        <h3 class="account-content__subtitle">{{ data.subtitle }}</h3>
+        <ul class="account-content__benefits">
+          @for (benefit of data.benefits; track benefit) {
+            <li>{{ benefit }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

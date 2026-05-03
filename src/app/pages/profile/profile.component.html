@@ -1,0 +1,85 @@
+<app-header-profile
+  [username]="'Bienvenido, ' + (usuario?.nombre || '') + ' ' + (usuario?.apellidos || '')"
+  accountNumber="ES12 3456 7890 1234"
+  backLink="/movimientos"
+  profileSrc="https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-left.svg"
+  profileAlt="Volver">
+</app-header-profile>
+
+<main class="perfil-fondo-general">
+  <div class="perfil-tarjeta-dos-columnas">
+
+    <aside class="perfil-columna-izquierda">
+      <img class="perfil-imagen-redonda"
+        [src]="usuario?.fotoPerfil || 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'"
+        alt="Foto de Perfil">
+
+      <div style="margin-top: 12px; text-align: center;">
+        <label for="fotoInput" class="btn-primary"
+          style="cursor:pointer; display:inline-block; font-size:12px;">
+          Cambiar foto
+        </label>
+        <input type="file" id="fotoInput" accept="image/*" style="display:none"
+          (change)="onFotoSeleccionada($event)">
+
+        <!-- Barra de progreso de subida a Firebase Storage -->
+        @if (progresoSubida > 0 && progresoSubida < 100) {
+          <div style="margin-top:10px;">
+            <div style="background:#eee; border-radius:999px; height:6px; overflow:hidden;">
+              <div [style.width.%]="progresoSubida"
+                style="background:goldenrod; height:100%; border-radius:999px;
+                       transition: width 0.3s ease;">
+              </div>
+            </div>
+            <p style="font-size:11px; color:#888; margin-top:4px;">
+              Subiendo a Firebase Storage... {{ progresoSubida }}%
+            </p>
+          </div>
+        }
+        @if (progresoSubida === 100) {
+          <p style="font-size:12px; color:green; margin-top:6px;">✓ Foto actualizada</p>
+        }
+        @if (errorSubida) {
+          <p style="font-size:12px; color:#d32f2f; margin-top:6px;">Error: {{ errorSubida }}</p>
+        }
+      </div>
+    </aside>
+
+    <section class="perfil-columna-derecha">
+      <div class="perfil-cabecera-titulos">
+        <h2>{{ usuario?.nombre }}</h2>
+        <p>{{ usuario?.apellidos }}</p>
+      </div>
+
+      <app-profile-item
+        label="Correo Electrónico"
+        [value]="usuario?.email || ''"
+        [editable]="true">
+      </app-profile-item>
+
+      <app-profile-item
+        label="Tipo de Cuenta"
+        [value]="(usuario?.tipoCuenta | titlecase) || ''">
+      </app-profile-item>
+
+      <app-profile-item
+        label="Número de teléfono"
+        [value]="usuario?.telefono || ''"
+        fallback="No especificado"
+        [editable]="true">
+      </app-profile-item>
+
+      <app-profile-item
+        label="Dirección"
+        [value]="usuario?.direccion || ''"
+        fallback="No especificada"
+        [editable]="true">
+      </app-profile-item>
+
+      <button class="btn-primary" (click)="logout()">Cerrar Sesión</button>
+    </section>
+
+  </div>
+</main>
+
+<app-footer></app-footer>

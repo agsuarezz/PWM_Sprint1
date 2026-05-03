@@ -1,0 +1,64 @@
+<app-header-profile
+  [username]="'Bienvenido, ' + (usuario?.nombre || '') + ' ' + (usuario?.apellidos || '')"
+  accountNumber="ES12 3456 7890 1234"
+  backLink="/movimientos"
+  profileSrc="https://raw.githubusercontent.com/feathericons/feather/master/icons/arrow-left.svg"
+  profileAlt="Volver">
+</app-header-profile>
+
+<app-transfer-form-card
+  [title]="ui?.titulo || 'Realizar Transferencia'"
+  [submitLabel]="ui?.buttons?.submit || 'Transferir'"
+  cancelLink="/movimientos"
+  (submitted)="onSubmit()"
+  (cleared)="limpiar()">
+
+  <app-form-field
+    fieldId="nombre"
+    labelName="Nombre del beneficiario"
+    fieldType="text"
+    phText="Nombre Completo"
+    [value]="form.nombre"
+    (valueChange)="form.nombre = $event"
+    [isRequired]="true"
+    pattern="[a-zA-ZÁ-Úá-úÑñ ]+"
+    patternTitle="Solo letras">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="iban"
+    labelName="Número de cuenta (IBAN)"
+    fieldType="text"
+    phText="ESXX XXXX XXXX XXXX XXXX XXXX"
+    [value]="form.iban"
+    (valueChange)="form.iban = $event"
+    [isRequired]="true"
+    pattern="[A-Z]{2}[0-9]{22}"
+    patternTitle="ES seguido de 22 números">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="importe"
+    labelName="Importe"
+    fieldType="number"
+    phText="0.0"
+    [value]="form.importe"
+    (valueChange)="form.importe = $event"
+    [isRequired]="true"
+    min="0.01"
+    step="0.01">
+  </app-form-field>
+
+  <app-form-field
+    fieldId="concepto"
+    labelName="Concepto"
+    fieldType="text"
+    phText="Motivo de la transferencia"
+    [value]="form.concepto"
+    (valueChange)="form.concepto = $event"
+    [isRequired]="true">
+  </app-form-field>
+
+</app-transfer-form-card>
+
+<app-footer></app-footer>

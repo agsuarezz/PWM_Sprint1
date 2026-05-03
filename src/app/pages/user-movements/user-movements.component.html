@@ -1,0 +1,34 @@
+<app-header-profile
+  [username]="'Bienvenido, ' + (usuario?.nombre || '') + ' ' + (usuario?.apellidos || '')"
+  accountNumber="ES12 3456 7890 1234"
+  backLink="/perfil"
+  profileSrc="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"
+  profileAlt="Perfil">
+</app-header-profile>
+
+<app-dashboard-layout
+  balanceLabel="Dinero disponible"
+  [balanceAmount]="saldoFormateado"
+  [actions]="actions"
+  activeTab="movimientos">
+
+  <div class="dashboard__movements">
+    @if (cargando) {
+      <p style="text-align:center; color:#888; padding:20px;">Cargando movimientos...</p>
+    }
+    @if (!cargando && movimientos.length === 0) {
+      <p style="text-align:center; color:#aaa; padding:20px;">No hay movimientos registrados.</p>
+    }
+    @for (mov of movimientos; track mov.id) {
+      <app-movement-item
+        [tipo]="mov.tipo"
+        [concepto]="mov.concepto || ''"
+        [fecha]="mov.fecha"
+        [importe]="mov.importe ?? 0">
+      </app-movement-item>
+    }
+  </div>
+
+</app-dashboard-layout>
+
+<app-footer></app-footer>
