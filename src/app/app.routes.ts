@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { authGuard, guestGuard } from './core/guards/auth.guard';
-import { SeedComponent } from './pages/seed/seed.component'
 
 export const routes: Routes = [
   { path: '', loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) },
@@ -17,6 +16,5 @@ export const routes: Routes = [
   { path: 'pagar-servicios', canActivate: [authGuard], loadComponent: () => import('./pages/pay-services/pay-services.component').then(m => m.PayServicesComponent) },
   { path: 'recargar', canActivate: [authGuard], loadComponent: () => import('./pages/top-up/top-up.component').then(m => m.TopUpComponent) },
   { path: 'perfil', canActivate: [authGuard], loadComponent: () => import('./pages/profile/profile.component').then(m => m.ProfileComponent) },
-  { path: 'seed', component: SeedComponent },
   { path: '**', redirectTo: '' }
 ];
