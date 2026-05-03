@@ -56,15 +56,3 @@ Acceder a: http://localhost:4200
 | `/pagar-servicios` | Pago de servicios (requiere auth) |
 | `/recargar` | Recarga movil (requiere auth) |
 | `/perfil` | Perfil de usuario (requiere auth) |
-
-## Construccion
-
-```bash
-npm run build
-```
-
-## Pruebas
-
-```bash
-npm test
-```
