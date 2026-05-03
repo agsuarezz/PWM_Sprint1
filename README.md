@@ -6,8 +6,6 @@ Aplicacion web de banca digital desarrollada con Angular 19 y Firebase.
 
 - Gestion de cuentas (Personal, Premium, Empresarial)
 - Transferencias entre cuentas
-- Pago de servicios (luz, agua, internet, etc.)
-- Recargas de saldo telefonico
 - Historial de movimientos en tiempo real
 - Gestion de tarjetas
 - Simulador de prestamos
